@@ -70,6 +70,14 @@ CnAISDA dialogue records. Research briefs remain in the source register as
 discovery inputs, while official primary sources are grouped separately on
 `/sources`.
 
+## PR 2B AISI Comparison Backfill
+
+Japan, South Korea, and Singapore AISI comparison records now include official
+primary-source backfill from `tmp/pr2b_aisi_comparison_backfill.json.md`.
+Singapore assurance infrastructure such as AI Verify, Project Moonshot, the
+Global AI Assurance Sandbox, and AI TAP is modeled separately from Singapore
+AISI proper.
+
 ## Project Rules
 
 - Every public claim should trace to a source record.

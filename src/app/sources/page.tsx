@@ -22,9 +22,9 @@ export default function SourcesPage() {
           Source register
         </h1>
         <p className="mt-4 text-base leading-7 text-stone-700">
-          Research briefs remain discovery records. PR 2A adds canonical
-          Chinese-language official sources for China standards and evaluation
-          claims.
+          Research briefs remain discovery records. Official primary sources now
+          include the PR 2A China standards/evaluation backfill and the PR 2B
+          Japan, Korea, and Singapore AISI comparison backfill.
         </p>
       </div>
 
