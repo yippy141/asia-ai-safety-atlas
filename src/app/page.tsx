@@ -1,65 +1,154 @@
-import Image from "next/image";
+import Link from "next/link";
+import type { ReactNode } from "react";
+import {
+  ArrowRight,
+  BookOpen,
+  Database,
+  GitBranch,
+  ShieldCheck,
+} from "lucide-react";
+import { buttonVariants } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import { countries, entities, relationships, sources } from "@/data";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
+  const sourceBackedEntities = entities.filter(
+    (entity) => entity.source_ids.length > 0
+  ).length;
+  const needsPrimarySource = entities.filter(
+    (entity) => entity.needs_primary_source
+  ).length;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main>
+      <section className="border-b border-stone-200 bg-white">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-16">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">
+              Bootstrap shell
+            </p>
+            <h1 className="mt-5 text-4xl font-semibold leading-tight text-slate-950 sm:text-5xl">
+              Mapping AI safety and governance ecosystems across China and
+              Asia-Pacific.
+            </h1>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-stone-700">
+              A static-first stakeholder intelligence atlas for researchers,
+              bridge-building organizations, and policy teams working from
+              source-backed public evidence.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                className={cn(buttonVariants({ size: "lg" }))}
+                href="/atlas"
+              >
+                Open atlas
+                <ArrowRight />
+              </Link>
+              <Link
+                className={cn(
+                  buttonVariants({ variant: "outline", size: "lg" })
+                )}
+                href="/methodology"
+              >
+                Review methodology
+              </Link>
+            </div>
+          </div>
+          <div className="grid content-start gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            <Metric label="Entities loaded" value={entities.length} />
+            <Metric label="Source-backed entities" value={sourceBackedEntities} />
+            <Metric label="Needs primary source" value={needsPrimarySource} />
+            <Metric label="Public relationships" value={relationships.length} />
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-7xl gap-4 px-4 py-10 sm:px-6 md:grid-cols-3 lg:px-8">
+        <Principle
+          icon={<Database />}
+          title="Typed local data"
+          text={`${sources.length} research-brief source records seed the shell while primary-source backfill begins.`}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <Principle
+          icon={<ShieldCheck />}
+          title="Conservative claims"
+          text="Confidence, sensitivity, and primary-source flags are visible in the public interface."
+        />
+        <Principle
+          icon={<GitBranch />}
+          title="Relationship graph"
+          text="Only public-safe relationship edges are shown, using conservative labels from the controlled taxonomy."
+        />
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">
+              Country slices
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold text-slate-950">
+              Static country pages
+            </h2>
+          </div>
+          <Link
+            href="/sources"
+            className="inline-flex items-center gap-2 text-sm font-medium text-blue-800 hover:underline"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            View source register
+            <BookOpen className="size-4" />
+          </Link>
         </div>
-      </main>
-    </div>
+        <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {countries.map((country) => (
+            <Link
+              key={country.slug}
+              href={`/countries/${country.slug}`}
+              className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow-md"
+            >
+              <div className="text-sm font-medium text-stone-500">
+                {country.region}
+              </div>
+              <h3 className="mt-2 text-lg font-semibold text-slate-950">
+                {country.country}
+              </h3>
+              <p className="mt-3 line-clamp-3 text-sm leading-6 text-stone-700">
+                {country.summary}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
+
+function Metric({ label, value }: { label: string; value: number }) {
+  return (
+    <Card className="p-5">
+      <div className="text-3xl font-semibold text-slate-950">{value}</div>
+      <div className="mt-1 text-sm text-stone-600">{label}</div>
+    </Card>
+  );
+}
+
+function Principle({
+  icon,
+  title,
+  text,
+}: {
+  icon: ReactNode;
+  title: string;
+  text: string;
+}) {
+  return (
+    <Card className="p-5">
+      <div className="flex size-9 items-center justify-center rounded-md bg-teal-700 text-white [&_svg]:size-4">
+        {icon}
+      </div>
+      <h2 className="mt-4 text-base font-semibold text-slate-950">{title}</h2>
+      <p className="mt-2 text-sm leading-6 text-stone-700">{text}</p>
+    </Card>
   );
 }

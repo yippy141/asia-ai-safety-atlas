@@ -1,0 +1,57 @@
+import { z } from "zod";
+
+export const entitySchema = z.object({
+  id: z.string().min(1),
+  name_en: z.string().min(1),
+  name_local: z.string().optional(),
+  acronym: z.string().optional(),
+  entity_type: z.string().min(1),
+  country: z.string().min(1),
+  city: z.string().optional(),
+  region: z.string().min(1),
+  website: z.string().url().optional(),
+  focus_areas: z.array(z.string()).default([]),
+  summary: z.string().min(1),
+  safety_relevance: z.string().optional(),
+  governance_relevance: z.string().optional(),
+  technical_relevance: z.string().optional(),
+  international_engagement_relevance: z.string().optional(),
+  sensitivity_level: z.enum(["low", "medium", "high"]),
+  confidence_level: z.enum(["low", "medium", "high"]),
+  last_verified: z.string(),
+  source_ids: z.array(z.string()).default([]),
+  tags: z.array(z.string()).optional(),
+  tier: z.union([z.literal(0), z.literal(1), z.literal(2), z.literal(3), z.literal(4)]).optional(),
+});
+
+export const sourceSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  title_original: z.string().optional(),
+  url: z.string().url(),
+  archive_url: z.string().url().optional(),
+  source_type: z.string().min(1),
+  publisher: z.string().min(1),
+  author: z.string().optional(),
+  publication_date: z.string().optional(),
+  access_date: z.string(),
+  language: z.string().min(1),
+  reliability_rating: z.enum(["A", "B", "C", "D", "E", "F"]),
+  summary_note: z.string().optional(),
+  translation_caveats: z.string().optional(),
+});
+
+export const relationshipSchema = z.object({
+  id: z.string().min(1),
+  source_entity_id: z.string().min(1),
+  target_entity_id: z.string().min(1),
+  relationship_type: z.string().min(1),
+  description: z.string().min(1),
+  start_date: z.string().optional(),
+  end_date: z.string().optional(),
+  confidence_level: z.enum(["low", "medium", "high"]),
+  sensitivity_level: z.enum(["low", "medium", "high"]).optional(),
+  source_ids: z.array(z.string()).default([]),
+  last_verified: z.string(),
+  public_note: z.string().optional(),
+});

@@ -1,0 +1,71 @@
+{
+  "entity_types": [
+    "government",
+    "standards_body",
+    "ai_safety_institute",
+    "evaluation_institution",
+    "university",
+    "research_group",
+    "think_tank",
+    "company",
+    "industry_alliance",
+    "dialogue_convenor",
+    "event",
+    "policy_program",
+    "other"
+  ],
+  "focus_areas": [
+    "frontier_ai_safety",
+    "technical_alignment",
+    "ai_governance",
+    "standards",
+    "evaluation",
+    "model_security",
+    "cybersecurity",
+    "biosecurity",
+    "content_safety",
+    "ethics",
+    "open_source_governance",
+    "international_dialogue",
+    "capacity_building"
+  ],
+  "relationship_types": [
+    "oversees",
+    "funds",
+    "hosts",
+    "member_of",
+    "convenes",
+    "participates_in",
+    "publishes",
+    "coauthors",
+    "signs_commitment",
+    "evaluates",
+    "standardizes",
+    "advises",
+    "partners_with",
+    "affiliated_with",
+    "regulates",
+    "invests_in",
+    "launches",
+    "certifies",
+    "provides_service_to"
+  ],
+  "source_reliability": {
+    "A": "official primary source",
+    "B": "paper/report/standards document",
+    "C": "reputable think tank or expert institution",
+    "D": "credible media",
+    "E": "social/community source or weak signal",
+    "F": "unverified lead"
+  },
+  "confidence_levels": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "sensitivity_levels": [
+    "low",
+    "medium",
+    "high"
+  ]
+}
