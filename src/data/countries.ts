@@ -2,27 +2,21 @@ import type { CountryProfile } from "@/types";
 
 export const countries: CountryProfile[] = [
   {
-    slug: "china",
-    country: "China",
-    region: "East Asia",
-    summary:
-      "PR 2A backfills China's standards and evaluation slice with official Chinese-language primary sources spanning CAC/MIIT rules, TC260 standards work, CAICT benchmarks, CESI standards infrastructure, SHLAB/OpenCompass, BAAI/FlagEval, and China-side dialogue networks.",
-    government_posture:
-      "CAC and MIIT are now backed by official co-issued rules and the 2024 national AI standardization guide. The profile still distinguishes CAC's online-information governance role from MIIT's standards, industry, and affiliated-institution role.",
-    standards_evaluation:
-      "TC260, TC28/SC42, CAICT, CESI, CSTC, MIIT/TC1, WG9, OpenCompass, FlagEval, and related benchmark or working-group nodes are represented with primary source IDs where available.",
-    research_ecosystem:
-      "SHLAB and BAAI are upgraded with official sources for evaluation infrastructure and safety/governance activities. Tsinghua-linked dialogue and policy nodes remain discovery-stage outside this standards/evaluation backfill.",
-    industry_ecosystem:
-      "AIIA is added as an industry-alliance platform because official CAICT sources link it to AI safety commitments, risk-management work, and AI safety benchmark activity.",
-    international_engagement:
-      "CnAISDA is updated from official Chinese institutional coverage as an international-dialogue network rather than a demonstrated domestic frontier-model testing regulator.",
-    open_questions: [
+    "slug": "china",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "PR 2A backfills China's standards and evaluation slice with official Chinese-language primary sources spanning CAC/MIIT rules, TC260 standards work, CAICT benchmarks, CESI standards infrastructure, SHLAB/OpenCompass, BAAI/FlagEval, and China-side dialogue networks.",
+    "government_posture": "CAC and MIIT are now backed by official co-issued rules and the 2024 national AI standardization guide. The profile still distinguishes CAC's online-information governance role from MIIT's standards, industry, and affiliated-institution role.",
+    "standards_evaluation": "TC260, TC28/SC42, CAICT, CESI, CSTC, MIIT/TC1, WG9, OpenCompass, FlagEval, and related benchmark or working-group nodes are represented with primary source IDs where available.",
+    "research_ecosystem": "SHLAB and BAAI are upgraded with official sources for evaluation infrastructure and safety/governance activities. Tsinghua-linked dialogue and policy nodes remain discovery-stage outside this standards/evaluation backfill.",
+    "industry_ecosystem": "AIIA is added as an industry-alliance platform because official CAICT sources link it to AI safety commitments, risk-management work, and AI safety benchmark activity.",
+    "international_engagement": "CnAISDA is updated from official Chinese institutional coverage as an international-dialogue network rather than a demonstrated domestic frontier-model testing regulator.",
+    "open_questions": [
       "How should CAC and the Central Cyberspace Affairs Commission Office be modeled when source text names one or the other?",
       "Which benchmark systems should become standalone profile pages as the atlas expands?",
-      "Which official sources, if any, establish domestic testing or audit mandates for dialogue-network entities?",
+      "Which official sources, if any, establish domestic testing or audit mandates for dialogue-network entities?"
     ],
-    source_ids: [
+    "source_ids": [
       "report-china-standards-evaluation-2026-06-05",
       "report-technical-research-groups-2026-06-05",
       "report-china-west-dialogue-2026-06-05",
@@ -37,99 +31,106 @@ export const countries: CountryProfile[] = [
       "cesi-qiusuo-benchmark-2024",
       "shlab-wg9-formation-2026",
       "baai-flageval-system-page",
-      "cnaisda-tsinghua-paris-side-event-2025",
+      "cnaisda-tsinghua-paris-side-event-2025"
     ],
-    last_verified: "2026-06-05",
+    "last_verified": "2026-06-05"
   },
   {
-    slug: "japan",
-    country: "Japan",
-    region: "East Asia",
-    summary:
-      "PR 1 includes Japan primarily through its AISI node so AISI comparisons and country pages can be tested.",
-    government_posture:
-      "Government posture fields are placeholders until Japan-specific primary sources are added.",
-    standards_evaluation:
-      "Japan AISI is the initial evaluation and safety-institute entry.",
-    research_ecosystem:
-      "Research ecosystem expansion is deferred to later PRs.",
-    industry_ecosystem:
-      "Industry ecosystem expansion is deferred to later PRs.",
-    international_engagement:
-      "Japan is included in the regional AISI comparison brief.",
-    open_questions: [
-      "Which official pages should anchor Japan AISI mandate and workstream claims?",
+    "slug": "japan",
+    "country": "Japan",
+    "region": "East Asia",
+    "summary": "Japan AISI is publicly structured as an IPA-hosted institution linked to Cabinet Office coordination rather than as a standalone statutory regulator. Its public profile is guidance- and evaluation-methods-heavy.",
+    "government_posture": "Cabinet Office coordination and IPA hosting are supported by primary sources; the public record reviewed does not establish Japan AISI as a standalone statutory regulator.",
+    "standards_evaluation": "Reviewed primary sources support a stack centered on evaluation methods, guidance, an OSS evaluation tool, and evaluation-environment building. Public evidence reviewed does not yet support classifying Japan AISI as an assurance accreditor or certification body.",
+    "research_ecosystem": "Japan AISI public materials emphasize evaluation methods, guidance, OSS tooling, and evaluation-environment work; broader research ecosystem expansion remains for later PRs.",
+    "industry_ecosystem": "Reviewed sources mention evaluation-environment task-force activity with companies, but the atlas does not model those company links until corresponding source-backed entities are added.",
+    "international_engagement": "Japan AISI publicly reports participation in the International Network of AI Safety Institutes and testing/evaluation co-chairing with Singapore.",
+    "open_questions": [
+      "How far Japan AISI will move into conformity assessment or formal assurance.",
+      "How durable the Cabinet Office coordination structure will be."
     ],
-    source_ids: ["report-japan-korea-singapore-aisi-2026-06-05"],
-    last_verified: "2026-06-05",
+    "source_ids": [
+      "report-japan-korea-singapore-aisi-2026-06-05",
+      "jpn-aisi-about-page",
+      "jpn-cabinet-office-aisi-liaison-setup",
+      "jpn-integrated-innovation-strategy-2024",
+      "jpn-aisi-activity-paper-2025-03",
+      "jpn-aisi-eval-tool-oss-post",
+      "jpn-aisi-eval-env-taskforce-report-post"
+    ],
+    "last_verified": "2026-06-05"
   },
   {
-    slug: "south-korea",
-    country: "South Korea",
-    region: "East Asia",
-    summary:
-      "PR 1 includes South Korea through a Korea AISI seed node for regional institute comparison.",
-    government_posture:
-      "Government posture fields are placeholders pending primary-source backfill.",
-    standards_evaluation:
-      "Korea AISI is the initial safety-institute and evaluation record.",
-    research_ecosystem:
-      "Research ecosystem expansion is deferred to later PRs.",
-    industry_ecosystem:
-      "Industry ecosystem expansion is deferred to later PRs.",
-    international_engagement:
-      "Korea is included in the regional AISI comparison brief.",
-    open_questions: [
-      "Which official Korean-language sources should anchor the Korea AISI profile?",
+    "slug": "south-korea",
+    "country": "South Korea",
+    "region": "East Asia",
+    "summary": "Korea AISI is publicly sharper on mandate than Japan’s reviewed model: MSIT launched it, ETRI is its clearest institutional home, and its own pages divide work into policy, evaluation, and research.",
+    "government_posture": "MSIT launched Korea AISI and ties it to post-Seoul-Summit implementation and international AI safety networking; ETRI is the clearest public institutional home.",
+    "standards_evaluation": "Korea AISI’s own pages emphasize risk definition, frameworks, evaluation infrastructure, and execution. Adjacent standards/certification functions appear in the TTA/MSIT trustworthiness-guide ecosystem, which should be analytically separated from Korea AISI unless future primary sources fuse them.",
+    "research_ecosystem": "Korea AISI and ETRI sources support a policy, evaluation, and research structure centered on risk definition, frameworks, infrastructure, and execution.",
+    "industry_ecosystem": "The Korea AI Safety Consortium is modeled as a support and coordination node, while full signed membership remains an open question.",
+    "international_engagement": "MSIT explicitly places Korea AISI inside the International Network of AI Safety Institutes. Consortium material shows subgroup discussion around international joint testing.",
+    "open_questions": [
+      "Exact division of labour between Korea AISI and TTA.",
+      "Full consortium roster in primary sources."
     ],
-    source_ids: ["report-japan-korea-singapore-aisi-2026-06-05"],
-    last_verified: "2026-06-05",
+    "source_ids": [
+      "report-japan-korea-singapore-aisi-2026-06-05",
+      "kor-aisi-vision-mission",
+      "kor-aisi-evaluation-page",
+      "kor-msit-launch-release",
+      "kor-etri-aisi-page",
+      "kor-msit-tta-nist-crosswalk-release",
+      "kor-aisi-consortium-meeting-post"
+    ],
+    "last_verified": "2026-06-05"
   },
   {
-    slug: "singapore",
-    country: "Singapore",
-    region: "Southeast Asia",
-    summary:
-      "PR 1 includes Singapore through AISI and AI Verify Foundation records for assurance, testing, and regional governance mapping.",
-    government_posture:
-      "Singapore is represented as a governance and assurance ecosystem node rather than a full policy profile at this stage.",
-    standards_evaluation:
-      "Singapore AISI and AI Verify Foundation are the initial evaluation and assurance records.",
-    research_ecosystem:
-      "Research ecosystem expansion is deferred to later PRs.",
-    industry_ecosystem:
-      "Industry ecosystem expansion is deferred to later PRs.",
-    international_engagement:
-      "Singapore appears in both the AISI and ASEAN governance seed briefs.",
-    open_questions: [
-      "Which AI Verify and Singapore AISI primary sources should be promoted to reliability A/B?",
+    "slug": "singapore",
+    "country": "Singapore",
+    "region": "Southeast Asia",
+    "summary": "Singapore AISI should not be treated as institutionally equivalent to Japan or Korea. Reviewed primary sources show a designation-plus-partnership model: DTC is the designated AISI and IMDA is the overall government agency.",
+    "government_posture": "Singapore sources show a designation-plus-partnership model: DTC is the designated Singapore AISI and IMDA is the overall government agency for baseline policy and international engagement.",
+    "standards_evaluation": "Singapore has the richest public assurance ecosystem in the three-country stack reviewed: AI Verify Testing Framework, Project Moonshot, IMDA’s Starter Kit, the Global AI Assurance Sandbox, and AI TAP. These should be separated from Singapore AISI proper in atlas modeling.",
+    "research_ecosystem": "DTC at NTU and Singapore AISI provide the public technical and research backbone for the Singapore AISI model.",
+    "industry_ecosystem": "AI Verify Foundation, AI Verify, Project Moonshot, the Global AI Assurance Sandbox, and AI TAP are modeled as adjacent assurance infrastructure rather than folded into Singapore AISI itself.",
+    "international_engagement": "Singapore AISI says it leads the testing track in the International Network of AI Safety Institutes and publishes joint-testing outputs with Korea and with Japan plus the UK.",
+    "open_questions": [
+      "Whether Singapore AISI will become a more standalone institution.",
+      "How to separate AISI functions from the wider IMDA/AIVF assurance ecosystem in future updates."
     ],
-    source_ids: [
+    "source_ids": [
       "report-japan-korea-singapore-aisi-2026-06-05",
       "report-asean-genai-governance-2026-06-05",
+      "sg-aisi-about-page",
+      "sg-aisi-work-page",
+      "sg-aisi-resources-page",
+      "sg-dtc-home-page",
+      "sg-ai-verify-foundation-about",
+      "sg-ai-verify-testing-framework-page",
+      "sg-project-moonshot-page",
+      "sg-global-ai-assurance-sandbox-page",
+      "sg-ai-tester-accreditation-page",
+      "sg-imda-llm-starter-kit"
     ],
-    last_verified: "2026-06-05",
+    "last_verified": "2026-06-05"
   },
   {
-    slug: "regional",
-    country: "Regional",
-    region: "Southeast Asia",
-    summary:
-      "The regional profile holds ASEAN-wide governance records until country-specific entries are expanded.",
-    government_posture:
-      "ASEAN-level coordination is represented through the Working Group on AI Governance seed record.",
-    standards_evaluation:
-      "Regional standards and assurance work is represented conservatively pending primary-source backfill.",
-    research_ecosystem:
-      "Research ecosystem expansion is deferred to later PRs.",
-    industry_ecosystem:
-      "Industry ecosystem expansion is deferred to later PRs.",
-    international_engagement:
-      "Regional governance and capacity-building channels are the focus for PR 1.",
-    open_questions: [
-      "How should ASEAN-wide entities be linked to individual country pages without implying national ownership?",
+    "slug": "regional",
+    "country": "Regional",
+    "region": "Southeast Asia",
+    "summary": "The regional profile holds ASEAN-wide governance records until country-specific entries are expanded.",
+    "government_posture": "ASEAN-level coordination is represented through the Working Group on AI Governance seed record.",
+    "standards_evaluation": "Regional standards and assurance work is represented conservatively pending primary-source backfill.",
+    "research_ecosystem": "Research ecosystem expansion is deferred to later PRs.",
+    "industry_ecosystem": "Industry ecosystem expansion is deferred to later PRs.",
+    "international_engagement": "Regional governance and capacity-building channels are the focus for PR 1.",
+    "open_questions": [
+      "How should ASEAN-wide entities be linked to individual country pages without implying national ownership?"
     ],
-    source_ids: ["report-asean-genai-governance-2026-06-05"],
-    last_verified: "2026-06-05",
-  },
+    "source_ids": [
+      "report-asean-genai-governance-2026-06-05"
+    ],
+    "last_verified": "2026-06-05"
+  }
 ];

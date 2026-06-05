@@ -308,5 +308,265 @@ export const relationships: Relationship[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "public_safe_to_show": true
+  },
+  {
+    "id": "rel-ipa-hosts-japan-aisi",
+    "source_entity_id": "ipa-japan",
+    "target_entity_id": "jp-aisi",
+    "relationship_type": "hosts",
+    "description": "Public sources place Japan AISI inside IPA and state that the AISI secretariat was set up in IPA.",
+    "evidence_note_ids": [
+      "jpn-e2",
+      "jpn-e6"
+    ],
+    "source_ids": [
+      "jpn-aisi-about-page",
+      "jpn-integrated-innovation-strategy-2024"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-japan-liaison-coordinates-japan-aisi",
+    "source_entity_id": "cabinet-office-aisi-liaison-japan",
+    "target_entity_id": "jp-aisi",
+    "relationship_type": "affiliated_with",
+    "description": "The liaison was created to coordinate government policy consideration around AI safety in connection with AISI.",
+    "evidence_note_ids": [
+      "jpn-e3",
+      "jpn-e4"
+    ],
+    "source_ids": [
+      "jpn-cabinet-office-aisi-liaison-setup"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-msit-establishes-korea-aisi",
+    "source_entity_id": "msit-korea",
+    "target_entity_id": "kr-aisi",
+    "relationship_type": "establishes",
+    "description": "MSIT hosted the launch ceremony and publicly announced the institute.",
+    "evidence_note_ids": [
+      "kor-e3"
+    ],
+    "source_ids": [
+      "kor-msit-launch-release"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-korea-aisi-affiliated-with-etri",
+    "source_entity_id": "kr-aisi",
+    "target_entity_id": "etri-korea",
+    "relationship_type": "affiliated_with",
+    "description": "ETRI’s official page presents Korea AISI within ETRI’s institutional structure; affiliated_with is the closest conservative taxonomy label.",
+    "evidence_note_ids": [
+      "kor-e7"
+    ],
+    "source_ids": [
+      "kor-etri-aisi-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-korea-aisi-establishes-consortium",
+    "source_entity_id": "kr-aisi",
+    "target_entity_id": "korea-ai-safety-consortium",
+    "relationship_type": "establishes",
+    "description": "MSIT says a post-launch MOU formed the Korea AI Safety Consortium to work with the institute.",
+    "evidence_note_ids": [
+      "kor-e6"
+    ],
+    "source_ids": [
+      "kor-msit-launch-release"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-korea-consortium-supports-korea-aisi",
+    "source_entity_id": "korea-ai-safety-consortium",
+    "target_entity_id": "kr-aisi",
+    "relationship_type": "supplements",
+    "description": "Korea AISI’s own consortium post describes subgroup work and joint-testing discussion that support the institute’s agenda.",
+    "evidence_note_ids": [
+      "kor-e10"
+    ],
+    "source_ids": [
+      "kor-aisi-consortium-meeting-post"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-dtc-designated-as-singapore-aisi",
+    "source_entity_id": "digital-trust-centre-singapore",
+    "target_entity_id": "sg-aisi",
+    "relationship_type": "affiliated_with",
+    "description": "Official Singapore AISI sources state that DTC Singapore is the designated Singapore AISI.",
+    "evidence_note_ids": [
+      "sg-e2"
+    ],
+    "source_ids": [
+      "sg-aisi-about-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-imda-coordinates-singapore-aisi",
+    "source_entity_id": "imda-singapore",
+    "target_entity_id": "sg-aisi",
+    "relationship_type": "oversees",
+    "description": "Singapore AISI’s official page says IMDA is the overall government agency responsible for baseline policy and international engagement.",
+    "evidence_note_ids": [
+      "sg-e3"
+    ],
+    "source_ids": [
+      "sg-aisi-about-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-ai-verify-foundation-affiliated-with-imda",
+    "source_entity_id": "sg-ai-verify-foundation",
+    "target_entity_id": "imda-singapore",
+    "relationship_type": "affiliated_with",
+    "description": "AIVF states that it is a wholly owned subsidiary of IMDA; affiliated_with is the closest conservative taxonomy label.",
+    "evidence_note_ids": [
+      "sg-e8"
+    ],
+    "source_ids": [
+      "sg-ai-verify-foundation-about"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-ai-verify-foundation-publishes-testing-framework",
+    "source_entity_id": "sg-ai-verify-foundation",
+    "target_entity_id": "ai-verify-testing-framework",
+    "relationship_type": "publishes",
+    "description": "The official AIVF site publishes and maintains the AI Verify Testing Framework.",
+    "evidence_note_ids": [
+      "sg-e9"
+    ],
+    "source_ids": [
+      "sg-ai-verify-testing-framework-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-ai-verify-foundation-publishes-project-moonshot",
+    "source_entity_id": "sg-ai-verify-foundation",
+    "target_entity_id": "project-moonshot",
+    "relationship_type": "publishes",
+    "description": "The official AIVF site publishes and maintains Project Moonshot as part of its tooling stack.",
+    "evidence_note_ids": [
+      "sg-e10"
+    ],
+    "source_ids": [
+      "sg-project-moonshot-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-ai-verify-foundation-establishes-ai-tap",
+    "source_entity_id": "sg-ai-verify-foundation",
+    "target_entity_id": "ai-tester-accreditation-programme",
+    "relationship_type": "establishes",
+    "description": "The AI Tester Accreditation Programme is presented on the official AIVF site as its accreditation programme for testing firms.",
+    "evidence_note_ids": [
+      "sg-e12"
+    ],
+    "source_ids": [
+      "sg-ai-tester-accreditation-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-singapore-aisi-conducts-testing-with-korea-aisi",
+    "source_entity_id": "sg-aisi",
+    "target_entity_id": "kr-aisi",
+    "relationship_type": "conducts_testing_with",
+    "description": "Singapore AISI’s resources page states that Korea and Singapore AISIs jointly tested AI agents for data leakage risks.",
+    "evidence_note_ids": [
+      "sg-e5"
+    ],
+    "source_ids": [
+      "sg-aisi-resources-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-singapore-aisi-conducts-testing-with-japan-aisi",
+    "source_entity_id": "sg-aisi",
+    "target_entity_id": "jp-aisi",
+    "relationship_type": "conducts_testing_with",
+    "description": "Singapore AISI’s resources page says Singapore and Japan, with the UK, led a multilingual evaluation exercise; Japan’s own 2025 materials also place Singapore and Japan as track co-chairs.",
+    "evidence_note_ids": [
+      "sg-e6",
+      "jpn-e7"
+    ],
+    "source_ids": [
+      "sg-aisi-resources-page",
+      "jpn-aisi-activity-paper-2025-03"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-imda-cohosts-global-ai-assurance-sandbox",
+    "source_entity_id": "imda-singapore",
+    "target_entity_id": "global-ai-assurance-sandbox",
+    "relationship_type": "co_hosts",
+    "description": "The sandbox page defines the Global AI Assurance Sandbox as an IMDA–AI Verify Foundation initiative. Co-hosts is the closest existing taxonomy label to co-runs.",
+    "evidence_note_ids": [
+      "sg-e11"
+    ],
+    "source_ids": [
+      "sg-global-ai-assurance-sandbox-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
   }
 ];

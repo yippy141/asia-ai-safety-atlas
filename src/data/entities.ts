@@ -729,86 +729,143 @@ export const entities: Entity[] = [
   {
     "id": "jp-aisi",
     "name_en": "Japan AI Safety Institute",
-    "acronym": "Japan AISI",
+    "acronym": "AISI",
     "entity_type": "ai_safety_institute",
     "country": "Japan",
     "region": "East Asia",
-    "summary": "National AI safety institute node for Japan, included to test AISI filtering and country routing in the atlas shell.",
+    "summary": "IPA-hosted Japanese AI safety body launched in February 2024. Publicly focused on evaluation methods, guidance, tools, and international coordination, not formal regulation.",
     "focus_areas": [
       "frontier_ai_safety",
       "evaluation",
+      "testing_infrastructure",
       "ai_assurance",
-      "standards"
+      "international_dialogue"
     ],
     "tags": [
       "AISI",
       "Japan",
-      "large-model evaluation"
+      "large-model evaluation",
+      "japan",
+      "aisi",
+      "evaluation",
+      "testing",
+      "evaluation methods",
+      "guidance",
+      "testing tools",
+      "evaluation environment",
+      "international coordination"
     ],
     "source_ids": [
-      "report-japan-korea-singapore-aisi-2026-06-05"
+      "report-japan-korea-singapore-aisi-2026-06-05",
+      "jpn-aisi-about-page",
+      "jpn-integrated-innovation-strategy-2024",
+      "jpn-aisi-activity-paper-2025-03",
+      "jpn-aisi-eval-tool-oss-post",
+      "jpn-aisi-eval-env-taskforce-report-post"
     ],
-    "confidence_level": "medium",
+    "confidence_level": "high",
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "tier": 1,
-    "needs_primary_source": true
+    "needs_primary_source": false,
+    "name_local": "AIセーフティ・インスティテュート",
+    "open_questions": [
+      "Whether Japan AISI will move into formal assurance or conformity assessment."
+    ]
   },
   {
     "id": "kr-aisi",
     "name_en": "Korea AI Safety Institute",
-    "acronym": "Korea AISI",
+    "acronym": "AISI",
     "entity_type": "ai_safety_institute",
     "country": "South Korea",
     "region": "East Asia",
-    "summary": "National AI safety institute node for Korea, included for AISI comparison and regional evaluation ecosystem mapping.",
+    "summary": "MSIT-launched Korea AISI with a clearer policy-evaluation-research structure than Japan’s public model. Publicly framed as non-regulatory and nationally representative in AI safety.",
     "focus_areas": [
       "frontier_ai_safety",
       "evaluation",
-      "ai_assurance",
-      "standards"
+      "testing_infrastructure",
+      "policy_regulation",
+      "technical_safety_research",
+      "international_dialogue"
     ],
     "tags": [
       "AISI",
       "Korea",
-      "large-model evaluation"
+      "large-model evaluation",
+      "south-korea",
+      "aisi",
+      "policy",
+      "evaluation",
+      "research",
+      "risk definition",
+      "evaluation frameworks",
+      "evaluation infrastructure",
+      "international cooperation"
     ],
     "source_ids": [
-      "report-japan-korea-singapore-aisi-2026-06-05"
+      "report-japan-korea-singapore-aisi-2026-06-05",
+      "kor-aisi-vision-mission",
+      "kor-aisi-evaluation-page",
+      "kor-msit-launch-release",
+      "kor-etri-aisi-page",
+      "kor-aisi-consortium-meeting-post"
     ],
-    "confidence_level": "medium",
+    "confidence_level": "high",
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "tier": 1,
-    "needs_primary_source": true
+    "needs_primary_source": false,
+    "name_local": "인공지능안전연구소",
+    "open_questions": [
+      "How Korea AISI will divide future work between evaluation, policy support, and standards-adjacent functions."
+    ]
   },
   {
     "id": "sg-aisi",
     "name_en": "Singapore AI Safety Institute",
-    "acronym": "Singapore AISI",
+    "acronym": "AISI",
     "entity_type": "ai_safety_institute",
     "country": "Singapore",
     "region": "Southeast Asia",
-    "summary": "Singapore AI safety institute node included for regional evaluation, assurance, and governance comparison.",
+    "summary": "Publicly structured as a designation-plus-partnership model rather than a standalone statutory institute: DTC is the designated AISI and IMDA is the overall government agency.",
     "focus_areas": [
       "frontier_ai_safety",
       "evaluation",
+      "testing_infrastructure",
       "ai_assurance",
-      "standards"
+      "international_dialogue",
+      "policy_regulation"
     ],
     "tags": [
       "AISI",
       "Singapore",
-      "large-model evaluation"
+      "large-model evaluation",
+      "singapore",
+      "aisi",
+      "testing",
+      "evaluation",
+      "policy",
+      "tools",
+      "research",
+      "international testing leadership",
+      "designation-plus-partnership model"
     ],
     "source_ids": [
-      "report-japan-korea-singapore-aisi-2026-06-05"
+      "report-japan-korea-singapore-aisi-2026-06-05",
+      "sg-aisi-about-page",
+      "sg-aisi-work-page",
+      "sg-aisi-resources-page"
     ],
-    "confidence_level": "medium",
+    "confidence_level": "high",
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "tier": 1,
-    "needs_primary_source": true
+    "needs_primary_source": false,
+    "name_local": "Singapore AI Safety Institute",
+    "open_questions": [
+      "Whether Singapore AISI will become a more standalone institution."
+    ]
   },
   {
     "id": "sg-ai-verify-foundation",
@@ -816,7 +873,7 @@ export const entities: Entity[] = [
     "entity_type": "evaluation_institution",
     "country": "Singapore",
     "region": "Southeast Asia",
-    "summary": "Singapore-based AI testing and assurance foundation included as an applied evaluation and AI assurance node.",
+    "summary": "IMDA-owned Singapore assurance institution that anchors AI Verify, Moonshot, sandboxing, and tester accreditation.",
     "focus_areas": [
       "ai_assurance",
       "evaluation",
@@ -826,17 +883,35 @@ export const entities: Entity[] = [
     "tags": [
       "AI Verify",
       "Singapore",
-      "model card"
+      "model card",
+      "singapore",
+      "aivf",
+      "assurance",
+      "tooling",
+      "frameworks",
+      "sandboxing",
+      "accreditation",
+      "Project Moonshot"
     ],
     "source_ids": [
       "report-japan-korea-singapore-aisi-2026-06-05",
-      "report-asean-genai-governance-2026-06-05"
+      "report-asean-genai-governance-2026-06-05",
+      "sg-ai-verify-foundation-about",
+      "sg-ai-verify-testing-framework-page",
+      "sg-project-moonshot-page",
+      "sg-global-ai-assurance-sandbox-page",
+      "sg-ai-tester-accreditation-page"
     ],
-    "confidence_level": "medium",
+    "confidence_level": "high",
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "tier": 1,
-    "needs_primary_source": true
+    "needs_primary_source": false,
+    "name_local": "AI Verify Foundation",
+    "acronym": "AIVF",
+    "open_questions": [
+      "How AIVF and Singapore AISI will divide future public-facing evaluation roles."
+    ]
   },
   {
     "id": "asean-working-group-ai-governance",
@@ -1001,6 +1076,373 @@ export const entities: Entity[] = [
     "sensitivity_level": "medium",
     "last_verified": "2026-06-05",
     "tier": 3,
+    "needs_primary_source": true
+  },
+  {
+    "id": "ipa-japan",
+    "entity_type": "government",
+    "country": "Japan",
+    "region": "East Asia",
+    "tags": [
+      "japan",
+      "ipa",
+      "host-agency",
+      "hosting",
+      "administrative support"
+    ],
+    "source_ids": [
+      "jpn-aisi-about-page",
+      "jpn-integrated-innovation-strategy-2024"
+    ],
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "name_en": "Information-technology Promotion Agency, Japan",
+    "name_local": "独立行政法人 情報処理推進機構",
+    "acronym": "IPA",
+    "summary": "Host agency in which Japan AISI is placed and where the AISI secretariat was set up.",
+    "focus_areas": [
+      "ai_governance",
+      "capacity_building",
+      "testing_infrastructure"
+    ],
+    "confidence_level": "high",
+    "needs_primary_source": false,
+    "open_questions": [
+      "Public sources do not fully specify AISI’s operational autonomy inside IPA."
+    ]
+  },
+  {
+    "id": "cabinet-office-aisi-liaison-japan",
+    "entity_type": "policy_program",
+    "country": "Japan",
+    "region": "East Asia",
+    "tags": [
+      "japan",
+      "cabinet-office",
+      "coordination",
+      "inter-ministerial linkage",
+      "inter-ministerial coordination",
+      "liaison meeting"
+    ],
+    "source_ids": [
+      "jpn-cabinet-office-aisi-liaison-setup"
+    ],
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "name_en": "AISI Related Ministries and Agencies Liaison Meeting",
+    "name_local": "AIセーフティ・インスティテュート関係府省庁等連絡会議",
+    "summary": "Cabinet Office-linked inter-ministerial coordination mechanism around Japan AISI, with ministries, research institutes, IPA, and AISI represented.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "international_dialogue",
+      "capacity_building"
+    ],
+    "confidence_level": "high",
+    "needs_primary_source": true,
+    "open_questions": [
+      "Its precise decision authority is not clear in reviewed public sources."
+    ]
+  },
+  {
+    "id": "msit-korea",
+    "entity_type": "government",
+    "country": "South Korea",
+    "region": "East Asia",
+    "tags": [
+      "south-korea",
+      "msit",
+      "ministry",
+      "institution creation",
+      "AI safety policy",
+      "international engagement"
+    ],
+    "source_ids": [
+      "kor-msit-launch-release",
+      "kor-msit-tta-nist-crosswalk-release"
+    ],
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "name_en": "Ministry of Science and ICT",
+    "name_local": "과학기술정보통신부",
+    "acronym": "MSIT",
+    "summary": "The ministry that launched Korea AISI and publicly ties it to post-Seoul-Summit implementation and international AI safety networking.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "international_dialogue"
+    ],
+    "confidence_level": "high",
+    "needs_primary_source": false,
+    "open_questions": [
+      "How MSIT oversight and resourcing of Korea AISI will evolve over time."
+    ]
+  },
+  {
+    "id": "etri-korea",
+    "entity_type": "research_group",
+    "country": "South Korea",
+    "region": "East Asia",
+    "tags": [
+      "south-korea",
+      "etri",
+      "research-institute",
+      "hosting",
+      "research support",
+      "institutional home"
+    ],
+    "source_ids": [
+      "kor-etri-aisi-page"
+    ],
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "name_en": "Electronics and Telecommunications Research Institute",
+    "name_local": "한국전자통신연구원",
+    "acronym": "ETRI",
+    "summary": "The clearest public institutional home for Korea AISI in reviewed sources.",
+    "focus_areas": [
+      "technical_safety_research",
+      "evaluation",
+      "testing_infrastructure"
+    ],
+    "confidence_level": "high",
+    "needs_primary_source": true,
+    "open_questions": [
+      "Whether Korea AISI will remain embedded in ETRI long term."
+    ]
+  },
+  {
+    "id": "korea-ai-safety-consortium",
+    "entity_type": "industry_alliance",
+    "country": "South Korea",
+    "region": "East Asia",
+    "tags": [
+      "south-korea",
+      "consortium",
+      "coordination",
+      "subgroups",
+      "joint testing discussion"
+    ],
+    "source_ids": [
+      "kor-msit-launch-release",
+      "kor-aisi-consortium-meeting-post"
+    ],
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "name_en": "Korea AI Safety Consortium",
+    "name_local": "AI안전컨소시엄",
+    "summary": "Consortium formed at Korea AISI’s launch to support framework work, subgroup collaboration, and joint-testing discussions.",
+    "focus_areas": [
+      "capacity_building",
+      "evaluation",
+      "international_dialogue",
+      "ai_governance"
+    ],
+    "confidence_level": "high",
+    "needs_primary_source": false,
+    "open_questions": [
+      "The full signed member list was not confirmed in reviewed primary sources."
+    ]
+  },
+  {
+    "id": "digital-trust-centre-singapore",
+    "entity_type": "research_group",
+    "country": "Singapore",
+    "region": "Southeast Asia",
+    "tags": [
+      "singapore",
+      "dtc",
+      "ntu",
+      "research-centre",
+      "technical work",
+      "research ecosystem coordination",
+      "talent",
+      "trust-tech R&D",
+      "NTU",
+      "technical backbone"
+    ],
+    "source_ids": [
+      "sg-aisi-about-page",
+      "sg-dtc-home-page"
+    ],
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "name_en": "Digital Trust Centre Singapore",
+    "name_local": "Digital Trust Centre",
+    "acronym": "DTC",
+    "summary": "NTU-based centre designated as Singapore AISI and serving as the technical backbone of the Singapore model.",
+    "focus_areas": [
+      "technical_safety_research",
+      "ai_assurance",
+      "testing_infrastructure",
+      "capacity_building"
+    ],
+    "confidence_level": "high",
+    "needs_primary_source": false,
+    "open_questions": [
+      "How DTC’s wider digital-trust mandate will balance with narrower AISI-style functions."
+    ]
+  },
+  {
+    "id": "imda-singapore",
+    "entity_type": "government",
+    "country": "Singapore",
+    "region": "Southeast Asia",
+    "tags": [
+      "singapore",
+      "imda",
+      "government-agency",
+      "assurance",
+      "policy",
+      "international engagement",
+      "assurance ecosystem building",
+      "baseline policy"
+    ],
+    "source_ids": [
+      "sg-aisi-about-page",
+      "sg-imda-llm-starter-kit"
+    ],
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "name_en": "Infocomm Media Development Authority",
+    "name_local": "Infocomm Media Development Authority",
+    "acronym": "IMDA",
+    "summary": "Overall government agency for Singapore AISI, responsible for baseline policy and international engagement, and central to Singapore’s wider AI assurance stack.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "ai_assurance",
+      "international_dialogue"
+    ],
+    "confidence_level": "high",
+    "needs_primary_source": false,
+    "open_questions": [
+      "Public sources reviewed do not fully separate IMDA’s AISI role from its broader trusted-AI policy role."
+    ]
+  },
+  {
+    "id": "ai-verify-testing-framework",
+    "name_en": "AI Verify Testing Framework",
+    "name_local": "AI Verify Testing Framework",
+    "entity_type": "policy_program",
+    "country": "Singapore",
+    "region": "Asia-Pacific",
+    "summary": "Core assurance framework in Singapore’s public stack; should be separated from Singapore AISI itself.",
+    "focus_areas": [
+      "ai_assurance",
+      "evaluation",
+      "standards"
+    ],
+    "tags": [
+      "AI Verify",
+      "testing framework",
+      "AI assurance",
+      "framework"
+    ],
+    "source_ids": [
+      "sg-ai-verify-testing-framework-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true
+  },
+  {
+    "id": "project-moonshot",
+    "name_en": "Project Moonshot",
+    "name_local": "Project Moonshot",
+    "entity_type": "evaluation_platform",
+    "country": "Singapore",
+    "region": "Asia-Pacific",
+    "summary": "Officially presented as an open-source LLM evaluation toolkit connected to IMDA’s Starter Kit and AIVF.",
+    "focus_areas": [
+      "evaluation",
+      "testing_infrastructure",
+      "red_teaming",
+      "ai_assurance"
+    ],
+    "tags": [
+      "Project Moonshot",
+      "open-source toolkit",
+      "LLM evaluation",
+      "red-teaming",
+      "tool"
+    ],
+    "source_ids": [
+      "sg-project-moonshot-page",
+      "sg-imda-llm-starter-kit"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false
+  },
+  {
+    "id": "global-ai-assurance-sandbox",
+    "name_en": "Global AI Assurance Sandbox",
+    "name_local": "Global AI Assurance Sandbox",
+    "entity_type": "policy_program",
+    "country": "Singapore",
+    "region": "Global",
+    "summary": "Important assurance programme that should not be conflated with Singapore AISI’s core institutional structure.",
+    "focus_areas": [
+      "ai_assurance",
+      "capacity_building",
+      "evaluation"
+    ],
+    "tags": [
+      "AI assurance",
+      "sandbox",
+      "IMDA",
+      "AIVF",
+      "programme"
+    ],
+    "source_ids": [
+      "sg-global-ai-assurance-sandbox-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true
+  },
+  {
+    "id": "ai-tester-accreditation-programme",
+    "name_en": "AI Tester Accreditation Programme",
+    "name_local": "AI Tester Accreditation Programme",
+    "acronym": "AI TAP",
+    "entity_type": "policy_program",
+    "country": "Singapore",
+    "region": "Asia-Pacific",
+    "summary": "Distinct third-party testing accreditation programme in Singapore’s assurance ecosystem.",
+    "focus_areas": [
+      "ai_assurance",
+      "capacity_building",
+      "evaluation",
+      "testing_infrastructure"
+    ],
+    "tags": [
+      "AI TAP",
+      "tester accreditation",
+      "third-party testing",
+      "programme"
+    ],
+    "source_ids": [
+      "sg-ai-tester-accreditation-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
     "needs_primary_source": true
   }
 ];

@@ -12,11 +12,14 @@ import {
 import { entities, relationships } from "@/data";
 import { formatLabel } from "@/lib/taxonomy";
 
+const defaultGraphEdgeLimit = 24;
+
 export default function GraphPage() {
-  const { nodes, edges } = useMemo(() => {
-    const visibleRelationships = relationships.filter(
+  const { nodes, edges, publicRelationshipCount } = useMemo(() => {
+    const publicRelationships = relationships.filter(
       (relationship) => relationship.public_safe_to_show
     );
+    const visibleRelationships = publicRelationships.slice(0, defaultGraphEdgeLimit);
     const connectedIds = new Set(
       visibleRelationships.flatMap((relationship) => [
         relationship.source_entity_id,
@@ -51,6 +54,7 @@ export default function GraphPage() {
         label: formatLabel(relationship.relationship_type),
         animated: relationship.confidence_level === "low",
       })),
+      publicRelationshipCount: publicRelationships.length,
     };
   }, []);
 
@@ -67,6 +71,10 @@ export default function GraphPage() {
           This graph only renders relationship records marked safe for public
           display. Low-confidence edges are animated so they remain visibly
           provisional.
+        </p>
+        <p className="mt-2 text-sm leading-6 text-stone-600">
+          Showing {edges.length} of {publicRelationshipCount} public-safe
+          relationships by default.
         </p>
       </div>
       <section className="h-[640px] overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm">
