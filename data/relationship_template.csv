@@ -1,0 +1,3 @@
+id,source_entity_id,target_entity_id,relationship_type,description,start_date,end_date,confidence_level,source_ids,last_verified,notes
+rel-cnaisd-paris-launch,cn-cnaisd,paris-ai-action-summit-2025,launches,CnAISDA was launched at the Paris AI Action Summit by prominent Chinese institutions.,2025-02,,medium,concordia-2025,2026-05-26,Verify with CnAISDA/Tsinghua primary sources.
+rel-caict-aiia,cn-caict,cn-aiia,affiliated_with,CAICT works closely with AIIA on industry AI safety/evaluation efforts.,,,medium,concordia-2025,2026-05-26,Add AIIA entity before publishing.

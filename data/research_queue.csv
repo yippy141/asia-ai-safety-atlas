@@ -1,0 +1,9 @@
+priority,cluster,entity_or_question,language_priority,recommended_research_mode,estimated_time,output_needed,notes
+P0,China standards,TC260 and MIIT/TC1 frontier AI safety standards,Chinese first,batch landscape + Tier 1 profiles,3-5 hours,standards rows; relationship edges; source records,High value because standards may operationalize governance.
+P0,China evaluation,"CAICT, CESI, CSTC, SHLAB, BAAI, OpenCompass, FlagEval",Chinese first,batch landscape,3-5 hours,entity rows; evaluation platform comparison,Map evaluation ecosystem before partnership claims.
+P0,China frontier companies,"DeepSeek, Alibaba/Qwen, Zhipu, MiniMax, Baidu, ByteDance, Tencent, Moonshot",Chinese + English,cluster survey + selected deep dives,5-8 hours,company safety disclosure matrix,Use model cards and ESG reports.
+P0,China international dialogue,"CnAISDA, IDAIS, CISS-Brookings, AIxBio, NCUSCR",English + Chinese,batch landscape,4-6 hours,dialogue rows; event timeline; relationship edges,Sensitive; distinguish public and private.
+P1,Japan,"Japan AISI, IPA, METI, MIC, Digital Agency",Japanese first,country landscape,3-5 hours,country profile + entity rows,Good comparison case.
+P1,Korea,"Korea AISI, MSIT, ETRI, consortium, Naver/Samsung",Korean first,country landscape,3-5 hours,country profile + entity rows,Good comparison case.
+P1,Singapore,"Singapore AISI, IMDA, AI Verify, AI Singapore",English,country landscape,3-5 hours,country profile + entity rows,Good regional hub.
+P2,ASEAN,ASEAN GenAI guide + national implementation,English + local languages,regional landscape,5-8 hours,regional page + country leads,Do not overclaim implementation.

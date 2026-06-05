@@ -1,0 +1,77 @@
+import type { Source } from "@/types";
+
+const researchBriefNote =
+  "Used for structured discovery and synthesis. Public claims should be backfilled with canonical primary sources where possible.";
+
+export const sources: Source[] = [
+  {
+    id: "report-market-sweep-2026-06-05",
+    title: "Asia AI Safety Atlas Market Sweep",
+    publisher: "Asia AI Safety Atlas research brief",
+    access_date: "2026-06-05",
+    language: "English",
+    source_type: "research_brief",
+    reliability_rating: "C",
+    summary_note: researchBriefNote,
+  },
+  {
+    id: "report-china-standards-evaluation-2026-06-05",
+    title: "China Standards and Evaluation Research Brief",
+    publisher: "Asia AI Safety Atlas research brief",
+    access_date: "2026-06-05",
+    language: "English",
+    source_type: "research_brief",
+    reliability_rating: "C",
+    summary_note: researchBriefNote,
+  },
+  {
+    id: "report-japan-korea-singapore-aisi-2026-06-05",
+    title: "Japan, Korea, and Singapore AISI Research Brief",
+    publisher: "Asia AI Safety Atlas research brief",
+    access_date: "2026-06-05",
+    language: "English",
+    source_type: "research_brief",
+    reliability_rating: "C",
+    summary_note: researchBriefNote,
+  },
+  {
+    id: "report-technical-research-groups-2026-06-05",
+    title: "Technical Research Groups Research Brief",
+    publisher: "Asia AI Safety Atlas research brief",
+    access_date: "2026-06-05",
+    language: "English",
+    source_type: "research_brief",
+    reliability_rating: "C",
+    summary_note: researchBriefNote,
+  },
+  {
+    id: "report-chinese-frontier-developers-2026-06-05",
+    title: "Chinese Frontier Developers Research Brief",
+    publisher: "Asia AI Safety Atlas research brief",
+    access_date: "2026-06-05",
+    language: "English",
+    source_type: "research_brief",
+    reliability_rating: "C",
+    summary_note: researchBriefNote,
+  },
+  {
+    id: "report-china-west-dialogue-2026-06-05",
+    title: "China-West Dialogue Channels Research Brief",
+    publisher: "Asia AI Safety Atlas research brief",
+    access_date: "2026-06-05",
+    language: "English",
+    source_type: "research_brief",
+    reliability_rating: "C",
+    summary_note: researchBriefNote,
+  },
+  {
+    id: "report-asean-genai-governance-2026-06-05",
+    title: "ASEAN Generative AI Governance Research Brief",
+    publisher: "Asia AI Safety Atlas research brief",
+    access_date: "2026-06-05",
+    language: "English",
+    source_type: "research_brief",
+    reliability_rating: "C",
+    summary_note: researchBriefNote,
+  },
+];

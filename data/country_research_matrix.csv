@@ -1,0 +1,6 @@
+country,priority,primary_languages,core_terms,official_sources_to_check,first_output
+China,P0,Chinese; English,人工智能安全; 大模型安全; 人工智能治理; 人工智能安全标准,gov.cn; cac.gov.cn; miit.gov.cn; most.gov.cn; tc260.org.cn; caict.ac.cn; shlab.org.cn; baai.ac.cn,China landscape + standards/eval/company modules
+Japan,P1,Japanese; English,AI安全性; AIガバナンス; AIセーフティ・インスティテュート,meti.go.jp; soumu.go.jp; digital.go.jp; ipa.go.jp,Country profile
+Korea,P1,Korean; English,인공지능 안전; AI 안전연구소; AI 신뢰성,msit.go.kr; etri.re.kr; nia.or.kr; iitp.kr,Country profile
+Singapore,P1,English,AI safety; AI assurance; AI Verify; red-teaming,sgaisi.sg; imda.gov.sg; mddi.gov.sg; aiverifyfoundation.sg,Country profile
+ASEAN,P2,English + national languages,AI governance; generative AI; ethics; safety,asean.org; national ministries,Regional profile + national leads
