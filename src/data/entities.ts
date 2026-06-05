@@ -1,363 +1,1006 @@
 import type { Entity } from "@/types";
 
-const chinaStandardsBrief = "report-china-standards-evaluation-2026-06-05";
-const aisiBrief = "report-japan-korea-singapore-aisi-2026-06-05";
-const technicalGroupsBrief = "report-technical-research-groups-2026-06-05";
-const dialogueBrief = "report-china-west-dialogue-2026-06-05";
-const aseanBrief = "report-asean-genai-governance-2026-06-05";
-
 export const entities: Entity[] = [
   {
-    id: "cn-cac",
-    name_en: "Cyberspace Administration of China",
-    name_local: "国家互联网信息办公室",
-    acronym: "CAC",
-    entity_type: "government",
-    country: "China",
-    city: "Beijing",
-    region: "East Asia",
-    summary:
-      "Central internet regulator included as a China AI governance anchor for PR 1. Claims are intentionally high level pending primary-source backfill.",
-    focus_areas: ["ai_governance", "policy_regulation", "content_safety"],
-    tags: ["public filing", "China", "AI governance"],
-    source_ids: [chinaStandardsBrief],
-    confidence_level: "medium",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 1,
-    needs_primary_source: true,
-    open_questions: [
-      "Which current primary sources best summarize CAC's role in generative AI governance?",
+    "id": "cn-cac",
+    "name_en": "Cyberspace Administration of China",
+    "name_local": "国家互联网信息办公室",
+    "acronym": "CAC",
+    "entity_type": "government",
+    "country": "China",
+    "city": "Beijing",
+    "region": "East Asia",
+    "summary": "Core Chinese internet-governance regulator for AI-related online information services. Primary-source materials show CAC co-issuing the 2023 Interim Measures for Generative AI Services, the 2025 AI-generated content labeling measures, the 2022 deep-synthesis rules, and the 2024 national AI standardization guide.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "content_safety",
+      "standards"
     ],
+    "tags": [
+      "regulator",
+      "content governance",
+      "co-issuer",
+      "AI service rules",
+      "generative AI service governance",
+      "deep synthesis governance",
+      "algorithmic recommendation governance",
+      "AI content labeling",
+      "security assessment for certain internet AI services",
+      "AI standards policy coordination",
+      "China"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "cac-generative-ai-measures-2023",
+      "cac-deep-synthesis-provisions-2022",
+      "cac-ai-content-labeling-measures-2025",
+      "cac-national-ai-standardization-guide-2024"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "For atlas purposes, whether to model the Central Cyberspace Affairs Commission Office and CAC as one node or linked but distinct nodes."
+    ]
   },
   {
-    id: "cn-miit",
-    name_en: "Ministry of Industry and Information Technology",
-    name_local: "工业和信息化部",
-    acronym: "MIIT",
-    entity_type: "government",
-    country: "China",
-    city: "Beijing",
-    region: "East Asia",
-    summary:
-      "Industrial and information technology ministry included as a key standards, industry, and evaluation policy actor.",
-    focus_areas: ["ai_governance", "standards", "policy_regulation"],
-    tags: ["public filing", "China", "standards"],
-    source_ids: [chinaStandardsBrief],
-    confidence_level: "medium",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 1,
-    needs_primary_source: true,
+    "id": "cn-miit",
+    "name_en": "Ministry of Industry and Information Technology",
+    "name_local": "工业和信息化部",
+    "acronym": "MIIT",
+    "entity_type": "government",
+    "country": "China",
+    "city": "Beijing",
+    "region": "East Asia",
+    "summary": "Central industry and telecom ministry with a major role in the China AI standards and evaluation stack. Primary sources show MIIT co-issuing CAC-facing AI service rules and the 2024 national AI standardization guide, and serving as the home ministry for affiliated institutions including CAICT and CESI.",
+    "focus_areas": [
+      "ai_governance",
+      "standards",
+      "policy_regulation",
+      "evaluation"
+    ],
+    "tags": [
+      "ministry",
+      "standards",
+      "co-issuer",
+      "industrial policy",
+      "industrial AI standardization",
+      "telecom and internet administration",
+      "co-issuance of AI service rules",
+      "ministry-affiliated standards and evaluation institutions",
+      "China"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "cac-generative-ai-measures-2023",
+      "cac-deep-synthesis-provisions-2022",
+      "cac-ai-content-labeling-measures-2025",
+      "cac-national-ai-standardization-guide-2024",
+      "miit-tc1-homepage"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Whether MIIT/TC1 should be promoted from candidate to full entity in the atlas core graph."
+    ]
   },
   {
-    id: "cn-tc260",
-    name_en: "National Technical Committee 260 on Cybersecurity",
-    name_local: "全国网络安全标准化技术委员会",
-    acronym: "TC260",
-    entity_type: "standards_body",
-    country: "China",
-    city: "Beijing",
-    region: "East Asia",
-    website: "https://www.tc260.org.cn/",
-    summary:
-      "Cybersecurity standardization committee included as a core China standards node for AI security, evaluation, and governance tracking.",
-    focus_areas: ["standards", "model_security", "evaluation", "cybersecurity"],
-    tags: ["large-model evaluation", "China", "standards"],
-    source_ids: [chinaStandardsBrief],
-    confidence_level: "medium",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 1,
-    needs_primary_source: true,
+    "id": "cn-tc260",
+    "name_en": "National Cybersecurity Standardization Technical Committee",
+    "name_local": "全国网络安全标准化技术委员会",
+    "acronym": "TC260",
+    "entity_type": "standards_body",
+    "country": "China",
+    "city": "Beijing",
+    "region": "East Asia",
+    "website": "https://www.tc260.org.cn/",
+    "summary": "China's main national cybersecurity standardization committee with an increasingly visible AI-security and AI-governance role. Official sources show AI-specific standards and guidance on generative AI service security, content labeling methods, AI safety governance, AI application ethics, and the 2026 formation of WG9 for AI security standards.",
+    "focus_areas": [
+      "standards",
+      "model_security",
+      "evaluation",
+      "cybersecurity",
+      "ai_governance",
+      "content_safety"
+    ],
+    "tags": [
+      "standards committee",
+      "AI security",
+      "guidance",
+      "WG9",
+      "AI security standards",
+      "generative AI service security",
+      "content labeling methods",
+      "AI safety governance framework",
+      "AI ethics and application guidance",
+      "cybersecurity standardization",
+      "China"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "tc260-homepage",
+      "tc260-committee-roster-2024",
+      "tc260-genai-service-security-requirements-2024",
+      "tc260-content-labeling-practice-guide-2023",
+      "tc260-ai-safety-governance-framework-2024",
+      "shlab-wg9-formation-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "A dedicated TC260 source explicitly naming the secretariat institution would strengthen administrative-link mapping.",
+      "Future updates should distinguish draft, technical-file, and national-standard status more granularly."
+    ]
   },
   {
-    id: "cn-caict",
-    name_en: "China Academy of Information and Communications Technology",
-    name_local: "中国信息通信研究院",
-    acronym: "CAICT",
-    entity_type: "evaluation_institution",
-    country: "China",
-    city: "Beijing",
-    region: "East Asia",
-    summary:
-      "MIIT-affiliated research and evaluation institution included for AI standards, testing, and industry coordination mapping.",
-    focus_areas: ["evaluation", "testing_infrastructure", "standards", "ai_assurance"],
-    tags: ["large-model evaluation", "China", "testing"],
-    source_ids: [chinaStandardsBrief],
-    confidence_level: "medium",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 1,
-    needs_primary_source: true,
+    "id": "tc28-sc42",
+    "name_en": "AI Subcommittee of the National Information Technology Standardization Technical Committee",
+    "name_local": "全国信息技术标准化技术委员会人工智能分技术委员会",
+    "acronym": "TC28/SC42",
+    "entity_type": "standards_committee",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "National information-technology AI subcommittee under the broader TC28 standards structure. Official sources show CESI as the secretariat unit and confirm the committee's role in AI standardization work.",
+    "focus_areas": [
+      "standards",
+      "evaluation",
+      "testing_infrastructure"
+    ],
+    "tags": [
+      "standards committee",
+      "AI subcommittee",
+      "national standards",
+      "AI standards development",
+      "national information-technology standardization",
+      "committee coordination",
+      "AI terminology and methods",
+      "China",
+      "CESI secretariat"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "tc28-sc42-samr-org-page",
+      "tc28-sc42-cesi-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "A fuller source on current working groups or current standard projects would improve subcommittee mapping."
+    ]
   },
   {
-    id: "cn-shlab",
-    name_en: "Shanghai AI Laboratory",
-    name_local: "上海人工智能实验室",
-    acronym: "SHLAB",
-    entity_type: "research_group",
-    country: "China",
-    city: "Shanghai",
-    region: "East Asia",
-    summary:
-      "Research organization included as a China technical AI research and evaluation ecosystem node.",
-    focus_areas: [
+    "id": "cn-caict",
+    "name_en": "China Academy of Information and Communications Technology",
+    "name_local": "中国信息通信研究院",
+    "acronym": "CAICT",
+    "entity_type": "evaluation_institution",
+    "country": "China",
+    "city": "Beijing",
+    "region": "East Asia",
+    "summary": "MIIT-affiliated research institution that is central to China's applied AI governance, benchmarking, and industry-self-regulation stack. Official sources show CAICT's direct MIIT affiliation, its secretary-general-unit role in jointly founding AIIA, its role in launching the AI Risk Management System and AI Safety Benchmark through AIIA, and its Fangsheng benchmarking system with a dedicated safety testing dimension.",
+    "focus_areas": [
+      "evaluation",
+      "testing_infrastructure",
+      "standards",
+      "ai_assurance",
+      "ai_governance",
+      "model_security"
+    ],
+    "tags": [
+      "research institute",
+      "benchmarking",
+      "AIIA",
+      "MIIT-affiliated",
+      "AI governance research",
+      "AI safety benchmarks",
+      "large-model benchmarking",
+      "industry commitments",
+      "AIIA platform operations",
+      "policy and standards support",
+      "China"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "caict-about-us",
+      "caict-aiia-founding-news-2018",
+      "caict-ai-risk-governance-report-2024",
+      "caict-ai-safety-governance-report-2025",
+      "caict-fangsheng-benchmark-report-2024"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "A dedicated current overview page for CAICT's AI institute or safety team structure would sharpen internal-unit mapping."
+    ]
+  },
+  {
+    "id": "aiia",
+    "name_en": "China AI Industry Development Alliance",
+    "name_local": "中国人工智能产业发展联盟",
+    "acronym": "AIIA",
+    "entity_type": "industry_alliance",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Needed because multiple official CAICT sources treat AIIA as the umbrella platform through which CAICT launched safety-governance structures, AI safety commitments, and AI safety benchmarks.",
+    "focus_areas": [
+      "ai_governance",
+      "ai_assurance",
+      "evaluation",
+      "capacity_building"
+    ],
+    "tags": [
+      "Needed because multiple official CAICT sources treat AIIA as the umbrella platform through which CAICT launched safety-governance structures, AI safety commitments, and AI safety benchmarks.",
+      "AIIA",
+      "industry alliance",
+      "AI safety benchmark"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "caict-aiia-founding-news-2018",
+      "caict-ai-risk-governance-report-2024",
+      "caict-ai-safety-governance-report-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false
+  },
+  {
+    "id": "aiia-safety-governance-committee",
+    "name_en": "AIIA Safety Governance Committee",
+    "name_local": "中国人工智能产业发展联盟安全治理委员会",
+    "acronym": "AIIA Safety Governance Committee",
+    "entity_type": "working_group",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Best-evidenced through official CAICT reports rather than a dedicated committee page. Official CAICT sources state that CAICT, relying on AIIA, prepared a Safety Governance Committee in late 2023, released an AI Risk Management System, and later linked AIIA to AI safety commitments and the AI Safety Benchmark.",
+    "focus_areas": [
+      "ai_governance",
+      "ai_assurance",
+      "evaluation",
+      "capacity_building"
+    ],
+    "tags": [
+      "industry committee",
+      "AIIA-linked",
+      "risk management",
+      "committee-in-formation-history",
+      "industry safety governance",
+      "AI risk management",
+      "AI safety benchmark coordination",
+      "industry commitments",
+      "China",
+      "AIIA"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "caict-ai-risk-governance-report-2024",
+      "caict-ai-safety-governance-report-2025"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 2,
+    "needs_primary_source": true,
+    "open_questions": [
+      "Dedicated official committee page and current leadership roster.",
+      "Whether the committee has a stable standing structure separate from CAICT's report language of 筹建.",
+      "Current membership and working-group breakdown."
+    ]
+  },
+  {
+    "id": "cesi",
+    "name_en": "China Electronics Standardization Institute",
+    "name_local": "中国电子技术标准化研究院",
+    "acronym": "CESI",
+    "entity_type": "evaluation_institution",
+    "country": "China",
+    "city": "Beijing",
+    "region": "East Asia",
+    "summary": "MIIT-affiliated standards institute with a central role in China's AI standards and model-evaluation infrastructure. Official sources place CESI as secretariat host for TC28/SC42 and show CESI releasing both a general large-model evaluation standard and the Qiúsuǒ national-standard benchmark system.",
+    "focus_areas": [
+      "standards",
+      "evaluation",
+      "testing_infrastructure",
+      "ai_assurance"
+    ],
+    "tags": [
+      "standards institute",
+      "MIIT-affiliated",
+      "evaluation standards",
+      "secretariat",
+      "AI standardization",
+      "committee secretariat functions",
+      "large-model evaluation standards",
+      "benchmark systems",
+      "electronics and information standards",
+      "China"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "cesi-basic-info",
+      "tc28-sc42-samr-org-page",
+      "tc28-sc42-cesi-page",
+      "cesi-general-large-model-evaluation-standard-2024",
+      "cesi-qiusuo-benchmark-2024"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Whether CESI's benchmark assets and testing services should be modeled as separate nodes or as institute-level capabilities."
+    ]
+  },
+  {
+    "id": "cstc",
+    "name_en": "China Software Testing Center",
+    "name_local": "中国软件评测中心",
+    "acronym": "CSTC",
+    "entity_type": "evaluation_institution",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Official site evidence supports CSTC as an AI assessment actor rather than a pure standards drafter. The homepage lists AI evaluation and AIM AI management maturity assessment services, and the center's Sadie Lab activity stream includes an AI large-model safety-governance seminar and AI safety workgroup launch.",
+    "focus_areas": [
+      "evaluation",
+      "testing_infrastructure",
+      "ai_assurance",
+      "model_security"
+    ],
+    "tags": [
+      "testing center",
+      "assessment",
+      "AIM",
+      "evaluation services",
+      "AI evaluation services",
+      "AI management maturity assessment",
+      "digital-government assessment",
+      "AI safety eventing and workgroup activity",
+      "China"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "cstc-homepage-ai-evaluation",
+      "cstc-ai-big-model-safety-workgroup-2024"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 2,
+    "needs_primary_source": true,
+    "open_questions": [
+      "A directly retrievable official center-introduction page would improve mapping of CSTC's administrative status.",
+      "The exact scope and permanence of the cited AI safety workgroup remain unclear from the retrieved snippet."
+    ]
+  },
+  {
+    "id": "cn-shlab",
+    "name_en": "Shanghai Artificial Intelligence Laboratory",
+    "name_local": "上海人工智能实验室",
+    "acronym": "SHLAB",
+    "entity_type": "research_group",
+    "country": "China",
+    "city": "Shanghai",
+    "region": "East Asia",
+    "summary": "Major Shanghai AI research institution with visible roles in evaluation infrastructure and AI security standardization. Official sources show SHLAB maintaining OpenCompass, leading or chairing TC260's newly formed WG9 on AI security standards, and leading the Shanghai medical large-model testing and verification center.",
+    "focus_areas": [
       "technical_safety_research",
       "evaluation",
-      "frontier_model_developer",
+      "testing_infrastructure",
+      "model_security",
+      "ai_assurance"
     ],
-    tags: ["large-model evaluation", "China", "technical research"],
-    source_ids: [technicalGroupsBrief],
-    confidence_level: "low",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 2,
-    needs_primary_source: true,
+    "tags": [
+      "research lab",
+      "OpenCompass",
+      "WG9",
+      "evaluation",
+      "open model evaluation",
+      "AI security standards",
+      "medical model testing",
+      "trustworthy AI",
+      "research infrastructure",
+      "China"
+    ],
+    "source_ids": [
+      "report-technical-research-groups-2026-06-05",
+      "shlab-about-us",
+      "shlab-opencompass-2023",
+      "shlab-wg9-formation-2026",
+      "shanghai-medical-llm-testing-center-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 2,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Further sources on how SHLAB's governance research center is institutionally nested within SHLAB would help entity-graph precision."
+    ]
   },
   {
-    id: "cn-baai",
-    name_en: "Beijing Academy of Artificial Intelligence",
-    name_local: "北京智源人工智能研究院",
-    acronym: "BAAI",
-    entity_type: "research_group",
-    country: "China",
-    city: "Beijing",
-    region: "East Asia",
-    summary:
-      "AI research institute included for tracking open-model governance, technical safety research, and China research ecosystem links.",
-    focus_areas: [
+    "id": "shanghai-ai-safety-and-governance-laboratory",
+    "name_en": "Shanghai AI Safety and Governance Laboratory",
+    "name_local": "上海人工智能安全治理实验室",
+    "acronym": "Shanghai AI Safety and Governance Laboratory",
+    "entity_type": "research_group",
+    "country": "China",
+    "city": "Shanghai",
+    "region": "East Asia",
+    "summary": "Officially evidenced through a government-domain repost from Cyberspace Shanghai. The retrieved source states the lab was jointly established by SHLAB's Governance Research Center and the Shanghai Information Security Testing and Certification Center and unveiled at WAIC 2024.",
+    "focus_areas": [
+      "ai_governance",
+      "technical_safety_research",
+      "model_security",
+      "ai_assurance"
+    ],
+    "tags": [
+      "local laboratory",
+      "Shanghai",
+      "governance",
+      "jointly established",
+      "AI safety governance",
+      "Shanghai local experimentation",
+      "governance research",
+      "safety support ecosystem",
+      "China"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "shanghai-ai-safety-governance-lab-unveiling-2024"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 2,
+    "needs_primary_source": true,
+    "open_questions": [
+      "A directly retrievable first-party page from the lab itself or from Cyberspace Shanghai.",
+      "Current operating team, permanent website, and concrete programs."
+    ]
+  },
+  {
+    "id": "tc260-wg9",
+    "name_en": "AI Security Standards Working Group",
+    "name_local": "人工智能安全标准工作组",
+    "acronym": "WG9",
+    "entity_type": "working_group",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Official SHLAB reporting attributes WG9's formal establishment to a TC260 notice and identifies SHLAB's director as group head, making WG9 a material node in the China AI security standards stack.",
+    "focus_areas": [
+      "standards",
+      "model_security",
+      "cybersecurity",
+      "evaluation"
+    ],
+    "tags": [
+      "Official SHLAB reporting attributes WG9's formal establishment to a TC260 notice and identifies SHLAB's director as group head, making WG9 a material node in the China AI security standards stack.",
+      "WG9",
+      "AI security standards"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "shlab-wg9-formation-2026",
+      "tc260-homepage"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false
+  },
+  {
+    "id": "opencompass",
+    "name_en": "OpenCompass",
+    "name_local": "司南",
+    "acronym": "OpenCompass",
+    "entity_type": "evaluation_platform",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Official SHLAB sources present OpenCompass as a SHLAB-built open evaluation system spanning multiple domains, including safety and trustworthiness.",
+    "focus_areas": [
+      "evaluation",
+      "testing_infrastructure",
+      "ai_assurance",
+      "open_model_governance"
+    ],
+    "tags": [
+      "Official SHLAB sources present OpenCompass as a SHLAB-built open evaluation system spanning multiple domains, including safety and trustworthiness.",
+      "OpenCompass",
+      "evaluation platform"
+    ],
+    "source_ids": [
+      "report-technical-research-groups-2026-06-05",
+      "shlab-opencompass-2023"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true
+  },
+  {
+    "id": "cn-baai",
+    "name_en": "Beijing Academy of Artificial Intelligence",
+    "name_local": "北京智源人工智能研究院",
+    "acronym": "BAAI",
+    "entity_type": "research_group",
+    "country": "China",
+    "city": "Beijing",
+    "region": "East Asia",
+    "summary": "Non-profit new-type AI R&D institution that is significant in China's model-evaluation and AI-safety dialogue ecosystem. Official sources show BAAI maintaining FlagEval as an open evaluation platform and hosting the Beijing AI Safety International Dialogue that produced the Beijing AI Safety Consensus.",
+    "focus_areas": [
+      "evaluation",
       "technical_safety_research",
       "open_model_governance",
-      "frontier_model_developer",
+      "international_dialogue"
     ],
-    tags: ["open source governance", "China", "technical research"],
-    source_ids: [technicalGroupsBrief],
-    confidence_level: "low",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 2,
-    needs_primary_source: true,
-  },
-  {
-    id: "cn-beijing-aisi",
-    name_en: "Beijing AI Safety Institute",
-    acronym: "Beijing AISI",
-    entity_type: "ai_safety_institute",
-    country: "China",
-    city: "Beijing",
-    region: "East Asia",
-    summary:
-      "Included as a candidate AI safety institute node from research-brief discovery. Public profile needs primary-source confirmation before deeper claims.",
-    focus_areas: ["frontier_ai_safety", "evaluation", "dangerous_capability_evaluation"],
-    tags: ["AISI", "China", "large-model evaluation"],
-    source_ids: [chinaStandardsBrief],
-    confidence_level: "low",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 2,
-    needs_primary_source: true,
-    open_questions: [
-      "What public primary source best establishes its mandate and current status?",
+    "tags": [
+      "research institute",
+      "FlagEval",
+      "AI safety dialogue",
+      "non-profit",
+      "large-model evaluation",
+      "open research infrastructure",
+      "Chinese model ecosystem benchmarking",
+      "China"
     ],
+    "source_ids": [
+      "report-technical-research-groups-2026-06-05",
+      "baai-about-us",
+      "baai-ai-safety-ecosystem-page",
+      "baai-flageval-system-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 2,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Whether to model the Beijing AI Safety International Dialogue and Beijing AI Safety Consensus as separate event and document entities."
+    ]
   },
   {
-    id: "cn-cnaisda",
-    name_en: "China AI Safety and Development Association",
-    acronym: "CnAISDA",
-    entity_type: "industry_alliance",
-    country: "China",
-    region: "East Asia",
-    summary:
-      "Discovery-stage China AI safety and development association node. Included with low-confidence metadata pending canonical source verification.",
-    focus_areas: ["ai_governance", "capacity_building", "dialogue_channel"],
-    tags: ["China", "capacity building", "needs primary source"],
-    source_ids: [dialogueBrief],
-    confidence_level: "low",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 3,
-    needs_primary_source: true,
+    "id": "flag-eval",
+    "name_en": "FlagEval",
+    "name_local": "FlagEval 大模型评测开放平台",
+    "acronym": "FlagEval",
+    "entity_type": "evaluation_platform",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Official BAAI system materials identify FlagEval as BAAI's open model-evaluation platform, making it a useful evaluation-stack node.",
+    "focus_areas": [
+      "evaluation",
+      "testing_infrastructure",
+      "open_model_governance",
+      "ai_assurance"
+    ],
+    "tags": [
+      "Official BAAI system materials identify FlagEval as BAAI's open model-evaluation platform, making it a useful evaluation-stack node.",
+      "FlagEval",
+      "large-model evaluation"
+    ],
+    "source_ids": [
+      "report-technical-research-groups-2026-06-05",
+      "baai-flageval-system-page"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true
   },
   {
-    id: "jp-aisi",
-    name_en: "Japan AI Safety Institute",
-    acronym: "Japan AISI",
-    entity_type: "ai_safety_institute",
-    country: "Japan",
-    region: "East Asia",
-    summary:
-      "National AI safety institute node for Japan, included to test AISI filtering and country routing in the atlas shell.",
-    focus_areas: ["frontier_ai_safety", "evaluation", "ai_assurance", "standards"],
-    tags: ["AISI", "Japan", "large-model evaluation"],
-    source_ids: [aisiBrief],
-    confidence_level: "medium",
-    sensitivity_level: "low",
-    last_verified: "2026-06-05",
-    tier: 1,
-    needs_primary_source: true,
+    "id": "cn-beijing-aisi",
+    "name_en": "Beijing Institute of AI Safety and Governance",
+    "name_local": "北京前瞻人工智能安全与治理研究院",
+    "acronym": "Beijing AISI",
+    "entity_type": "ai_safety_institute",
+    "country": "China",
+    "city": "Beijing",
+    "region": "East Asia",
+    "summary": "Beijing's dedicated AI safety-and-governance institute appears to have evolved from a 2024 laboratory phase into a formally established institute in April 2025. Official sources also show a department structure that explicitly distinguishes AI Safety from AI Security and includes guardrails, ethics, and risk-response work.",
+    "focus_areas": [
+      "frontier_ai_safety",
+      "evaluation",
+      "ai_governance",
+      "red_teaming",
+      "model_security"
+    ],
+    "tags": [
+      "local institute",
+      "Beijing",
+      "AI safety",
+      "AI security",
+      "AI safety research",
+      "AI security research",
+      "guardrails",
+      "risk response",
+      "AI ethics",
+      "governance research",
+      "AISI",
+      "China"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "beijing-ai-safety-lab-launch-2024",
+      "beijing-ai-safety-institute-official-launch-2025",
+      "beijing-ai-safety-institute-departments"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 2,
+    "needs_primary_source": false,
+    "open_questions": [
+      "How the institute relates administratively to Beijing municipal authorities and other Beijing AI institutions.",
+      "Whether the earlier lab name should remain as an alias or a historical predecessor entity."
+    ]
   },
   {
-    id: "kr-aisi",
-    name_en: "Korea AI Safety Institute",
-    acronym: "Korea AISI",
-    entity_type: "ai_safety_institute",
-    country: "South Korea",
-    region: "East Asia",
-    summary:
-      "National AI safety institute node for Korea, included for AISI comparison and regional evaluation ecosystem mapping.",
-    focus_areas: ["frontier_ai_safety", "evaluation", "ai_assurance", "standards"],
-    tags: ["AISI", "Korea", "large-model evaluation"],
-    source_ids: [aisiBrief],
-    confidence_level: "medium",
-    sensitivity_level: "low",
-    last_verified: "2026-06-05",
-    tier: 1,
-    needs_primary_source: true,
+    "id": "cn-cnaisda",
+    "name_en": "China AI Development and Safety Network",
+    "name_local": "中国人工智能发展与安全研究网络",
+    "acronym": "CnAISDA",
+    "entity_type": "dialogue_convenor",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Official Chinese institutional coverage positions CnAISDA primarily as a China-side dialogue network corresponding to an AI safety institute for international engagement, not automatically as a domestic frontier-model testing regulator. Tsinghua and SQZ sources explicitly identify CAICT, BAAI, and SHLAB as member units.",
+    "focus_areas": [
+      "international_dialogue",
+      "dialogue_channel",
+      "capacity_building",
+      "ai_governance"
+    ],
+    "tags": [
+      "network",
+      "international dialogue",
+      "China-side representative body",
+      "not-yet-demonstrated domestic evaluator",
+      "international AI safety dialogue",
+      "research-network coordination",
+      "global governance engagement",
+      "cross-institution representation",
+      "China",
+      "Track 2"
+    ],
+    "source_ids": [
+      "report-china-west-dialogue-2026-06-05",
+      "cnaisda-tsinghua-paris-side-event-2025",
+      "cnaisda-shanghai-qizhi-side-event-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 3,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Permanent governance structure and secretariat.",
+      "Whether future official sources will assign domestic testing or audit functions."
+    ]
   },
   {
-    id: "sg-aisi",
-    name_en: "Singapore AI Safety Institute",
-    acronym: "Singapore AISI",
-    entity_type: "ai_safety_institute",
-    country: "Singapore",
-    region: "Southeast Asia",
-    summary:
-      "Singapore AI safety institute node included for regional evaluation, assurance, and governance comparison.",
-    focus_areas: ["frontier_ai_safety", "evaluation", "ai_assurance", "standards"],
-    tags: ["AISI", "Singapore", "large-model evaluation"],
-    source_ids: [aisiBrief],
-    confidence_level: "medium",
-    sensitivity_level: "low",
-    last_verified: "2026-06-05",
-    tier: 1,
-    needs_primary_source: true,
+    "id": "miit-tc1",
+    "name_en": "AI Standardization Technical Committee of the Ministry of Industry and Information Technology",
+    "name_local": "工业和信息化部人工智能标准化技术委员会",
+    "acronym": "MIIT/TC1",
+    "entity_type": "standards_committee",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "The official committee homepage shows a distinct ministry-level AI standardization architecture with dedicated working groups and a CAICT-linked operational base, making it highly relevant to the China standards stack even though it was not in the starting cluster.",
+    "focus_areas": [
+      "standards",
+      "policy_regulation",
+      "ai_governance"
+    ],
+    "tags": [
+      "The official committee homepage shows a distinct ministry-level AI standardization architecture with dedicated working groups and a CAICT-linked operational base, making it highly relevant to the China standards stack even though it was not in the starting cluster.",
+      "MIIT/TC1",
+      "standards committee"
+    ],
+    "source_ids": [
+      "report-china-standards-evaluation-2026-06-05",
+      "miit-tc1-homepage"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true
   },
   {
-    id: "sg-ai-verify-foundation",
-    name_en: "AI Verify Foundation",
-    entity_type: "evaluation_institution",
-    country: "Singapore",
-    region: "Southeast Asia",
-    summary:
-      "Singapore-based AI testing and assurance foundation included as an applied evaluation and AI assurance node.",
-    focus_areas: ["ai_assurance", "evaluation", "testing_infrastructure", "standards"],
-    tags: ["AI Verify", "Singapore", "model card"],
-    source_ids: [aisiBrief, aseanBrief],
-    confidence_level: "medium",
-    sensitivity_level: "low",
-    last_verified: "2026-06-05",
-    tier: 1,
-    needs_primary_source: true,
+    "id": "jp-aisi",
+    "name_en": "Japan AI Safety Institute",
+    "acronym": "Japan AISI",
+    "entity_type": "ai_safety_institute",
+    "country": "Japan",
+    "region": "East Asia",
+    "summary": "National AI safety institute node for Japan, included to test AISI filtering and country routing in the atlas shell.",
+    "focus_areas": [
+      "frontier_ai_safety",
+      "evaluation",
+      "ai_assurance",
+      "standards"
+    ],
+    "tags": [
+      "AISI",
+      "Japan",
+      "large-model evaluation"
+    ],
+    "source_ids": [
+      "report-japan-korea-singapore-aisi-2026-06-05"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true
   },
   {
-    id: "asean-working-group-ai-governance",
-    name_en: "ASEAN Working Group on AI Governance",
-    acronym: "ASEAN AI Governance Working Group",
-    entity_type: "policy_program",
-    country: "Regional",
-    region: "Southeast Asia",
-    summary:
-      "Regional governance working group included for ASEAN generative AI governance and cross-border policy coordination tracking.",
-    focus_areas: ["ai_governance", "policy_regulation", "capacity_building"],
-    tags: ["ASEAN", "AI governance", "capacity building"],
-    source_ids: [aseanBrief],
-    confidence_level: "medium",
-    sensitivity_level: "low",
-    last_verified: "2026-06-05",
-    tier: 1,
-    needs_primary_source: true,
+    "id": "kr-aisi",
+    "name_en": "Korea AI Safety Institute",
+    "acronym": "Korea AISI",
+    "entity_type": "ai_safety_institute",
+    "country": "South Korea",
+    "region": "East Asia",
+    "summary": "National AI safety institute node for Korea, included for AISI comparison and regional evaluation ecosystem mapping.",
+    "focus_areas": [
+      "frontier_ai_safety",
+      "evaluation",
+      "ai_assurance",
+      "standards"
+    ],
+    "tags": [
+      "AISI",
+      "Korea",
+      "large-model evaluation"
+    ],
+    "source_ids": [
+      "report-japan-korea-singapore-aisi-2026-06-05"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true
   },
   {
-    id: "org-concordia-ai",
-    name_en: "Concordia AI",
-    entity_type: "think_tank",
-    country: "International",
-    region: "Cross-border",
-    summary:
-      "AI safety and governance organization included as a China-West dialogue and research synthesis node.",
-    focus_areas: ["international_dialogue", "ai_governance", "technical_safety_research"],
-    tags: ["Track 2", "China-West dialogue", "technical research"],
-    source_ids: [dialogueBrief],
-    confidence_level: "medium",
-    sensitivity_level: "low",
-    last_verified: "2026-06-05",
-    tier: 2,
-    needs_primary_source: true,
+    "id": "sg-aisi",
+    "name_en": "Singapore AI Safety Institute",
+    "acronym": "Singapore AISI",
+    "entity_type": "ai_safety_institute",
+    "country": "Singapore",
+    "region": "Southeast Asia",
+    "summary": "Singapore AI safety institute node included for regional evaluation, assurance, and governance comparison.",
+    "focus_areas": [
+      "frontier_ai_safety",
+      "evaluation",
+      "ai_assurance",
+      "standards"
+    ],
+    "tags": [
+      "AISI",
+      "Singapore",
+      "large-model evaluation"
+    ],
+    "source_ids": [
+      "report-japan-korea-singapore-aisi-2026-06-05"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true
   },
   {
-    id: "org-safe-ai-forum",
-    name_en: "Safe AI Forum",
-    entity_type: "dialogue_convenor",
-    country: "International",
-    region: "Cross-border",
-    summary:
-      "Dialogue convenor included as a cross-border AI safety discussion channel in the seed atlas.",
-    focus_areas: ["international_dialogue", "dialogue_channel", "frontier_ai_safety"],
-    tags: ["Track 2", "dialogue channel", "frontier AI safety"],
-    source_ids: [dialogueBrief],
-    confidence_level: "low",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 3,
-    needs_primary_source: true,
+    "id": "sg-ai-verify-foundation",
+    "name_en": "AI Verify Foundation",
+    "entity_type": "evaluation_institution",
+    "country": "Singapore",
+    "region": "Southeast Asia",
+    "summary": "Singapore-based AI testing and assurance foundation included as an applied evaluation and AI assurance node.",
+    "focus_areas": [
+      "ai_assurance",
+      "evaluation",
+      "testing_infrastructure",
+      "standards"
+    ],
+    "tags": [
+      "AI Verify",
+      "Singapore",
+      "model card"
+    ],
+    "source_ids": [
+      "report-japan-korea-singapore-aisi-2026-06-05",
+      "report-asean-genai-governance-2026-06-05"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true
   },
   {
-    id: "event-idais",
-    name_en: "International Dialogues on AI Safety",
-    acronym: "IDAIS",
-    entity_type: "event",
-    country: "International",
-    region: "Cross-border",
-    summary:
-      "Dialogue series included as a cross-border AI safety engagement channel. Specific sessions and participants need source-level backfill.",
-    focus_areas: ["international_dialogue", "dialogue_channel", "frontier_ai_safety"],
-    tags: ["Track 2", "dialogue channel", "IDAIS"],
-    source_ids: [dialogueBrief],
-    confidence_level: "low",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 3,
-    needs_primary_source: true,
+    "id": "asean-working-group-ai-governance",
+    "name_en": "ASEAN Working Group on AI Governance",
+    "acronym": "ASEAN AI Governance Working Group",
+    "entity_type": "policy_program",
+    "country": "Regional",
+    "region": "Southeast Asia",
+    "summary": "Regional governance working group included for ASEAN generative AI governance and cross-border policy coordination tracking.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "capacity_building"
+    ],
+    "tags": [
+      "ASEAN",
+      "AI governance",
+      "capacity building"
+    ],
+    "source_ids": [
+      "report-asean-genai-governance-2026-06-05"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true
   },
   {
-    id: "cn-tsinghua-iaiig",
-    name_en: "Tsinghua Institute for AI International Governance",
-    name_local: "清华大学人工智能国际治理研究院",
-    acronym: "Tsinghua I-AIIG",
-    entity_type: "university",
-    country: "China",
-    city: "Beijing",
-    region: "East Asia",
-    summary:
-      "Tsinghua-linked AI international governance research node included for policy, governance, and cross-border dialogue mapping.",
-    focus_areas: ["ai_governance", "international_dialogue", "policy_regulation"],
-    tags: ["Track 2", "China", "AI governance"],
-    source_ids: [technicalGroupsBrief, dialogueBrief],
-    confidence_level: "low",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 2,
-    needs_primary_source: true,
+    "id": "org-concordia-ai",
+    "name_en": "Concordia AI",
+    "entity_type": "think_tank",
+    "country": "International",
+    "region": "Cross-border",
+    "summary": "AI safety and governance organization included as a China-West dialogue and research synthesis node.",
+    "focus_areas": [
+      "international_dialogue",
+      "ai_governance",
+      "technical_safety_research"
+    ],
+    "tags": [
+      "Track 2",
+      "China-West dialogue",
+      "technical research"
+    ],
+    "source_ids": [
+      "report-china-west-dialogue-2026-06-05"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 2,
+    "needs_primary_source": true
   },
   {
-    id: "cn-tsinghua-ciss",
-    name_en: "Tsinghua Center for International Security and Strategy",
-    name_local: "清华大学国际安全与战略研究中心",
-    acronym: "Tsinghua CISS",
-    entity_type: "university",
-    country: "China",
-    city: "Beijing",
-    region: "East Asia",
-    summary:
-      "Tsinghua-linked international security and strategy center included as a China policy and dialogue ecosystem node.",
-    focus_areas: ["international_dialogue", "policy_regulation", "ai_governance"],
-    tags: ["Track 2", "China", "international security"],
-    source_ids: [dialogueBrief],
-    confidence_level: "low",
-    sensitivity_level: "medium",
-    last_verified: "2026-06-05",
-    tier: 3,
-    needs_primary_source: true,
+    "id": "org-safe-ai-forum",
+    "name_en": "Safe AI Forum",
+    "entity_type": "dialogue_convenor",
+    "country": "International",
+    "region": "Cross-border",
+    "summary": "Dialogue convenor included as a cross-border AI safety discussion channel in the seed atlas.",
+    "focus_areas": [
+      "international_dialogue",
+      "dialogue_channel",
+      "frontier_ai_safety"
+    ],
+    "tags": [
+      "Track 2",
+      "dialogue channel",
+      "frontier AI safety"
+    ],
+    "source_ids": [
+      "report-china-west-dialogue-2026-06-05"
+    ],
+    "confidence_level": "low",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 3,
+    "needs_primary_source": true
   },
+  {
+    "id": "event-idais",
+    "name_en": "International Dialogues on AI Safety",
+    "acronym": "IDAIS",
+    "entity_type": "event",
+    "country": "International",
+    "region": "Cross-border",
+    "summary": "Dialogue series included as a cross-border AI safety engagement channel. Specific sessions and participants need source-level backfill.",
+    "focus_areas": [
+      "international_dialogue",
+      "dialogue_channel",
+      "frontier_ai_safety"
+    ],
+    "tags": [
+      "Track 2",
+      "dialogue channel",
+      "IDAIS"
+    ],
+    "source_ids": [
+      "report-china-west-dialogue-2026-06-05"
+    ],
+    "confidence_level": "low",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 3,
+    "needs_primary_source": true
+  },
+  {
+    "id": "cn-tsinghua-iaiig",
+    "name_en": "Tsinghua Institute for AI International Governance",
+    "name_local": "清华大学人工智能国际治理研究院",
+    "acronym": "Tsinghua I-AIIG",
+    "entity_type": "university",
+    "country": "China",
+    "city": "Beijing",
+    "region": "East Asia",
+    "summary": "Tsinghua-linked AI international governance research node included for policy, governance, and cross-border dialogue mapping.",
+    "focus_areas": [
+      "ai_governance",
+      "international_dialogue",
+      "policy_regulation"
+    ],
+    "tags": [
+      "Track 2",
+      "China",
+      "AI governance"
+    ],
+    "source_ids": [
+      "report-technical-research-groups-2026-06-05",
+      "report-china-west-dialogue-2026-06-05"
+    ],
+    "confidence_level": "low",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 2,
+    "needs_primary_source": true
+  },
+  {
+    "id": "cn-tsinghua-ciss",
+    "name_en": "Tsinghua Center for International Security and Strategy",
+    "name_local": "清华大学国际安全与战略研究中心",
+    "acronym": "Tsinghua CISS",
+    "entity_type": "university",
+    "country": "China",
+    "city": "Beijing",
+    "region": "East Asia",
+    "summary": "Tsinghua-linked international security and strategy center included as a China policy and dialogue ecosystem node.",
+    "focus_areas": [
+      "international_dialogue",
+      "policy_regulation",
+      "ai_governance"
+    ],
+    "tags": [
+      "Track 2",
+      "China",
+      "international security"
+    ],
+    "source_ids": [
+      "report-china-west-dialogue-2026-06-05"
+    ],
+    "confidence_level": "low",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-05",
+    "tier": 3,
+    "needs_primary_source": true
+  }
 ];

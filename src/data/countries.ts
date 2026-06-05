@@ -6,25 +6,38 @@ export const countries: CountryProfile[] = [
     country: "China",
     region: "East Asia",
     summary:
-      "PR 1 tracks China as a dense standards, evaluation, governance, frontier-model, and dialogue ecosystem. Most entries still need canonical Chinese-language primary sources.",
+      "PR 2A backfills China's standards and evaluation slice with official Chinese-language primary sources spanning CAC/MIIT rules, TC260 standards work, CAICT benchmarks, CESI standards infrastructure, SHLAB/OpenCompass, BAAI/FlagEval, and China-side dialogue networks.",
     government_posture:
-      "Seed records include CAC and MIIT as high-level governance and industry policy anchors.",
+      "CAC and MIIT are now backed by official co-issued rules and the 2024 national AI standardization guide. The profile still distinguishes CAC's online-information governance role from MIIT's standards, industry, and affiliated-institution role.",
     standards_evaluation:
-      "TC260 and CAICT are included as initial standards, assurance, and evaluation nodes.",
+      "TC260, TC28/SC42, CAICT, CESI, CSTC, MIIT/TC1, WG9, OpenCompass, FlagEval, and related benchmark or working-group nodes are represented with primary source IDs where available.",
     research_ecosystem:
-      "SHLAB, BAAI, and Tsinghua-linked centers are included as discovery-stage research and policy nodes.",
+      "SHLAB and BAAI are upgraded with official sources for evaluation infrastructure and safety/governance activities. Tsinghua-linked dialogue and policy nodes remain discovery-stage outside this standards/evaluation backfill.",
     industry_ecosystem:
-      "Chinese frontier developer coverage is intentionally deferred beyond this shell, except for research institutions with model-development relevance tags.",
+      "AIIA is added as an industry-alliance platform because official CAICT sources link it to AI safety commitments, risk-management work, and AI safety benchmark activity.",
     international_engagement:
-      "Dialogue-channel entries are included with low-confidence summaries pending primary-source backfill.",
+      "CnAISDA is updated from official Chinese institutional coverage as an international-dialogue network rather than a demonstrated domestic frontier-model testing regulator.",
     open_questions: [
-      "Which primary sources should anchor public claims for Beijing AISI and CnAISDA?",
-      "How should frontier-model developer records be separated from technical safety research records?",
+      "How should CAC and the Central Cyberspace Affairs Commission Office be modeled when source text names one or the other?",
+      "Which benchmark systems should become standalone profile pages as the atlas expands?",
+      "Which official sources, if any, establish domestic testing or audit mandates for dialogue-network entities?",
     ],
     source_ids: [
       "report-china-standards-evaluation-2026-06-05",
       "report-technical-research-groups-2026-06-05",
       "report-china-west-dialogue-2026-06-05",
+      "cac-generative-ai-measures-2023",
+      "cac-national-ai-standardization-guide-2024",
+      "tc260-genai-service-security-requirements-2024",
+      "tc260-ai-safety-governance-framework-2024",
+      "caict-about-us",
+      "caict-ai-risk-governance-report-2024",
+      "caict-fangsheng-benchmark-report-2024",
+      "cesi-basic-info",
+      "cesi-qiusuo-benchmark-2024",
+      "shlab-wg9-formation-2026",
+      "baai-flageval-system-page",
+      "cnaisda-tsinghua-paris-side-event-2025",
     ],
     last_verified: "2026-06-05",
   },

@@ -195,6 +195,7 @@ export function validateAtlasData({
   const entityIds = new Set(entities.map((entity) => entity.id));
   const sourceIds = new Set(sources.map((source) => source.id));
   const evidenceNoteIds = new Set(evidenceNotes.map((note) => note.id));
+  const sourcesById = new Map(sources.map((source) => [source.id, source]));
 
   collectDuplicateIds("Entity", entities, errors);
   collectDuplicateIds("Relationship", relationships, errors);
@@ -202,6 +203,42 @@ export function validateAtlasData({
   collectDuplicateIds("Evidence note", evidenceNotes, errors);
 
   for (const entity of entities) {
+    if (entity.tier === 1) {
+      if (!entity.last_verified) {
+        errors.push(`Tier 1 entity ${entity.id} is missing last_verified.`);
+      }
+
+      if (!entity.confidence_level) {
+        errors.push(`Tier 1 entity ${entity.id} is missing confidence_level.`);
+      }
+
+      if (!entity.sensitivity_level) {
+        errors.push(`Tier 1 entity ${entity.id} is missing sensitivity_level.`);
+      }
+
+      if (entity.source_ids.length === 0) {
+        errors.push(`Tier 1 entity ${entity.id} must have at least one source_id.`);
+      }
+    }
+
+    if (entity.needs_primary_source === false) {
+      const canonicalSourceCount = entity.source_ids.filter((sourceId) => {
+        const source = sourcesById.get(sourceId);
+
+        return (
+          source &&
+          source.source_type !== "research_brief" &&
+          (source.reliability_rating === "A" || source.reliability_rating === "B")
+        );
+      }).length;
+
+      if (canonicalSourceCount < 2) {
+        errors.push(
+          `Entity ${entity.id} sets needs_primary_source to false but has fewer than two good canonical sources.`
+        );
+      }
+    }
+
     for (const sourceId of entity.source_ids) {
       if (!sourceIds.has(sourceId)) {
         errors.push(`Entity ${entity.id} references missing source ${sourceId}.`);
@@ -218,6 +255,15 @@ export function validateAtlasData({
   }
 
   for (const relationship of relationships) {
+    if (
+      relationship.public_safe_to_show &&
+      (relationship.evidence_note_ids ?? []).length === 0
+    ) {
+      errors.push(
+        `Public relationship ${relationship.id} must reference at least one evidence note.`
+      );
+    }
+
     if (!entityIds.has(relationship.source_entity_id)) {
       errors.push(
         `Relationship ${relationship.id} references missing source entity ${relationship.source_entity_id}.`
@@ -238,7 +284,7 @@ export function validateAtlasData({
       }
     }
 
-    for (const noteId of relationship.evidence_note_ids) {
+    for (const noteId of relationship.evidence_note_ids ?? []) {
       if (!evidenceNoteIds.has(noteId)) {
         errors.push(
           `Relationship ${relationship.id} references missing evidence note ${noteId}.`

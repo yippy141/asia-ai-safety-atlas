@@ -61,6 +61,15 @@ Most entities are marked `needs_primary_source: true` because the briefs are
 used for discovery and synthesis. Public claims should be backfilled with
 canonical primary sources where possible.
 
+## PR 2A China Backfill
+
+The China standards/evaluation slice now includes official primary-source
+records from `tmp/pr2a_china_backfill.json.md`: CAC/MIIT rules, TC260 standards
+work, CAICT and CESI reports/pages, SHLAB/OpenCompass, BAAI/FlagEval, and
+CnAISDA dialogue records. Research briefs remain in the source register as
+discovery inputs, while official primary sources are grouped separately on
+`/sources`.
+
 ## Project Rules
 
 - Every public claim should trace to a source record.
