@@ -568,5 +568,107 @@ export const relationships: Relationship[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "public_safe_to_show": true
+  },
+  {
+    "id": "tsinghua-ciss-cohosts-us-china-ai-dialogue-round-6-2024",
+    "source_entity_id": "cn-tsinghua-ciss",
+    "target_entity_id": "us-china-ai-and-international-security-dialogue-round-6-2024",
+    "relationship_type": "co_hosts",
+    "description": "Tsinghua CISS was publicly associated with the sixth U.S.-China AI and International Security Dialogue.",
+    "evidence_note_ids": [
+      "note-brookings-round6"
+    ],
+    "source_ids": [
+      "brookings-ai-glossary-2024"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "tsinghua-ciss-cohosts-china-eu-ai-dialogue-round-2-2024",
+    "source_entity_id": "cn-tsinghua-ciss",
+    "target_entity_id": "china-eu-ai-and-international-security-dialogue-round-2-2024",
+    "relationship_type": "co_hosts",
+    "description": "Tsinghua CISS publicly co-hosted round two of the China-EU AI and International Security Dialogue.",
+    "evidence_note_ids": [
+      "note-ciss-hd-round2"
+    ],
+    "source_ids": [
+      "ciss-china-eu-ai-security-dialogue-round-2-2024"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "centre-for-humanitarian-dialogue-cohosts-china-eu-ai-dialogue-round-2-2024",
+    "source_entity_id": "centre-for-humanitarian-dialogue",
+    "target_entity_id": "china-eu-ai-and-international-security-dialogue-round-2-2024",
+    "relationship_type": "co_hosts",
+    "description": "HD publicly co-hosted round two of the China-EU AI and International Security Dialogue.",
+    "evidence_note_ids": [
+      "note-ciss-hd-round2"
+    ],
+    "source_ids": [
+      "ciss-china-eu-ai-security-dialogue-round-2-2024"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "tsinghua-ciss-cohosts-china-eu-ai-dialogue-round-5-2026",
+    "source_entity_id": "cn-tsinghua-ciss",
+    "target_entity_id": "china-eu-ai-and-international-security-dialogue-round-5-2026",
+    "relationship_type": "co_hosts",
+    "description": "Tsinghua CISS publicly co-hosted round five of the China-EU AI and International Security Dialogue.",
+    "evidence_note_ids": [
+      "note-ciss-hd-round5"
+    ],
+    "source_ids": [
+      "ciss-china-eu-ai-security-dialogue-round-5-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "centre-for-humanitarian-dialogue-cohosts-china-eu-ai-dialogue-round-5-2026",
+    "source_entity_id": "centre-for-humanitarian-dialogue",
+    "target_entity_id": "china-eu-ai-and-international-security-dialogue-round-5-2026",
+    "relationship_type": "co_hosts",
+    "description": "HD publicly co-hosted round five of the China-EU AI and International Security Dialogue.",
+    "evidence_note_ids": [
+      "note-ciss-hd-round5"
+    ],
+    "source_ids": [
+      "ciss-china-eu-ai-security-dialogue-round-5-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "cnaisda-organizes-paris-side-event-2025",
+    "source_entity_id": "cn-cnaisda",
+    "target_entity_id": "cnaisda-paris-side-event-2025",
+    "relationship_type": "organizes",
+    "description": "CnAISDA appeared as the named interface for a public side event during the Paris summit period.",
+    "evidence_note_ids": [
+      "note-cnaisda-paris-side-event"
+    ],
+    "source_ids": [
+      "cnaisda-shanghai-qizhi-side-event-2025"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
   }
 ];

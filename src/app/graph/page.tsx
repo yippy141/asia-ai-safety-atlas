@@ -9,7 +9,7 @@ import {
   type Edge,
   type Node,
 } from "@xyflow/react";
-import { entities, relationships } from "@/data";
+import { entities, events, relationships } from "@/data";
 import { formatLabel } from "@/lib/taxonomy";
 
 const defaultGraphEdgeLimit = 24;
@@ -27,26 +27,51 @@ export default function GraphPage() {
       ])
     );
     const graphEntities = entities.filter((entity) => connectedIds.has(entity.id));
+    const graphEvents = events.filter((event) => connectedIds.has(event.id));
 
     return {
-      nodes: graphEntities.map<Node>((entity, index) => ({
-        id: entity.id,
-        position: {
-          x: (index % 4) * 260,
-          y: Math.floor(index / 4) * 160,
-        },
-        data: {
-          label: `${entity.acronym ?? entity.name_en}\n${entity.country}`,
-        },
-        style: {
-          border: "1px solid #d6d3d1",
-          borderRadius: 8,
-          color: "#0f172a",
-          fontSize: 12,
-          padding: 10,
-          width: 190,
-        },
-      })),
+      nodes: [
+        ...graphEntities.map<Node>((entity, index) => ({
+          id: entity.id,
+          position: {
+            x: (index % 4) * 260,
+            y: Math.floor(index / 4) * 160,
+          },
+          data: {
+            label: `${entity.acronym ?? entity.name_en}\n${entity.country}`,
+          },
+          style: {
+            border: "1px solid #d6d3d1",
+            borderRadius: 8,
+            color: "#0f172a",
+            fontSize: 12,
+            padding: 10,
+            width: 190,
+          },
+        })),
+        ...graphEvents.map<Node>((event, index) => {
+          const nodeIndex = graphEntities.length + index;
+
+          return {
+            id: event.id,
+            position: {
+              x: (nodeIndex % 4) * 260,
+              y: Math.floor(nodeIndex / 4) * 160,
+            },
+            data: {
+              label: `${event.name}\n${event.event_type}`,
+            },
+            style: {
+              border: "1px dashed #0f766e",
+              borderRadius: 8,
+              color: "#0f172a",
+              fontSize: 12,
+              padding: 10,
+              width: 210,
+            },
+          };
+        }),
+      ],
       edges: visibleRelationships.map<Edge>((relationship) => ({
         id: relationship.id,
         source: relationship.source_entity_id,

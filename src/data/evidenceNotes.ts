@@ -742,5 +742,169 @@ export const evidenceNotes: EvidenceNote[] = [
     "page_or_section": "Executive Summary and Part 4",
     "confidence_level": "high",
     "public_safe_to_show": true
+  },
+  {
+    "id": "note-bletchley-signatories",
+    "source_id": "gov-uk-bletchley-declaration-2023",
+    "claim_text": "The Bletchley Declaration was agreed by countries attending the Bletchley summit.",
+    "evidence_quote": "Declaration agreed by countries attending the AI Safety Summit 2023 at Bletchley Park, Buckinghamshire.",
+    "evidence_paraphrase": "The official UK source presents the declaration as the summit's agreed state-level outcome.",
+    "page_or_section": "lines 77-97",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-bletchley-global-effort",
+    "source_id": "gov-uk-bletchley-declaration-2023",
+    "claim_text": "Bletchley was framed as a new global effort on AI safety.",
+    "evidence_quote": "The Bletchley Declaration on AI Safety announces a new global effort to unlock the enormous benefits offered by AI – by ensuring it remains safe.",
+    "evidence_paraphrase": "The official page treats the declaration as a global coordination step on AI safety.",
+    "page_or_section": "lines 101-104",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-seoul-cohost",
+    "source_id": "gov-uk-ai-seoul-summit-2024",
+    "claim_text": "The AI Seoul Summit was co-hosted by the UK and the Republic of Korea.",
+    "evidence_quote": "The UK government will co-host the AI Seoul Summit with the Republic of Korea on the 21 and 22 May 2024.",
+    "evidence_paraphrase": "The UK topical page explicitly states UK-ROK co-hosting.",
+    "page_or_section": "lines 72-78",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-seoul-builds-on-bletchley",
+    "source_id": "gov-uk-ai-seoul-summit-2024",
+    "claim_text": "The Seoul summit was explicitly presented as building on Bletchley.",
+    "evidence_quote": "The AI Seoul Summit will build on the legacy of the first AI Safety Summit which was hosted by the UK at Bletchley Park in November 2023.",
+    "evidence_paraphrase": "The UK source links Seoul to the Bletchley process.",
+    "page_or_section": "lines 74-79",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-seoul-signatories",
+    "source_id": "industry-au-seoul-declaration-2024",
+    "claim_text": "The Seoul Declaration carried ten-country plus EU signatory support.",
+    "evidence_quote": "Ten countries and the European Union signed the Seoul Declaration at the AI Seoul Summit in South Korea on 21 May 2024.",
+    "evidence_paraphrase": "The Australian government page republishes the declaration and records the signatories.",
+    "page_or_section": "intro and declaration",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-seoul-hiroshima-reference",
+    "source_id": "industry-au-seoul-declaration-2024",
+    "claim_text": "The Seoul Declaration explicitly referenced the Hiroshima Process code of conduct and the upcoming French summit.",
+    "evidence_quote": "We continue to focus on supporting the operationalisation of the Hiroshima Process International Code of Conduct for Organizations Developing Advanced AI Systems.",
+    "evidence_paraphrase": "The declaration linked Seoul to Hiroshima Process work and looked ahead to France's AI Action Summit.",
+    "page_or_section": "declaration",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-paris-week",
+    "source_id": "elysee-ai-action-summit-overview-2025",
+    "claim_text": "The Paris summit was part of a broader week of events from 6 to 11 February 2025.",
+    "evidence_quote": "Pendant près d’une semaine, du 6 au 11 février 2025, Paris a accueilli de nombreux évènements ... un Sommet international au Grand Palais.",
+    "evidence_paraphrase": "The Élysée page presents the summit as the culmination of a full week of AI events in Paris.",
+    "original_language_quote": "Pendant près d’une semaine, du 6 au 11 février 2025, Paris a accueilli de nombreux évènements ... un Sommet international au Grand Palais.",
+    "translation_note": "French text paraphrased into English.",
+    "page_or_section": "overview page",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-paris-global-dialogue",
+    "source_id": "elysee-ai-action-summit-declaration-2025",
+    "claim_text": "The Paris declaration explicitly called for inclusive multistakeholder dialogue and a global dialogue on AI governance.",
+    "evidence_quote": "Nous reconnaissons la nécessité de dialogues pluripartites inclusifs ... les participants ont également réaffirmé leur volonté de lancer un dialogue mondial sur la gouvernance de l’IA",
+    "evidence_paraphrase": "The declaration calls for inclusive dialogue and a global AI governance dialogue.",
+    "original_language_quote": "Nous reconnaissons la nécessité de dialogues pluripartites inclusifs ... les participants ont également réaffirmé leur volonté de lancer un dialogue mondial sur la gouvernance de l’IA",
+    "translation_note": "French text paraphrased into English.",
+    "page_or_section": "declaration",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-paris-china-signatory",
+    "source_id": "elysee-ai-action-summit-declaration-2025",
+    "claim_text": "China appears in the signatory list of the Paris declaration.",
+    "evidence_quote": "11. Chine",
+    "evidence_paraphrase": "The declaration signatory list explicitly includes China.",
+    "original_language_quote": "11. Chine",
+    "translation_note": "French-language signatory list.",
+    "page_or_section": "signatory list",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-zhang-attendance",
+    "source_id": "reuters-china-vice-premier-paris-ai-summit-2025",
+    "claim_text": "Vice Premier Zhang Guoqing was publicly reported as attending the Paris AI summit.",
+    "evidence_paraphrase": "Reuters reported Zhang Guoqing's Paris summit attendance on China's side.",
+    "page_or_section": "news article summary",
+    "confidence_level": "medium",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-brookings-round6",
+    "source_id": "brookings-ai-glossary-2024",
+    "claim_text": "Brookings publicly tied a dialogue output to the sixth U.S.-China AI and International Security Dialogue with Tsinghua CISS.",
+    "evidence_paraphrase": "The prior PR2C draft records this Brookings source as a public output associated with the sixth round and Tsinghua CISS.",
+    "translation_note": "Exact page text should be reattached from the original draft.",
+    "page_or_section": "Brookings public output; exact section not reattached",
+    "confidence_level": "medium",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-ciss-hd-round2",
+    "source_id": "ciss-china-eu-ai-security-dialogue-round-2-2024",
+    "claim_text": "Round two of the China-EU AI and International Security Dialogue was publicly held by Tsinghua CISS and HD.",
+    "evidence_paraphrase": "The prior PR2C draft records the official CISS source as identifying Tsinghua CISS and HD as public co-hosts of round two.",
+    "translation_note": "Exact page text should be reattached from the original draft.",
+    "page_or_section": "official dialogue announcement",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-ciss-hd-round5",
+    "source_id": "ciss-china-eu-ai-security-dialogue-round-5-2026",
+    "claim_text": "Round five of the China-EU AI and International Security Dialogue was publicly held by Tsinghua CISS and HD in Munich.",
+    "evidence_paraphrase": "The prior PR2C draft records the official CISS source as identifying Tsinghua CISS and HD as public co-hosts of round five and as discussing high-level non-state misuse risks.",
+    "translation_note": "Exact page text should be reattached from the original draft.",
+    "page_or_section": "official dialogue announcement",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-idais-series",
+    "source_id": "farai-idais-page",
+    "claim_text": "IDAIS was presented as a recurring dialogue series rather than a one-off event.",
+    "evidence_paraphrase": "The prior PR2C draft used the FAR.AI page to trace repeated IDAIS venues across multiple cities.",
+    "translation_note": "Exact page text should be reattached from the original draft.",
+    "page_or_section": "series page",
+    "confidence_level": "medium",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-project-moonshot",
+    "source_id": "sg-project-moonshot-page",
+    "claim_text": "AI Verify Foundation publicly maintains Project Moonshot as an evaluation and assurance channel.",
+    "evidence_paraphrase": "The prior PR2C draft used this source to anchor Project Moonshot in the standards and evaluation layer.",
+    "page_or_section": "project page",
+    "confidence_level": "medium",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "note-cnaisda-paris-side-event",
+    "source_id": "cnaisda-shanghai-qizhi-side-event-2025",
+    "claim_text": "CnAISDA had a publicly visible side event during the Paris summit period.",
+    "evidence_paraphrase": "The prior PR2C draft treated the Qi Zhi source as the official China-side record of the CnAISDA Paris side event.",
+    "translation_note": "Exact page text should be reattached from the original draft.",
+    "page_or_section": "official announcement",
+    "confidence_level": "medium",
+    "public_safe_to_show": true
   }
 ];

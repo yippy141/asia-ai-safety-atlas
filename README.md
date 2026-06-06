@@ -78,6 +78,14 @@ Singapore assurance infrastructure such as AI Verify, Project Moonshot, the
 Global AI Assurance Sandbox, and AI TAP is modeled separately from Singapore
 AISI proper.
 
+## PR 2C China-West Dialogue Backfill
+
+The first event layer now imports the safe PR2C subset from
+`tmp/pr2c_china_west_dialogue_v2.json`, filtered through
+`tmp/pr2c_v2_factcheck.json` and `tmp/source_url_repair_map.json`. Event-target
+relationships are limited to event-oriented labels, and homepage-only source rows
+remain held unless repaired or matched to an exact existing source.
+
 ## Project Rules
 
 - Every public claim should trace to a source record.

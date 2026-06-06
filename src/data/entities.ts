@@ -999,7 +999,7 @@ export const entities: Entity[] = [
     "entity_type": "event",
     "country": "International",
     "region": "Cross-border",
-    "summary": "Dialogue series included as a cross-border AI safety engagement channel. Specific sessions and participants need source-level backfill.",
+    "summary": "Dialogue series included as a cross-border AI safety engagement channel. PR2C adds the repaired IDAIS page as a source for the recurring series, while session-specific China-side rows remain held pending exact URLs.",
     "focus_areas": [
       "international_dialogue",
       "dialogue_channel",
@@ -1011,13 +1011,17 @@ export const entities: Entity[] = [
       "IDAIS"
     ],
     "source_ids": [
-      "report-china-west-dialogue-2026-06-05"
+      "report-china-west-dialogue-2026-06-05",
+      "farai-idais-page"
     ],
-    "confidence_level": "low",
+    "confidence_level": "medium",
     "sensitivity_level": "medium",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 3,
-    "needs_primary_source": true
+    "needs_primary_source": true,
+    "open_questions": [
+      "Which session-specific IDAIS pages should anchor China-side participant claims?"
+    ]
   },
   {
     "id": "cn-tsinghua-iaiig",
@@ -1052,31 +1056,42 @@ export const entities: Entity[] = [
   {
     "id": "cn-tsinghua-ciss",
     "name_en": "Tsinghua Center for International Security and Strategy",
-    "name_local": "清华大学国际安全与战略研究中心",
-    "acronym": "Tsinghua CISS",
-    "entity_type": "university",
+    "name_local": "清华大学战略与安全研究中心",
+    "acronym": "CISS",
+    "entity_type": "think_tank",
     "country": "China",
     "city": "Beijing",
     "region": "East Asia",
-    "summary": "Tsinghua-linked international security and strategy center included as a China policy and dialogue ecosystem node.",
+    "summary": "Tsinghua-linked center that appears in public records for U.S.-China and China-EU AI and international security dialogues. PR2C keeps these descriptions high-level and models the rows as public dialogue channels, not operational security relationships.",
     "focus_areas": [
       "international_dialogue",
-      "policy_regulation",
-      "ai_governance"
+      "dialogue_channel",
+      "ai_governance",
+      "policy_regulation"
     ],
     "tags": [
       "Track 2",
       "China",
-      "international security"
+      "international security",
+      "CISS",
+      "track 2 dialogue",
+      "China-EU AI and international security dialogue",
+      "U.S.-China AI and international security dialogue"
     ],
     "source_ids": [
-      "report-china-west-dialogue-2026-06-05"
+      "report-china-west-dialogue-2026-06-05",
+      "ciss-china-eu-ai-security-dialogue-round-2-2024",
+      "ciss-china-eu-ai-security-dialogue-round-5-2026",
+      "brookings-ai-glossary-2024"
     ],
-    "confidence_level": "low",
+    "confidence_level": "high",
     "sensitivity_level": "medium",
-    "last_verified": "2026-06-05",
-    "tier": 3,
-    "needs_primary_source": true
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Additional exact public source paths would strengthen the seventh U.S.-China dialogue row before import."
+    ]
   },
   {
     "id": "ipa-japan",
@@ -1444,5 +1459,68 @@ export const entities: Entity[] = [
     "last_verified": "2026-06-05",
     "tier": 1,
     "needs_primary_source": true
+  },
+  {
+    "id": "centre-for-humanitarian-dialogue",
+    "name_en": "Centre for Humanitarian Dialogue",
+    "acronym": "HD",
+    "entity_type": "dialogue_convenor",
+    "country": "Switzerland",
+    "region": "Europe",
+    "summary": "Public co-host institution for repaired China-EU AI and International Security Dialogue round records. The atlas models this as a dialogue-convening role only.",
+    "focus_areas": [
+      "international_dialogue",
+      "dialogue_channel",
+      "ai_governance"
+    ],
+    "tags": [
+      "HD Centre",
+      "China-EU dialogue",
+      "track 2 dialogue",
+      "dialogue convenor"
+    ],
+    "source_ids": [
+      "ciss-china-eu-ai-security-dialogue-round-2-2024",
+      "ciss-china-eu-ai-security-dialogue-round-5-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "A more specific HD institutional page would improve the organization profile; PR2C only imports the event co-host evidence."
+    ]
+  },
+  {
+    "id": "shanghai-qi-zhi-institute",
+    "name_en": "Shanghai Qi Zhi Institute",
+    "name_local": "上海期智研究院",
+    "entity_type": "research_group",
+    "country": "China",
+    "city": "Shanghai",
+    "region": "East Asia",
+    "summary": "China-side research institute visible in this PR2C import through the source-backed CnAISDA Paris side-event record. Broader IDAIS-related claims are held until exact URLs are repaired.",
+    "focus_areas": [
+      "international_dialogue",
+      "ai_governance"
+    ],
+    "tags": [
+      "SQZ",
+      "CnAISDA",
+      "Paris side event",
+      "China-facing interface"
+    ],
+    "source_ids": [
+      "cnaisda-shanghai-qizhi-side-event-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "needs_primary_source": true,
+    "open_questions": [
+      "Exact source URLs are still needed before importing the IDAIS Oxfordshire relationship rows."
+    ]
   }
 ];

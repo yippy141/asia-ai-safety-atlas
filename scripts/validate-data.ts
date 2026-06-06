@@ -1,5 +1,6 @@
 import { countries } from "../src/data/countries.ts";
 import { entities } from "../src/data/entities.ts";
+import { events } from "../src/data/events.ts";
 import { evidenceNotes } from "../src/data/evidenceNotes.ts";
 import { relationships } from "../src/data/relationships.ts";
 import { sources } from "../src/data/sources.ts";
@@ -16,6 +17,7 @@ try {
     relationships,
     sources,
     evidenceNotes,
+    events,
   });
 } catch (error) {
   errors.push(error instanceof Error ? error.message : String(error));
@@ -53,6 +55,7 @@ console.log(
     "Atlas data validation passed:",
     `${entities.length} entities`,
     `${relationships.length} relationships`,
+    `${events.length} events`,
     `${sources.length} sources`,
     `${countries.length} country profiles`,
   ].join(" ")

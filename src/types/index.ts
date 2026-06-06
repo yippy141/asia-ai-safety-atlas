@@ -101,6 +101,8 @@ export interface Event {
   name: string;
   name_original?: string;
   event_type: string;
+  date?: string;
+  location?: string;
   country?: string;
   city?: string;
   start_date?: string;
@@ -108,6 +110,8 @@ export interface Event {
   summary: string;
   organizer_entity_ids?: string[];
   participant_entity_ids?: string[];
+  organizer_entity_ids_or_names?: string[];
+  participant_entity_ids_or_names?: string[];
   source_ids: string[];
   evidence_note_ids?: string[];
   confidence_level: ConfidenceLevel;

@@ -5,16 +5,19 @@ export const countries: CountryProfile[] = [
     "slug": "china",
     "country": "China",
     "region": "East Asia",
-    "summary": "PR 2A backfills China's standards and evaluation slice with official Chinese-language primary sources spanning CAC/MIIT rules, TC260 standards work, CAICT benchmarks, CESI standards infrastructure, SHLAB/OpenCompass, BAAI/FlagEval, and China-side dialogue networks.",
-    "government_posture": "CAC and MIIT are now backed by official co-issued rules and the 2024 national AI standardization guide. The profile still distinguishes CAC's online-information governance role from MIIT's standards, industry, and affiliated-institution role.",
+    "summary": "China now has source-backed standards/evaluation records plus a first PR2C layer for public dialogue channels and event records. The dialogue layer is modeled as engagement pathways rather than inferred partnerships.",
+    "government_posture": "CAC and MIIT remain the core official standards/evaluation regulators in the atlas. PR2C adds public state-level summit context for Bletchley, Seoul, and Paris, but only imports a China participation relationship where the surviving public sources directly support it.",
     "standards_evaluation": "TC260, TC28/SC42, CAICT, CESI, CSTC, MIIT/TC1, WG9, OpenCompass, FlagEval, and related benchmark or working-group nodes are represented with primary source IDs where available.",
     "research_ecosystem": "SHLAB and BAAI are upgraded with official sources for evaluation infrastructure and safety/governance activities. Tsinghua-linked dialogue and policy nodes remain discovery-stage outside this standards/evaluation backfill.",
     "industry_ecosystem": "AIIA is added as an industry-alliance platform because official CAICT sources link it to AI safety commitments, risk-management work, and AI safety benchmark activity.",
-    "international_engagement": "CnAISDA is updated from official Chinese institutional coverage as an international-dialogue network rather than a demonstrated domestic frontier-model testing regulator.",
+    "international_engagement": "PR2C adds conservative public engagement pathways: repaired Brookings-CISS sixth U.S.-China dialogue output, repaired CISS-HD China-EU AI and International Security Dialogue rounds, summit-diplomacy event records, and the exact existing CnAISDA Paris side-event source. These are dialogue channels, not partnership claims.",
     "open_questions": [
       "How should CAC and the Central Cyberspace Affairs Commission Office be modeled when source text names one or the other?",
       "Which benchmark systems should become standalone profile pages as the atlas expands?",
-      "Which official sources, if any, establish domestic testing or audit mandates for dialogue-network entities?"
+      "Which official sources, if any, establish domestic testing or audit mandates for dialogue-network entities?",
+      "Which exact source should anchor the seventh U.S.-China AI and International Security Dialogue row?",
+      "Which French institution was the named counterpart in the first Beijing AISI China-France dialogue?",
+      "Which unrepaired homepage-only forum sources should be reattached before importing the broader I-AIIG and IDAIS event rows?"
     ],
     "source_ids": [
       "report-china-standards-evaluation-2026-06-05",
@@ -31,9 +34,20 @@ export const countries: CountryProfile[] = [
       "cesi-qiusuo-benchmark-2024",
       "shlab-wg9-formation-2026",
       "baai-flageval-system-page",
-      "cnaisda-tsinghua-paris-side-event-2025"
+      "cnaisda-tsinghua-paris-side-event-2025",
+      "gov-uk-bletchley-declaration-2023",
+      "gov-uk-ai-seoul-summit-2024",
+      "industry-au-seoul-declaration-2024",
+      "elysee-ai-action-summit-overview-2025",
+      "elysee-ai-action-summit-declaration-2025",
+      "reuters-china-vice-premier-paris-ai-summit-2025",
+      "brookings-ai-glossary-2024",
+      "ciss-china-eu-ai-security-dialogue-round-2-2024",
+      "ciss-china-eu-ai-security-dialogue-round-5-2026",
+      "farai-idais-page",
+      "cnaisda-shanghai-qizhi-side-event-2025"
     ],
-    "last_verified": "2026-06-05"
+    "last_verified": "2026-06-06"
   },
   {
     "slug": "japan",

@@ -8,7 +8,7 @@ import {
   sensitivityLevels,
   sourceTypes,
 } from "./taxonomy.ts";
-import type { Entity, EvidenceNote, Relationship, Source } from "@/types";
+import type { Entity, Event, EvidenceNote, Relationship, Source } from "@/types";
 
 export const focusAreaSchema = z.enum(focusAreas);
 export const confidenceLevelSchema = z.enum(confidenceLevels);
@@ -109,6 +109,8 @@ export const eventSchema = z.object({
   name: z.string().min(1),
   name_original: z.string().optional(),
   event_type: z.string().min(1),
+  date: z.string().optional(),
+  location: z.string().optional(),
   country: z.string().optional(),
   city: z.string().optional(),
   start_date: z.string().optional(),
@@ -116,7 +118,9 @@ export const eventSchema = z.object({
   summary: z.string().min(1),
   organizer_entity_ids: z.array(z.string()).optional(),
   participant_entity_ids: z.array(z.string()).optional(),
-  source_ids: z.array(z.string()).default([]),
+  organizer_entity_ids_or_names: z.array(z.string().min(1)).optional(),
+  participant_entity_ids_or_names: z.array(z.string().min(1)).optional(),
+  source_ids: z.array(z.string().min(1)).min(1),
   evidence_note_ids: z.array(z.string()).optional(),
   confidence_level: confidenceLevelSchema,
   sensitivity_level: sensitivityLevelSchema,
@@ -178,6 +182,7 @@ export type AtlasData = {
   relationships: Relationship[];
   sources: Source[];
   evidenceNotes: EvidenceNote[];
+  events?: Event[];
 };
 
 export function validateAtlasData({
@@ -185,22 +190,32 @@ export function validateAtlasData({
   relationships,
   sources,
   evidenceNotes,
+  events = [],
 }: AtlasData) {
   const errors: string[] = [];
   collectSchemaErrors("Entity", entities, entitySchema, errors);
   collectSchemaErrors("Relationship", relationships, relationshipSchema, errors);
   collectSchemaErrors("Source", sources, sourceSchema, errors);
   collectSchemaErrors("Evidence note", evidenceNotes, evidenceNoteSchema, errors);
+  collectSchemaErrors("Event", events, eventSchema, errors);
 
   const entityIds = new Set(entities.map((entity) => entity.id));
+  const eventIds = new Set(events.map((event) => event.id));
   const sourceIds = new Set(sources.map((source) => source.id));
   const evidenceNoteIds = new Set(evidenceNotes.map((note) => note.id));
   const sourcesById = new Map(sources.map((source) => [source.id, source]));
+  const eventRelationshipTypes = new Set([
+    "hosts",
+    "co_hosts",
+    "organizes",
+    "participates_in",
+  ]);
 
   collectDuplicateIds("Entity", entities, errors);
   collectDuplicateIds("Relationship", relationships, errors);
   collectDuplicateIds("Source", sources, errors);
   collectDuplicateIds("Evidence note", evidenceNotes, errors);
+  collectDuplicateIds("Event", events, errors);
 
   for (const entity of entities) {
     if (entity.tier === 1) {
@@ -270,9 +285,21 @@ export function validateAtlasData({
       );
     }
 
-    if (!entityIds.has(relationship.target_entity_id)) {
+    const targetIsEntity = entityIds.has(relationship.target_entity_id);
+    const targetIsEvent = eventIds.has(relationship.target_entity_id);
+
+    if (!targetIsEntity && !targetIsEvent) {
       errors.push(
-        `Relationship ${relationship.id} references missing target entity ${relationship.target_entity_id}.`
+        `Relationship ${relationship.id} references missing target entity or event ${relationship.target_entity_id}.`
+      );
+    }
+
+    if (
+      targetIsEvent &&
+      !eventRelationshipTypes.has(relationship.relationship_type)
+    ) {
+      errors.push(
+        `Relationship ${relationship.id} targets an event but uses non-event relationship type ${relationship.relationship_type}.`
       );
     }
 
@@ -298,6 +325,22 @@ export function validateAtlasData({
       errors.push(
         `Evidence note ${note.id} references missing source ${note.source_id}.`
       );
+    }
+  }
+
+  for (const event of events) {
+    for (const sourceId of event.source_ids) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(`Event ${event.id} references missing source ${sourceId}.`);
+      }
+    }
+
+    for (const noteId of event.evidence_note_ids ?? []) {
+      if (!evidenceNoteIds.has(noteId)) {
+        errors.push(
+          `Event ${event.id} references missing evidence note ${noteId}.`
+        );
+      }
     }
   }
 
