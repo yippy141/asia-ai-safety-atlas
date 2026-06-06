@@ -509,13 +509,13 @@ export const entities: Entity[] = [
   },
   {
     "id": "opencompass",
-    "name_en": "OpenCompass",
-    "name_local": "司南",
+    "name_en": "OpenCompass at Shanghai AI Laboratory",
+    "name_local": "OpenCompass 司南",
     "acronym": "OpenCompass",
     "entity_type": "evaluation_platform",
     "country": "China",
     "region": "East Asia",
-    "summary": "Official SHLAB sources present OpenCompass as a SHLAB-built open evaluation system spanning multiple domains, including safety and trustworthiness.",
+    "summary": "Open evaluation infrastructure from Shanghai AI Lab that explicitly includes safety as a model capability dimension.",
     "focus_areas": [
       "evaluation",
       "testing_infrastructure",
@@ -525,17 +525,28 @@ export const entities: Entity[] = [
     "tags": [
       "Official SHLAB sources present OpenCompass as a SHLAB-built open evaluation system spanning multiple domains, including safety and trustworthiness.",
       "OpenCompass",
-      "evaluation platform"
+      "evaluation platform",
+      "open benchmarking",
+      "multimodal evaluation",
+      "Shanghai AI Lab",
+      "model_evaluation",
+      "safety_evaluation",
+      "technical_testing_infrastructure"
     ],
     "source_ids": [
       "report-technical-research-groups-2026-06-05",
-      "shlab-opencompass-2023"
+      "shlab-opencompass-2023",
+      "src-opencompass-launch",
+      "src-opencompass-doc"
     ],
-    "confidence_level": "medium",
+    "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 1,
-    "needs_primary_source": true
+    "needs_primary_source": false,
+    "open_questions": [
+      "Need more public documentation on OpenCompass safety-only tracks and datasets."
+    ]
   },
   {
     "id": "cn-baai",
@@ -581,12 +592,12 @@ export const entities: Entity[] = [
   {
     "id": "flag-eval",
     "name_en": "FlagEval",
-    "name_local": "FlagEval 大模型评测开放平台",
+    "name_local": "FlagEval 天秤大模型评测体系及开放平台",
     "acronym": "FlagEval",
     "entity_type": "evaluation_platform",
     "country": "China",
     "region": "East Asia",
-    "summary": "Official BAAI system materials identify FlagEval as BAAI's open model-evaluation platform, making it a useful evaluation-stack node.",
+    "summary": "BAAI’s public evaluation platform for large and foundation models, including safety and values dimensions.",
     "focus_areas": [
       "evaluation",
       "testing_infrastructure",
@@ -596,17 +607,27 @@ export const entities: Entity[] = [
     "tags": [
       "Official BAAI system materials identify FlagEval as BAAI's open model-evaluation platform, making it a useful evaluation-stack node.",
       "FlagEval",
-      "large-model evaluation"
+      "large-model evaluation",
+      "benchmarking",
+      "leaderboard",
+      "foundation models",
+      "model_evaluation",
+      "safety_evaluation",
+      "technical_testing_infrastructure"
     ],
     "source_ids": [
       "report-technical-research-groups-2026-06-05",
-      "baai-flageval-system-page"
+      "baai-flageval-system-page",
+      "src-flageval"
     ],
-    "confidence_level": "medium",
+    "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 1,
-    "needs_primary_source": true
+    "needs_primary_source": false,
+    "open_questions": [
+      "Need current public detail on its safety-specific testing modules."
+    ]
   },
   {
     "id": "cn-beijing-aisi",
@@ -728,18 +749,21 @@ export const entities: Entity[] = [
   },
   {
     "id": "jp-aisi",
-    "name_en": "Japan AI Safety Institute",
-    "acronym": "AISI",
+    "name_en": "AI Safety Institute Japan",
+    "acronym": "AISI Japan",
     "entity_type": "ai_safety_institute",
     "country": "Japan",
     "region": "East Asia",
-    "summary": "IPA-hosted Japanese AI safety body launched in February 2024. Publicly focused on evaluation methods, guidance, tools, and international coordination, not formal regulation.",
+    "summary": "Strong public technical-evaluation node with explicit guides for LLM-system safety evaluation and red teaming.",
     "focus_areas": [
       "frontier_ai_safety",
       "evaluation",
       "testing_infrastructure",
       "ai_assurance",
-      "international_dialogue"
+      "international_dialogue",
+      "dangerous_capability_evaluation",
+      "red_teaming",
+      "model_security"
     ],
     "tags": [
       "AISI",
@@ -753,7 +777,14 @@ export const entities: Entity[] = [
       "guidance",
       "testing tools",
       "evaluation environment",
-      "international coordination"
+      "international coordination",
+      "evaluation guide",
+      "red teaming",
+      "LLM systems",
+      "safety_evaluation",
+      "dangerous-capability_evaluation",
+      "jailbreak_or_prompt-injection_evaluation",
+      "technical_testing_infrastructure"
     ],
     "source_ids": [
       "report-japan-korea-singapore-aisi-2026-06-05",
@@ -761,33 +792,39 @@ export const entities: Entity[] = [
       "jpn-integrated-innovation-strategy-2024",
       "jpn-aisi-activity-paper-2025-03",
       "jpn-aisi-eval-tool-oss-post",
-      "jpn-aisi-eval-env-taskforce-report-post"
+      "jpn-aisi-eval-env-taskforce-report-post",
+      "src-japan-aisi-eval",
+      "src-japan-aisi-redteam"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 1,
     "needs_primary_source": false,
     "name_local": "AIセーフティ・インスティテュート",
     "open_questions": [
-      "Whether Japan AISI will move into formal assurance or conformity assessment."
+      "Whether Japan AISI will move into formal assurance or conformity assessment.",
+      "Need public benchmark and dataset outputs beyond guidance documents."
     ]
   },
   {
     "id": "kr-aisi",
-    "name_en": "Korea AI Safety Institute",
-    "acronym": "AISI",
+    "name_en": "AI Safety Institute Korea",
+    "acronym": "AISI Korea",
     "entity_type": "ai_safety_institute",
     "country": "South Korea",
     "region": "East Asia",
-    "summary": "MSIT-launched Korea AISI with a clearer policy-evaluation-research structure than Japan’s public model. Publicly framed as non-regulatory and nationally representative in AI safety.",
+    "summary": "Major Korean public evaluation node with explicit risk categories, benchmark infrastructure, and public model-evaluation activity.",
     "focus_areas": [
       "frontier_ai_safety",
       "evaluation",
       "testing_infrastructure",
       "policy_regulation",
       "technical_safety_research",
-      "international_dialogue"
+      "international_dialogue",
+      "dangerous_capability_evaluation",
+      "red_teaming",
+      "model_security"
     ],
     "tags": [
       "AISI",
@@ -801,7 +838,14 @@ export const entities: Entity[] = [
       "risk definition",
       "evaluation frameworks",
       "evaluation infrastructure",
-      "international cooperation"
+      "international cooperation",
+      "risk categories",
+      "42-model program",
+      "safety_evaluation",
+      "dangerous-capability_evaluation",
+      "deception",
+      "jailbreak_or_prompt-injection_evaluation",
+      "technical_testing_infrastructure"
     ],
     "source_ids": [
       "report-japan-korea-singapore-aisi-2026-06-05",
@@ -809,16 +853,19 @@ export const entities: Entity[] = [
       "kor-aisi-evaluation-page",
       "kor-msit-launch-release",
       "kor-etri-aisi-page",
-      "kor-aisi-consortium-meeting-post"
+      "kor-aisi-consortium-meeting-post",
+      "src-korea-aisi-home",
+      "src-korea-aisi-42models"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 1,
     "needs_primary_source": false,
     "name_local": "인공지능안전연구소",
     "open_questions": [
-      "How Korea AISI will divide future work between evaluation, policy support, and standards-adjacent functions."
+      "How Korea AISI will divide future work between evaluation, policy support, and standards-adjacent functions.",
+      "Need public names and links for specific datasets and tools hosted by the institute."
     ]
   },
   {
@@ -873,12 +920,13 @@ export const entities: Entity[] = [
     "entity_type": "evaluation_institution",
     "country": "Singapore",
     "region": "Southeast Asia",
-    "summary": "Update AI Verify Foundation with current assurance stack: Project Moonshot, the Global AI Assurance Sandbox, and the AI Tester Accreditation Programme. Connect this update to existing Singapore assurance/tooling records rather than duplicating PR2B entries.",
+    "summary": "Singapore’s strongest public technical-testing ecosystem node, relevant here because it operates Project Moonshot for LLM benchmarking and red teaming.",
     "focus_areas": [
       "ai_assurance",
       "evaluation",
       "testing_infrastructure",
-      "standards"
+      "standards",
+      "open_model_governance"
     ],
     "tags": [
       "AI Verify",
@@ -894,7 +942,13 @@ export const entities: Entity[] = [
       "Project Moonshot",
       "sandbox",
       "benchmarking",
-      "red teaming"
+      "red teaming",
+      "AI assurance",
+      "testing ecosystem",
+      "open-source",
+      "safety_evaluation",
+      "technical_testing_infrastructure",
+      "open-source_or_open-weight_model_governance"
     ],
     "source_ids": [
       "report-japan-korea-singapore-aisi-2026-06-05",
@@ -905,7 +959,8 @@ export const entities: Entity[] = [
       "sg-global-ai-assurance-sandbox-page",
       "sg-ai-tester-accreditation-page",
       "ai-verify-foundation-home-2026",
-      "global-ai-assurance-sandbox-main-report-2025"
+      "global-ai-assurance-sandbox-main-report-2025",
+      "src-aivf-moonshot-launch"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
@@ -916,7 +971,8 @@ export const entities: Entity[] = [
     "acronym": "AIVF",
     "open_questions": [
       "How AIVF and Singapore AISI will divide future public-facing evaluation roles.",
-      "Publicly documented governance and scope details for the AI Tester Accreditation Programme remain limited in the sources captured here."
+      "Publicly documented governance and scope details for the AI Tester Accreditation Programme remain limited in the sources captured here.",
+      "Need a public breakdown of Moonshot modules and released case studies."
     ]
   },
   {
@@ -1402,30 +1458,42 @@ export const entities: Entity[] = [
     "entity_type": "evaluation_platform",
     "country": "Singapore",
     "region": "Southeast Asia",
-    "summary": "Officially presented as an open-source LLM evaluation toolkit connected to IMDA’s Starter Kit and AIVF, with benchmarking and red-teaming functions.",
+    "summary": "Open-source LLM evaluation toolkit that combines benchmarking and red teaming for LLMs and LLM applications.",
     "focus_areas": [
       "evaluation",
       "testing_infrastructure",
       "red_teaming",
-      "ai_assurance"
+      "ai_assurance",
+      "model_security"
     ],
     "tags": [
       "Project Moonshot",
       "open-source toolkit",
       "LLM evaluation",
       "red-teaming",
-      "tool"
+      "tool",
+      "LLM toolkit",
+      "benchmarking",
+      "red teaming",
+      "safety_evaluation",
+      "jailbreak_or_prompt-injection_evaluation",
+      "technical_testing_infrastructure"
     ],
     "source_ids": [
       "sg-project-moonshot-page",
       "sg-imda-llm-starter-kit",
-      "expanded-asean-guide-genai-2025"
+      "expanded-asean-guide-genai-2025",
+      "src-aivf-moonshot-launch"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
     "last_verified": "2026-06-06",
     "tier": 1,
-    "needs_primary_source": false
+    "needs_primary_source": false,
+    "acronym": "Moonshot",
+    "open_questions": [
+      "Need public inventory of datasets, threat classes, and supported report outputs."
+    ]
   },
   {
     "id": "global-ai-assurance-sandbox",
@@ -2586,5 +2654,504 @@ export const entities: Entity[] = [
       "Programme charter, governance, and current scope."
     ],
     "needs_primary_source": true
+  },
+  {
+    "id": "pku-alignment-team",
+    "name_en": "PKU-Alignment Team",
+    "name_local": "北大对齐小组",
+    "acronym": "PKU-Alignment",
+    "entity_type": "research_group",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Public PKU team focused on LLM alignment, Safe-RLHF, multimodal alignment, and alignment-brittleness research.",
+    "focus_areas": [
+      "technical_alignment",
+      "evaluation",
+      "testing_infrastructure"
+    ],
+    "tags": [
+      "RLHF",
+      "multimodal alignment",
+      "open-source",
+      "safety_evaluation",
+      "technical_testing_infrastructure"
+    ],
+    "source_ids": [
+      "src-pku-align-anything",
+      "src-pku-brittleness",
+      "src-pku-alignment-github",
+      "src-pku-safe-rlhf"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Need clearer mapping to the broader PKU Center for AI Safety and Governance."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "baai-flagsafe",
+    "name_en": "FlagSafe",
+    "name_local": "FlagSafe 大模型安全平台",
+    "acronym": "FlagSafe",
+    "entity_type": "evaluation_platform",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "BAAI-led public safety platform spanning red teaming, defense, interpretability, deception, and alignment.",
+    "focus_areas": [
+      "technical_alignment",
+      "evaluation",
+      "dangerous_capability_evaluation",
+      "agent_safety",
+      "model_security",
+      "testing_infrastructure"
+    ],
+    "tags": [
+      "red team",
+      "blue team",
+      "white-box",
+      "Chinese safety platform",
+      "safety_evaluation",
+      "deception",
+      "technical_testing_infrastructure"
+    ],
+    "source_ids": [
+      "src-flagsafe-home",
+      "src-flagsafe-launch",
+      "src-flagsafe-alignment",
+      "src-flagsafe-deception"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Whether FlagSafe should be modeled as a platform or as the public face of a wider BAAI safety center."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "ruc-xiting-wang-group",
+    "name_en": "Xiting Wang Group at Renmin University of China",
+    "name_local": "王诣挺课题组",
+    "entity_type": "research_group",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Publicly described as working on large-model interpretability and safety alignment.",
+    "focus_areas": [
+      "technical_alignment"
+    ],
+    "tags": [
+      "RUC",
+      "interpretability",
+      "safety alignment"
+    ],
+    "source_ids": [
+      "src-ruc-xiting-bio"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "open_questions": [
+      "Need a fuller official lab page tying the group to specific benchmarks or tools."
+    ],
+    "needs_primary_source": true
+  },
+  {
+    "id": "bigai",
+    "name_en": "Beijing Institute for General Artificial Intelligence",
+    "name_local": "北京通用人工智能研究院",
+    "acronym": "BIGAI",
+    "entity_type": "research_group",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "BIGAI is included for TongTest and explicit ability-plus-value-alignment framing; the row remains medium-confidence because the work is broader AGI evaluation rather than pure frontier LLM safety.",
+    "focus_areas": [
+      "technical_alignment",
+      "testing_infrastructure",
+      "agent_safety"
+    ],
+    "tags": [
+      "TongTest",
+      "AGI evaluation",
+      "value alignment",
+      "technical_testing_infrastructure"
+    ],
+    "source_ids": [
+      "src-bigai-tongtest"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "open_questions": [
+      "How much of TongTest now directly targets foundation-model safety."
+    ],
+    "needs_primary_source": true
+  },
+  {
+    "id": "hkust-shuai-wang-group",
+    "name_en": "Shuai Wang Group at HKUST CSE",
+    "name_local": "香港科技大学王帅课题组",
+    "entity_type": "research_group",
+    "country": "Hong Kong",
+    "region": "East Asia",
+    "summary": "Public HKUST materials show direct LLM security relevance and broader trustworthy-LLM framing around security and reliability risks.",
+    "focus_areas": [
+      "model_security",
+      "cybersecurity"
+    ],
+    "tags": [
+      "LLM security",
+      "watermarking",
+      "trustworthy LLM",
+      "ai-cybersecurity"
+    ],
+    "source_ids": [
+      "src-hkust-shuaiwang",
+      "src-hkust-trustworthy-llm"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "open_questions": [
+      "Need more official evidence of jailbreak or prompt-injection-specific work."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "hong-kong-generative-ai-rd-center",
+    "name_en": "Hong Kong Generative AI Research and Development Center",
+    "name_local": "香港生成式人工智能研发中心",
+    "acronym": "HKGAI",
+    "entity_type": "research_group",
+    "country": "Hong Kong",
+    "region": "East Asia",
+    "summary": "Publicly visible through HKGAI-V1, which is framed around Hong Kong-specific alignment, safety, and contextual suitability.",
+    "focus_areas": [
+      "technical_alignment",
+      "evaluation",
+      "open_model_governance"
+    ],
+    "tags": [
+      "regional alignment",
+      "Hong Kong sovereign model",
+      "HKGAI-V1",
+      "safety_evaluation",
+      "open-source_or_open-weight_model_governance"
+    ],
+    "source_ids": [
+      "src-hkust-hkgai-v1",
+      "src-hkgai-v1-paper"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "open_questions": [
+      "Need more official center pages on benchmarks and released safety tools."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "nii-llmc",
+    "name_en": "NII Large Language Model Research and Development Center",
+    "name_local": "国立情報学研究所 大規模言語モデル研究開発センター",
+    "acronym": "LLMC",
+    "entity_type": "research_group",
+    "country": "Japan",
+    "region": "East Asia",
+    "summary": "Key Japanese public node for technical LLM safety, with a Safety WG and safety symposiums.",
+    "focus_areas": [
+      "technical_alignment",
+      "evaluation"
+    ],
+    "tags": [
+      "LLM-jp",
+      "symposium",
+      "working group",
+      "safety_evaluation"
+    ],
+    "source_ids": [
+      "src-nii-llmc",
+      "src-nii-today",
+      "src-llmjp-resources"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Need a fuller map of LLMC technical-safety outputs beyond talks and reports."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "llm-jp-safety-wg",
+    "name_en": "LLM-jp Safety Working Group",
+    "name_local": "LLM-jp 安全性ワーキンググループ",
+    "acronym": "LLM-jp Safety WG",
+    "entity_type": "working_group",
+    "country": "Japan",
+    "region": "East Asia",
+    "summary": "Public safety working group inside Japan’s open LLM ecosystem, visible through NII and LLM-jp resources.",
+    "focus_areas": [
+      "technical_alignment",
+      "evaluation"
+    ],
+    "tags": [
+      "LLM-jp",
+      "Safety WG",
+      "Japan",
+      "safety_evaluation"
+    ],
+    "source_ids": [
+      "src-nii-llmc",
+      "src-llmjp-resources"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Need clearer public authorship and institutional membership data."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "sb-intuitions-responsible-ai-team",
+    "name_en": "Responsible AI Team at SB Intuitions",
+    "name_local": "Responsible AI チーム",
+    "entity_type": "research_group",
+    "country": "Japan",
+    "region": "East Asia",
+    "summary": "Corporate technical-safety team with public Japanese benchmarks for safety-boundary testing and guardrails.",
+    "focus_areas": [
+      "evaluation",
+      "red_teaming",
+      "model_security"
+    ],
+    "tags": [
+      "guardrails",
+      "Japanese benchmarks",
+      "corporate R&D",
+      "safety_evaluation",
+      "jailbreak_or_prompt-injection_evaluation"
+    ],
+    "source_ids": [
+      "src-sb-safety-boundary",
+      "src-sb-wildguard-jp"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Need more public detail on multilingual scope beyond Japanese evaluations."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "riken-aip-nlu",
+    "name_en": "RIKEN AIP Natural Language Understanding Team",
+    "name_local": "理研AIP 自然言語理解チーム",
+    "entity_type": "research_group",
+    "country": "Japan",
+    "region": "East Asia",
+    "summary": "Relevant mainly through public interpretability and trustworthy-foundation framing plus adjacent Japanese LLM safety dataset work. This row remains medium-confidence and is not labeled as a core frontier AI safety lab.",
+    "focus_areas": [
+      "technical_alignment"
+    ],
+    "tags": [
+      "trustworthy NLP",
+      "interpretability",
+      "AnswerCarefully adjacency"
+    ],
+    "source_ids": [
+      "src-riken-answercarefully",
+      "src-riken-nlu"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "open_questions": [
+      "Need more direct frontier-model safety outputs from the team itself."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "soongsil-ai-safety-center",
+    "name_en": "Soongsil University AI Safety Research Center",
+    "name_local": "숭실대학교 AI안전성연구센터",
+    "acronym": "AISC",
+    "entity_type": "research_group",
+    "country": "South Korea",
+    "region": "East Asia",
+    "summary": "University-based Korean group with direct public evidence of large-model security and safety benchmarking using prompt-injection and jailbreak attacks.",
+    "focus_areas": [
+      "evaluation",
+      "red_teaming",
+      "model_security",
+      "cybersecurity"
+    ],
+    "tags": [
+      "57 attacks",
+      "20-model benchmark",
+      "foundation-model testing",
+      "safety_evaluation",
+      "jailbreak_or_prompt-injection_evaluation",
+      "ai-cybersecurity"
+    ],
+    "source_ids": [
+      "src-soongsil-center",
+      "src-soongsil-llm-safety"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Need released methodology, benchmark artifacts, and scoring details."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "kaist-aipr-lab",
+    "name_en": "KAIST Artificial Intelligence and Probabilistic Reasoning Lab",
+    "name_local": "KAIST AIPR Lab",
+    "acronym": "AIPR",
+    "entity_type": "research_group",
+    "country": "South Korea",
+    "region": "East Asia",
+    "summary": "KAIST lab with direct public work on jailbreak defense for misaligned instructions and transformer interpretability.",
+    "focus_areas": [
+      "technical_alignment",
+      "red_teaming",
+      "model_security"
+    ],
+    "tags": [
+      "GC-DPO",
+      "Monet",
+      "safe diffusion",
+      "interpretability",
+      "jailbreak_or_prompt-injection_evaluation"
+    ],
+    "source_ids": [
+      "src-kaist-aipr-home",
+      "src-kaist-aipr-pubs"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Need public benchmark or tool releases beyond publications."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "smu-jun-sun-group",
+    "name_en": "Jun Sun Group at Singapore Management University",
+    "name_local": "Jun Sun research group",
+    "entity_type": "research_group",
+    "country": "Singapore",
+    "region": "Southeast Asia",
+    "summary": "Publicly relevant through agent-safety, backdoor, and LLM-safety work such as AgentSpec and BackdoorLLM.",
+    "focus_areas": [
+      "agent_safety",
+      "model_security",
+      "red_teaming",
+      "technical_alignment"
+    ],
+    "tags": [
+      "AgentSpec",
+      "BackdoorLLM",
+      "SMU",
+      "jailbreak_or_prompt-injection_evaluation"
+    ],
+    "source_ids": [
+      "src-smu-agentspec",
+      "src-smu-backdoorllm",
+      "src-smu-llm-seminar"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Need a fuller public map of the group’s current safety portfolio beyond highlighted papers."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "nus-jin-song-dong-group",
+    "name_en": "Jin-Song Dong Group at National University of Singapore",
+    "name_local": "Jin-Song Dong research group",
+    "entity_type": "research_group",
+    "country": "Singapore",
+    "region": "Southeast Asia",
+    "summary": "NUS group relevant through formal methods with LLM agents, trusted AI, and the TrustLLM benchmark.",
+    "focus_areas": [
+      "technical_alignment",
+      "evaluation",
+      "agent_safety"
+    ],
+    "tags": [
+      "formal methods",
+      "LLM agents",
+      "TrustLLM",
+      "verified synthesis",
+      "safety_evaluation"
+    ],
+    "source_ids": [
+      "src-nus-jinsong",
+      "src-trustllm"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Need public clarification of which current projects are benchmarks versus deployed verification tools."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "hong-kong-university-of-science-and-technology",
+    "name_en": "Hong Kong University of Science and Technology",
+    "name_local": "香港科技大学",
+    "acronym": "HKUST",
+    "entity_type": "university",
+    "country": "Hong Kong",
+    "region": "East Asia",
+    "summary": "University parent institution for source-backed HKUST technical safety and LLM-security rows in PR2F, including Shuai Wang group materials and HKGAI-V1 public activity.",
+    "focus_areas": [
+      "technical_safety_research",
+      "model_security",
+      "technical_alignment"
+    ],
+    "tags": [
+      "HKUST",
+      "Hong Kong",
+      "LLM security",
+      "HKGAI"
+    ],
+    "source_ids": [
+      "src-hkust-shuaiwang",
+      "src-hkust-hkgai-v1"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "open_questions": [
+      "Which HKUST centers or labs own current public safety benchmarks and technical deliverables."
+    ],
+    "needs_primary_source": false
   }
 ];

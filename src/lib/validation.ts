@@ -13,6 +13,7 @@ import type {
   Event,
   EvidenceNote,
   PolicyOrStandard,
+  ResearchOutput,
   Relationship,
   Source,
 } from "@/types";
@@ -161,8 +162,9 @@ export const researchOutputSchema = z.object({
   author_entity_ids: z.array(z.string()).optional(),
   publication_date: z.string().optional(),
   summary: z.string().min(1),
-  focus_areas: z.array(focusAreaSchema).default([]),
-  source_ids: z.array(z.string()).default([]),
+  focus_areas: z.array(focusAreaSchema).min(1),
+  tags: z.array(z.string().min(1)).optional(),
+  source_ids: z.array(z.string().min(1)).min(1),
   evidence_note_ids: z.array(z.string()).optional(),
   confidence_level: confidenceLevelSchema,
   sensitivity_level: sensitivityLevelSchema,
@@ -191,6 +193,7 @@ export type AtlasData = {
   evidenceNotes: EvidenceNote[];
   events?: Event[];
   policies?: PolicyOrStandard[];
+  researchOutputs?: ResearchOutput[];
 };
 
 export function validateAtlasData({
@@ -200,6 +203,7 @@ export function validateAtlasData({
   evidenceNotes,
   events = [],
   policies = [],
+  researchOutputs = [],
 }: AtlasData) {
   const errors: string[] = [];
   collectSchemaErrors("Entity", entities, entitySchema, errors);
@@ -211,6 +215,12 @@ export function validateAtlasData({
     "Policy or standard",
     policies,
     policyOrStandardSchema,
+    errors
+  );
+  collectSchemaErrors(
+    "Research output",
+    researchOutputs,
+    researchOutputSchema,
     errors
   );
 
@@ -232,6 +242,7 @@ export function validateAtlasData({
   collectDuplicateIds("Evidence note", evidenceNotes, errors);
   collectDuplicateIds("Event", events, errors);
   collectDuplicateIds("Policy or standard", policies, errors);
+  collectDuplicateIds("Research output", researchOutputs, errors);
 
   for (const entity of entities) {
     if (entity.tier === 1) {
@@ -381,6 +392,32 @@ export function validateAtlasData({
       if (!evidenceNoteIds.has(noteId)) {
         errors.push(
           `Policy or standard ${policy.id} references missing evidence note ${noteId}.`
+        );
+      }
+    }
+  }
+
+  for (const output of researchOutputs) {
+    for (const entityId of output.author_entity_ids ?? []) {
+      if (!entityIds.has(entityId)) {
+        errors.push(
+          `Research output ${output.id} references missing author entity ${entityId}.`
+        );
+      }
+    }
+
+    for (const sourceId of output.source_ids) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(
+          `Research output ${output.id} references missing source ${sourceId}.`
+        );
+      }
+    }
+
+    for (const noteId of output.evidence_note_ids ?? []) {
+      if (!evidenceNoteIds.has(noteId)) {
+        errors.push(
+          `Research output ${output.id} references missing evidence note ${noteId}.`
         );
       }
     }

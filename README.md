@@ -52,6 +52,8 @@ analytics, or server-side ingestion.
 - `src/data/relationships.ts` - public-safe relationship records
 - `src/data/evidenceNotes.ts` - evidence note records
 - `src/data/policies.ts` - policy and standard records
+- `src/data/researchOutputs.ts` - benchmarks, papers, datasets, tools, and
+  other research output records
 - `src/data/countries.ts` - country profile records
 - `src/data/glossary.ts` - glossary entries
 
@@ -104,6 +106,13 @@ national strategies, laws/regulations, implementation bodies, testing/assurance
 programmes, events, and policy/standard records. Search-snippet evidence and
 overclaims about binding ASEAN enforcement or operational safety-testing
 networks remain held out.
+
+## PR 2F Technical Safety Research Backfill
+
+Technical AI safety research records now include source-backed research groups,
+events, and `researchOutputs` rows for benchmarks, papers, datasets, tools,
+platforms, and model projects. Output-like candidates are kept out of the entity
+graph unless they are persistent platforms already useful for discovery.
 
 ## Project Rules
 

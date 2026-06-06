@@ -31,7 +31,8 @@ export default function SourcesPage() {
           Japan, Korea, and Singapore AISI comparison backfill. PR 2C adds a
           filtered China-West dialogue and event-layer source set; PR 2D adds
           Chinese frontier-developer public-disclosure sources; PR 2E adds ASEAN
-          governance implementation and Southeast Asia policy sources.
+          governance implementation and Southeast Asia policy sources; PR 2F
+          adds technical safety research group and research-output sources.
         </p>
       </div>
 

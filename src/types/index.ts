@@ -147,6 +147,7 @@ export interface ResearchOutput {
   publication_date?: string;
   summary: string;
   focus_areas: FocusArea[];
+  tags?: string[];
   source_ids: string[];
   evidence_note_ids?: string[];
   confidence_level: ConfidenceLevel;

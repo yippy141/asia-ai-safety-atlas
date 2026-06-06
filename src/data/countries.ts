@@ -5,22 +5,16 @@ export const countries: CountryProfile[] = [
     "slug": "china",
     "country": "China",
     "region": "East Asia",
-    "summary": "China now has source-backed standards/evaluation records, a first dialogue/event layer, and PR2D public-disclosure records for major Chinese frontier-model developers. The developer layer is modeled as platform governance, compliance, content-safety, privacy, API-control, model-card, repository, and evaluation-tooling disclosure rather than preparedness-framework evidence.",
-    "government_posture": "CAC and MIIT remain the core official standards/evaluation regulators in the atlas. PR2D adds company disclosure rows that often align with Chinese compliance requirements around lawful content, platform terms, user-data handling, and generated-content labeling.",
-    "standards_evaluation": "TC260, TC28/SC42, CAICT, CESI, CSTC, MIIT/TC1, WG9, OpenCompass, FlagEval, and related benchmark or working-group nodes remain represented with primary sources. PR2D adds developer-side model-evaluation and platform-evaluation disclosures from Zhipu, Baidu Qianfan, Volcengine Ark, and other company documentation, while avoiding unsupported dangerous-capability claims.",
-    "research_ecosystem": "SHLAB and BAAI remain the strongest source-backed research/evaluation infrastructure nodes. PR2D adds open-weight and model-card documentation from company developers including DeepSeek, Qwen, Kimi, MiniMax, and 01.AI, but treats training/alignment language as technical disclosure rather than advanced-risk governance.",
-    "industry_ecosystem": "PR2D adds major Chinese frontier-developer records. Visible public disclosures are concentrated in content moderation, provenance labeling, privacy and user-data handling, API-key controls, platform security, model cards, repository releases, and evaluation tooling; public first-party evidence for catastrophic-risk governance, dangerous-capability testing, external red-teaming, or preparedness frameworks remains sparse.",
-    "international_engagement": "PR2C adds conservative public engagement pathways: repaired Brookings-CISS sixth U.S.-China dialogue output, repaired CISS-HD China-EU AI and International Security Dialogue rounds, summit-diplomacy event records, and the exact existing CnAISDA Paris side-event source. These are dialogue channels, not partnership claims. PR2D did not locate strong primary-source evidence of cross-border frontier-safety commitments from the reviewed companies.",
+    "summary": "China now has source-backed standards/evaluation records, dialogue/event records, frontier-developer disclosure records, and PR2F public technical-safety research rows. PR2F adds PKU alignment tooling, BAAI FlagSafe/FlagEval, OpenCompass, BIGAI TongTest, and RUC interpretability/safety-alignment signals without treating generic AI work as frontier safety.",
+    "government_posture": "The PR2F technical-safety slice is carried mainly by universities, research institutes, and public platforms rather than by a stand-alone national AISI equivalent in the reviewed sources.",
+    "standards_evaluation": "FlagEval and OpenCompass remain public evaluation infrastructures, while FlagSafe adds more overt safety framing with red-team, defense, deception, alignment, and interpretability modules. These are modeled as public technical/evaluation infrastructure, not regulatory mandates.",
+    "research_ecosystem": "Public technical research spans Safe-RLHF, multimodal alignment, alignment brittleness, deception evaluation, interpretability and AGI-style value-oriented testing. Borderline rows remain medium confidence where source detail is thin.",
+    "industry_ecosystem": "The most visible PR2F actors are university, quasi-public, or institute-linked platforms rather than purely private frontier labs.",
+    "international_engagement": "FlagSafe and OpenCompass are internationally legible public tooling stacks, but this import does not infer cross-border partnerships from mere public availability.",
     "open_questions": [
-      "How should CAC and the Central Cyberspace Affairs Commission Office be modeled when source text names one or the other?",
-      "Which benchmark systems should become standalone profile pages as the atlas expands?",
-      "Which official sources, if any, establish domestic testing or audit mandates for dialogue-network entities?",
-      "Which exact source should anchor the seventh U.S.-China AI and International Security Dialogue row?",
-      "Which French institution was the named counterpart in the first Beijing AISI China-France dialogue?",
-      "Which unrepaired homepage-only forum sources should be reattached before importing the broader I-AIIG and IDAIS event rows?",
-      "Which Chinese companies have unpublished but real internal frontier-safety processes not visible in public documentation?",
-      "Are any third-party red-team results or external audits available in Chinese but outside the reviewed platform docs?",
-      "Which developers will publish model-specific safety cards or preparedness policies as frontier capabilities advance?"
+      "Need stronger primary evidence for PKU’s broader Center for AI Safety and Governance.",
+      "Need more public detail on AI45Lab and Tsinghua-linked technical safety work.",
+      "Which platform outputs should become separate public pages as research-output UI matures?"
     ],
     "source_ids": [
       "report-china-standards-evaluation-2026-06-05",
@@ -56,23 +50,28 @@ export const countries: CountryProfile[] = [
       "stepfun-openai-migration",
       "kimi-k2-instruct-model-card",
       "minimax-content-labeling-announcement",
-      "yi-license"
+      "yi-license",
+      "src-pku-align-anything",
+      "src-pku-brittleness",
+      "src-flagsafe-home",
+      "src-flageval",
+      "src-opencompass-launch"
     ],
-    "last_verified": "2026-06-05"
+    "last_verified": "2026-06-06"
   },
   {
     "slug": "japan",
     "country": "Japan",
     "region": "East Asia",
-    "summary": "Japan AISI is publicly structured as an IPA-hosted institution linked to Cabinet Office coordination rather than as a standalone statutory regulator. Its public profile is guidance- and evaluation-methods-heavy.",
-    "government_posture": "Cabinet Office coordination and IPA hosting are supported by primary sources; the public record reviewed does not establish Japan AISI as a standalone statutory regulator.",
-    "standards_evaluation": "Reviewed primary sources support a stack centered on evaluation methods, guidance, an OSS evaluation tool, and evaluation-environment building. Public evidence reviewed does not yet support classifying Japan AISI as an assurance accreditor or certification body.",
-    "research_ecosystem": "Japan AISI public materials emphasize evaluation methods, guidance, OSS tooling, and evaluation-environment work; broader research ecosystem expansion remains for later PRs.",
-    "industry_ecosystem": "Reviewed sources mention evaluation-environment task-force activity with companies, but the atlas does not model those company links until corresponding source-backed entities are added.",
-    "international_engagement": "Japan AISI publicly reports participation in the International Network of AI Safety Institutes and testing/evaluation co-chairing with Singapore.",
+    "summary": "Japan has a clear public-source technical safety stack through NII LLMC, LLM-jp Safety WG, Japan AISI guidance, and Japanese benchmark work from SB Intuitions and RIKEN-linked teams.",
+    "government_posture": "Japan AISI’s published evaluation and red-team guides indicate a concrete LLM-system safety-evaluation posture; this profile keeps AISI guidance separate from broader research outputs.",
+    "standards_evaluation": "Public documentation covers evaluation scope, red-teaming methods, prompt-injection classes, Japanese safety-boundary testing, guardrail benchmarking, and safety-enhancing Japanese datasets.",
+    "research_ecosystem": "The ecosystem mixes institutional coordination with concrete outputs on guardrails, safety datasets, and interpretable trustworthy foundation technologies. RIKEN NLU remains medium-confidence for core frontier-safety relevance.",
+    "industry_ecosystem": "SB Intuitions is the strongest publicly visible corporate technical-safety actor in the reviewed record.",
+    "international_engagement": "NII’s symposium and LLM-jp ecosystem appear designed to connect academic, industry, and policy actors in an internationally legible format.",
     "open_questions": [
-      "How far Japan AISI will move into conformity assessment or formal assurance.",
-      "How durable the Cabinet Office coordination structure will be."
+      "Need public repository-level mapping for more LLM-jp Safety WG outputs.",
+      "Need more direct frontier-model safety outputs from RIKEN NLU specifically."
     ],
     "source_ids": [
       "report-japan-korea-singapore-aisi-2026-06-05",
@@ -81,23 +80,29 @@ export const countries: CountryProfile[] = [
       "jpn-integrated-innovation-strategy-2024",
       "jpn-aisi-activity-paper-2025-03",
       "jpn-aisi-eval-tool-oss-post",
-      "jpn-aisi-eval-env-taskforce-report-post"
+      "jpn-aisi-eval-env-taskforce-report-post",
+      "src-nii-llmc",
+      "src-llmjp-resources",
+      "src-japan-aisi-eval",
+      "src-japan-aisi-redteam",
+      "src-sb-safety-boundary",
+      "src-riken-answercarefully"
     ],
-    "last_verified": "2026-06-05"
+    "last_verified": "2026-06-06"
   },
   {
     "slug": "south-korea",
     "country": "South Korea",
     "region": "East Asia",
-    "summary": "Korea AISI is publicly sharper on mandate than Japan’s reviewed model: MSIT launched it, ETRI is its clearest institutional home, and its own pages divide work into policy, evaluation, and research.",
-    "government_posture": "MSIT launched Korea AISI and ties it to post-Seoul-Summit implementation and international AI safety networking; ETRI is the clearest public institutional home.",
-    "standards_evaluation": "Korea AISI’s own pages emphasize risk definition, frameworks, evaluation infrastructure, and execution. Adjacent standards/certification functions appear in the TTA/MSIT trustworthiness-guide ecosystem, which should be analytically separated from Korea AISI unless future primary sources fuse them.",
-    "research_ecosystem": "Korea AISI and ETRI sources support a policy, evaluation, and research structure centered on risk definition, frameworks, infrastructure, and execution.",
-    "industry_ecosystem": "The Korea AI Safety Consortium is modeled as a support and coordination node, while full signed membership remains an open question.",
-    "international_engagement": "MSIT explicitly places Korea AISI inside the International Network of AI Safety Institutes. Consortium material shows subgroup discussion around international joint testing.",
+    "summary": "South Korea’s public technical-safety ecosystem is anchored by Korea AISI plus university evaluation work at Soongsil and method-level safety research at KAIST.",
+    "government_posture": "Korea AISI publicly emphasizes dangerous-capability categories, evaluation infrastructure, international cooperation, and ETRI affiliation.",
+    "standards_evaluation": "The clearest public evaluation signals are Korea AISI’s risk and infrastructure pages, its 42-model disclosure, and Soongsil’s 20-model benchmark with 57 attacks.",
+    "research_ecosystem": "Public work covers jailbreak defense, transformer interpretability, prompt-injection and jailbreak evaluation, and broader security framing for Korean and foreign foundation models.",
+    "industry_ecosystem": "The Soongsil benchmark explicitly tests major Korean foundation models alongside leading foreign systems.",
+    "international_engagement": "Official AISI materials frame Korea’s institute as part of the wider international AISI network.",
     "open_questions": [
-      "Exact division of labour between Korea AISI and TTA.",
-      "Full consortium roster in primary sources."
+      "Need public links to Korea AISI datasets and tools, not just institutional descriptions.",
+      "Need stronger direct-source evidence for additional Korean university labs beyond KAIST AIPR and Soongsil."
     ],
     "source_ids": [
       "report-japan-korea-singapore-aisi-2026-06-05",
@@ -106,23 +111,27 @@ export const countries: CountryProfile[] = [
       "kor-msit-launch-release",
       "kor-etri-aisi-page",
       "kor-msit-tta-nist-crosswalk-release",
-      "kor-aisi-consortium-meeting-post"
+      "kor-aisi-consortium-meeting-post",
+      "src-korea-aisi-home",
+      "src-korea-aisi-42models",
+      "src-soongsil-llm-safety",
+      "src-kaist-aipr-home"
     ],
-    "last_verified": "2026-06-05"
+    "last_verified": "2026-06-06"
   },
   {
     "slug": "singapore",
     "country": "Singapore",
     "region": "Southeast Asia",
-    "summary": "Singapore’s official materials show the most mature public assurance-and-evaluation stack in Southeast Asia among the PR2E countries: A.I. Verify, AI Verify Foundation, Project Moonshot, the Global AI Assurance Sandbox, the Singapore AI Safety Red Teaming Challenge, ISO/IEC 42001 accreditation activity, and 2026 standardisation efforts.",
-    "government_posture": "Singapore sources continue to show a designation-plus-partnership AISI model, with IMDA as the overall government agency and a broader assurance ecosystem around AIVF. The fact-check-held National AI Council search-snippet claim is not used here.",
-    "standards_evaluation": "Singapore’s assurance model is implementation-oriented: application testing, benchmarking, red teaming, assurance sandboxing, and accreditation around AI management systems are directly documented.",
-    "research_ecosystem": "The captured sources are stronger on assurance tooling and system testing than on frontier technical safety research institutions, so this profile keeps the emphasis on assurance and evaluation implementation.",
-    "industry_ecosystem": "AI Verify Foundation’s public pages show an ecosystem-facing model aimed at builders, deployers, and specialist testing vendors, rather than solely government internal use.",
-    "international_engagement": "The Global AI Assurance Sandbox and IMDA’s 2026 standardisation announcement indicate that Singapore uses public assurance programmes to shape cross-border testing norms.",
+    "summary": "Singapore’s public technical-safety record is strongest in open testing infrastructure and university-based methods: AI Verify Foundation / Moonshot, SMU agent-safety and model-security work, and NUS TrustLLM plus formal-methods framing.",
+    "government_posture": "The most visible posture is assurance-oriented and tooling-centric rather than centered on a frontier-model developer.",
+    "standards_evaluation": "Project Moonshot gives Singapore a concrete public LLM benchmarking and red-teaming artifact; TrustLLM adds a peer-reviewed benchmark contribution.",
+    "research_ecosystem": "Public technical work spans agent runtime enforcement, LLM backdoor benchmarking, trustworthiness benchmarking, and formal methods with LLM agents.",
+    "industry_ecosystem": "The AIVF ecosystem is designed to support practical testing and evaluation adoption across industry rather than to serve as a single research lab.",
+    "international_engagement": "The open-source and standards-facing design of Moonshot gives Singapore an outward-facing role in cross-border assurance and evaluation discussion.",
     "open_questions": [
-      "Detailed public scope, governance, and accreditation criteria for the AI Tester Accreditation Programme.",
-      "Whether new statutory AI obligations are planned beyond current strategy-and-assurance instruments."
+      "Need clearer public links between Moonshot modules and external testers or case-study pipelines.",
+      "Need more official evidence for AI Singapore or A*STAR multimodal safety work before inclusion."
     ],
     "source_ids": [
       "report-japan-korea-singapore-aisi-2026-06-05",
@@ -143,7 +152,11 @@ export const countries: CountryProfile[] = [
       "global-ai-assurance-sandbox-main-report-2025",
       "singapore-ai-safety-red-teaming-challenge-page-2025",
       "sac-iso-42001-accreditation-programme-2025",
-      "singapore-global-ai-testing-standardisation-2026"
+      "singapore-global-ai-testing-standardisation-2026",
+      "src-smu-agentspec",
+      "src-smu-backdoorllm",
+      "src-nus-jinsong",
+      "src-trustllm"
     ],
     "last_verified": "2026-06-06"
   },
@@ -288,6 +301,28 @@ export const countries: CountryProfile[] = [
       "philippines-dost-asti-ai-page",
       "philippines-naicri-launch-2026",
       "philippines-dost-ai-flagship-year1-2026"
+    ],
+    "last_verified": "2026-06-06"
+  },
+  {
+    "slug": "hong-kong",
+    "country": "Hong Kong",
+    "region": "East Asia",
+    "summary": "Hong Kong’s public technical-safety picture is thinner but source-backed: HKUST materials support LLM security work and HKGAI-V1 supports region-specific alignment and safety framing.",
+    "government_posture": "The public model is university- and InnoHK-centered rather than a dedicated Hong Kong AISI.",
+    "standards_evaluation": "The clearest benchmark-like artifact is the HKGAI-V1 paper’s Adversarial HK Value Benchmark claim, recorded as a research output rather than a graph entity.",
+    "research_ecosystem": "Public outputs point to model security, trustworthy-LLM framing, localized value alignment, and policy-embedded sovereign-model design.",
+    "industry_ecosystem": "The sources emphasize university-led deployment and ecosystem building more than a large private safety-lab cluster.",
+    "international_engagement": "Hong Kong’s trilingual model-development context gives it a natural bridge role between mainland Chinese and international English-language safety discussions, but no partnership edge is inferred.",
+    "open_questions": [
+      "Need stronger official technical pages for the HKGAI center itself.",
+      "Need more public benchmark or repository outputs from HKUST-linked Hong Kong groups."
+    ],
+    "source_ids": [
+      "src-hkust-shuaiwang",
+      "src-hkust-trustworthy-llm",
+      "src-hkust-hkgai-v1",
+      "src-hkgai-v1-paper"
     ],
     "last_verified": "2026-06-06"
   }

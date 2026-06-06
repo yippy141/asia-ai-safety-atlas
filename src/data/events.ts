@@ -327,5 +327,87 @@ export const events: Event[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-06",
     "public_safe_to_show": true
+  },
+  {
+    "id": "evt-llm-safety-symposium-2025",
+    "name": "LLM Safety Symposium 2025",
+    "name_original": "LLMの安全性シンポジウム2025",
+    "event_type": "symposium",
+    "date": "2025",
+    "start_date": "2025",
+    "location": "Japan",
+    "country": "Japan",
+    "summary": "Public symposium advertised by NII LLMC as part of its safety working-group activity.",
+    "organizer_entity_ids_or_names": [
+      "nii-llmc"
+    ],
+    "participant_entity_ids_or_names": [
+      "nii-llmc",
+      "llm-jp-safety-wg"
+    ],
+    "source_ids": [
+      "src-nii-llmc"
+    ],
+    "evidence_note_ids": [
+      "ev-nii-llmc"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "evt-hkust-rtf-2024-trustworthy-llm",
+    "name": "Research and Technology Forum 2024",
+    "name_original": "Research and Technology Forum 2024",
+    "event_type": "forum",
+    "date": "2024",
+    "start_date": "2024",
+    "location": "Hong Kong",
+    "country": "Hong Kong",
+    "summary": "HKUST CSE forum featuring Shuai Wang’s public talk on trustworthy LLMs and LLM security and reliability risks.",
+    "organizer_entity_ids_or_names": [
+      "hong-kong-university-of-science-and-technology"
+    ],
+    "participant_entity_ids_or_names": [
+      "hkust-shuai-wang-group"
+    ],
+    "source_ids": [
+      "src-hkust-trustworthy-llm"
+    ],
+    "evidence_note_ids": [
+      "ev-hkust-trustworthy-llm"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "evt-soongsil-foundation-model-safety-seminar",
+    "name": "Domestic and Overseas Foundation Model Security and Safety Evaluation Seminar",
+    "name_original": "국내외 파운데이션 모델 보안·안전성 평가 세미나",
+    "event_type": "seminar",
+    "date": "2025-11",
+    "start_date": "2025-11",
+    "location": "Korea",
+    "country": "South Korea",
+    "summary": "Soongsil University publicly reported a seminar announcing its 20-model foundation-model safety comparison.",
+    "organizer_entity_ids_or_names": [
+      "Soongsil University"
+    ],
+    "participant_entity_ids_or_names": [
+      "soongsil-ai-safety-center"
+    ],
+    "source_ids": [
+      "src-soongsil-llm-safety"
+    ],
+    "evidence_note_ids": [
+      "ev-soongsil-llm-safety"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
   }
 ];

@@ -882,5 +882,57 @@ export const relationships: Relationship[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-06",
     "public_safe_to_show": true
+  },
+  {
+    "id": "rel-flagsafe-affiliated-with-pku",
+    "source_entity_id": "baai-flagsafe",
+    "target_entity_id": "pku-alignment-team",
+    "relationship_type": "affiliated_with",
+    "description": "FlagSafe’s official launch announcement explicitly names Peking University as a joint release partner.",
+    "evidence_note_ids": [
+      "ev-flagsafe-launch"
+    ],
+    "source_ids": [
+      "src-flagsafe-launch"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-nii-hosts-llmjp-safetywg",
+    "source_entity_id": "nii-llmc",
+    "target_entity_id": "llm-jp-safety-wg",
+    "relationship_type": "hosts",
+    "description": "NII’s LLMC publicly hosts and advertises the LLM-jp Safety Working Group.",
+    "evidence_note_ids": [
+      "ev-nii-llmc"
+    ],
+    "source_ids": [
+      "src-nii-llmc",
+      "src-llmjp-resources"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-hkust-group-affiliated-with-hkust",
+    "source_entity_id": "hkust-shuai-wang-group",
+    "target_entity_id": "hong-kong-university-of-science-and-technology",
+    "relationship_type": "affiliated_with",
+    "description": "Shuai Wang’s public faculty page is hosted by HKUST CSE and identifies him as HKUST faculty.",
+    "evidence_note_ids": [
+      "ev-hkust-shuaiwang"
+    ],
+    "source_ids": [
+      "src-hkust-shuaiwang"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
   }
 ];
