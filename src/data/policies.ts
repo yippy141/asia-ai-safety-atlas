@@ -393,5 +393,105 @@ export const policies: PolicyOrStandard[] = [
     "confidence_level": "high",
     "sensitivity_level": "low",
     "last_verified": "2026-06-06"
+  },
+  {
+    "id": "policy-oecd-ai-principles",
+    "title": "OECD AI Principles",
+    "issuing_entity_ids": [
+      "oecd-ai"
+    ],
+    "jurisdiction": "International",
+    "policy_type": "standard",
+    "summary": "Updated OECD principles used as an interoperability baseline for AI policy and risk frameworks across jurisdictions, including APAC adherents and G20-linked jurisdictions.",
+    "focus_areas": [
+      "standards",
+      "policy_regulation",
+      "international_dialogue",
+      "ai_governance"
+    ],
+    "source_ids": [
+      "oecd-ai-principles"
+    ],
+    "evidence_note_ids": [
+      "ev-10-oecd-principles"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06"
+  },
+  {
+    "id": "policy-oecd-ai-incidents-monitor",
+    "title": "OECD AI Incidents and Hazards Monitor",
+    "issuing_entity_ids": [
+      "oecd-ai"
+    ],
+    "jurisdiction": "International",
+    "policy_type": "reporting mechanism",
+    "summary": "OECD AIM is an automated public-source AI incident and hazard monitor with APAC country filters, imported as a reporting comparator rather than enforcement infrastructure.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "evaluation",
+      "international_dialogue"
+    ],
+    "source_ids": [
+      "oecd-aim"
+    ],
+    "evidence_note_ids": [
+      "ev-11-oecd-aim"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06"
+  },
+  {
+    "id": "policy-hiroshima-ai-code-of-conduct",
+    "title": "Hiroshima Process International Code of Conduct for Organizations Developing Advanced AI Systems",
+    "issuing_entity_ids": [],
+    "jurisdiction": "G7 / International",
+    "policy_type": "voluntary code of conduct",
+    "summary": "Japan-linked G7 voluntary code for advanced-AI developers, including lifecycle risk work, red-teaming, incident reporting, security controls, and interoperable technical standards.",
+    "focus_areas": [
+      "frontier_ai_safety",
+      "standards",
+      "policy_regulation",
+      "red_teaming",
+      "model_security",
+      "international_dialogue"
+    ],
+    "source_ids": [
+      "mofa-hiroshima-code"
+    ],
+    "evidence_note_ids": [
+      "ev-12-mofa-hiroshima-code"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06"
+  },
+  {
+    "id": "policy-hiroshima-ai-reporting-framework",
+    "title": "Hiroshima AI Reporting Framework",
+    "issuing_entity_ids": [
+      "oecd-ai"
+    ],
+    "jurisdiction": "International",
+    "policy_type": "reporting mechanism",
+    "summary": "OECD-hosted transparency and comparability pathway for advanced-AI developer reporting, originating from the G7 Hiroshima AI Process.",
+    "focus_areas": [
+      "frontier_ai_safety",
+      "policy_regulation",
+      "international_dialogue",
+      "standards"
+    ],
+    "source_ids": [
+      "oecd-haip"
+    ],
+    "evidence_note_ids": [
+      "ev-12-oecd-haip"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06"
   }
 ];

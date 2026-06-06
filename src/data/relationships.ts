@@ -934,5 +934,109 @@ export const relationships: Relationship[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-06",
     "public_safe_to_show": true
+  },
+  {
+    "id": "rel-caisi-affiliated-with-nist",
+    "source_entity_id": "us-caisi",
+    "target_entity_id": "nist",
+    "relationship_type": "affiliated_with",
+    "description": "CAISI is presented as a NIST-hosted AI center; affiliated_with is the conservative taxonomy label for this parent/host relationship.",
+    "evidence_note_ids": [
+      "ev-01-caisi-main"
+    ],
+    "source_ids": [
+      "caisi-main"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-uk-aisi-participates-in-in-aimes",
+    "source_entity_id": "uk-aisi",
+    "target_entity_id": "in-aimes",
+    "relationship_type": "participates_in",
+    "description": "UK government materials say AISI shares best practice through IN-AIMES; full participant roster is not inferred.",
+    "evidence_note_ids": [
+      "ev-06-in-aimes-naming"
+    ],
+    "source_ids": [
+      "uk-aus-mou"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-uk-aisi-affiliated-with-aus-aisi",
+    "source_entity_id": "uk-aisi",
+    "target_entity_id": "aus-aisi",
+    "relationship_type": "affiliated_with",
+    "description": "A UK government release says UK AISI and the Australian AI Safety Institute signed an MoU on frontier AI capability information sharing, evaluation collaboration, research findings, and staff exchanges.",
+    "evidence_note_ids": [
+      "ev-05-uk-aus-mou"
+    ],
+    "source_ids": [
+      "uk-aus-mou"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-safe-ai-forum-hosts-idais-beijing",
+    "source_entity_id": "org-safe-ai-forum",
+    "target_entity_id": "idais-beijing-2024",
+    "relationship_type": "hosts",
+    "description": "Safe AI Forum identifies IDAIS as its flagship series, and IDAIS-Beijing is imported as a session event.",
+    "evidence_note_ids": [
+      "ev-13-saif",
+      "ev-14-idais-beijing"
+    ],
+    "source_ids": [
+      "saif",
+      "idais-beijing"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-safe-ai-forum-hosts-idais-london",
+    "source_entity_id": "org-safe-ai-forum",
+    "target_entity_id": "idais-london-2026",
+    "relationship_type": "hosts",
+    "description": "IDAIS describes London 2026 as co-hosted by Safe AI Forum and Oxford Martin AI Governance Initiative.",
+    "evidence_note_ids": [
+      "ev-14-idais-home"
+    ],
+    "source_ids": [
+      "farai-idais-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-oxford-martin-cohosts-idais-london",
+    "source_entity_id": "oxford-martin-ai-governance-initiative",
+    "target_entity_id": "idais-london-2026",
+    "relationship_type": "co_hosts",
+    "description": "IDAIS describes London 2026 as co-hosted by Oxford Martin AI Governance Initiative and Safe AI Forum.",
+    "evidence_note_ids": [
+      "ev-14-idais-home"
+    ],
+    "source_ids": [
+      "farai-idais-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
   }
 ];

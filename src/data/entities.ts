@@ -399,13 +399,15 @@ export const entities: Entity[] = [
     "country": "China",
     "city": "Shanghai",
     "region": "East Asia",
-    "summary": "Major Shanghai AI research institution with visible roles in evaluation infrastructure and AI security standardization. Official sources show SHLAB maintaining OpenCompass, leading or chairing TC260's newly formed WG9 on AI security standards, and leading the Shanghai medical large-model testing and verification center.",
+    "summary": "Major Shanghai AI research institution with visible roles in evaluation infrastructure, AI security standardization, and PR2G-imported frontier-risk framework work with Concordia AI.",
     "focus_areas": [
       "technical_safety_research",
       "evaluation",
       "testing_infrastructure",
       "model_security",
-      "ai_assurance"
+      "ai_assurance",
+      "frontier_ai_safety",
+      "dangerous_capability_evaluation"
     ],
     "tags": [
       "research lab",
@@ -417,22 +419,28 @@ export const entities: Entity[] = [
       "medical model testing",
       "trustworthy AI",
       "research infrastructure",
-      "China"
+      "China",
+      "Concordia framework co-issuer",
+      "frontier risk framework"
     ],
     "source_ids": [
       "report-technical-research-groups-2026-06-05",
       "shlab-about-us",
       "shlab-opencompass-2023",
       "shlab-wg9-formation-2026",
-      "shanghai-medical-llm-testing-center-2025"
+      "shanghai-medical-llm-testing-center-2025",
+      "concordia-framework"
     ],
     "confidence_level": "high",
     "sensitivity_level": "medium",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 2,
     "needs_primary_source": false,
     "open_questions": [
       "Further sources on how SHLAB's governance research center is institutionally nested within SHLAB would help entity-graph precision."
+    ],
+    "evidence_note_ids": [
+      "ev-16-concordia-framework"
     ]
   },
   {
@@ -1015,25 +1023,54 @@ export const entities: Entity[] = [
     "entity_type": "think_tank",
     "country": "International",
     "region": "Cross-border",
-    "summary": "AI safety and governance organization included as a China-West dialogue and research synthesis node.",
+    "summary": "Social enterprise with offices in Beijing and Singapore. PR2G treats Concordia as a highly APAC-linked comparator across China/Singapore research, standards and policy engagement, and frontier-risk framework work with Shanghai AI Laboratory.",
     "focus_areas": [
       "international_dialogue",
       "ai_governance",
-      "technical_safety_research"
+      "technical_safety_research",
+      "frontier_ai_safety",
+      "standards",
+      "evaluation",
+      "dangerous_capability_evaluation",
+      "biosecurity",
+      "cybersecurity",
+      "open_source_governance"
     ],
     "tags": [
       "Track 2",
       "China-West dialogue",
-      "technical research"
+      "technical research",
+      "Concordia AI",
+      "Beijing office",
+      "Singapore office",
+      "China report",
+      "Singapore report",
+      "frontier risk framework",
+      "standards participation"
     ],
     "source_ids": [
-      "report-china-west-dialogue-2026-06-05"
+      "report-china-west-dialogue-2026-06-05",
+      "concordia-home",
+      "concordia-china-report",
+      "concordia-singapore-report",
+      "concordia-policy",
+      "concordia-framework"
     ],
-    "confidence_level": "medium",
+    "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 2,
-    "needs_primary_source": true
+    "needs_primary_source": false,
+    "evidence_note_ids": [
+      "ev-15-concordia-home",
+      "ev-15-concordia-china-report",
+      "ev-15-concordia-singapore-report",
+      "ev-15-concordia-policy",
+      "ev-16-concordia-framework"
+    ],
+    "open_questions": [
+      "Specific WAIC event claims remain held until an accessible official event source is available."
+    ]
   },
   {
     "id": "org-safe-ai-forum",
@@ -1041,25 +1078,40 @@ export const entities: Entity[] = [
     "entity_type": "dialogue_convenor",
     "country": "International",
     "region": "Cross-border",
-    "summary": "Dialogue convenor included as a cross-border AI safety discussion channel in the seed atlas.",
+    "summary": "Non-profit dialogue convenor whose flagship series is IDAIS. PR2G imports it as directly APAC-relevant through Beijing and London IDAIS dialogue architecture.",
     "focus_areas": [
       "international_dialogue",
       "dialogue_channel",
-      "frontier_ai_safety"
+      "frontier_ai_safety",
+      "ai_governance",
+      "capacity_building"
     ],
     "tags": [
       "Track 2",
       "dialogue channel",
-      "frontier AI safety"
+      "frontier AI safety",
+      "Safe AI Forum",
+      "IDAIS",
+      "dialogue convenor",
+      "China-linked dialogue"
     ],
     "source_ids": [
-      "report-china-west-dialogue-2026-06-05"
+      "report-china-west-dialogue-2026-06-05",
+      "saif",
+      "farai-idais-page"
     ],
-    "confidence_level": "low",
+    "confidence_level": "high",
     "sensitivity_level": "medium",
-    "last_verified": "2026-06-05",
-    "tier": 3,
-    "needs_primary_source": true
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "needs_primary_source": false,
+    "evidence_note_ids": [
+      "ev-13-saif",
+      "ev-13-idais-home"
+    ],
+    "open_questions": [
+      "Session-specific source coverage is incomplete for IDAIS-Oxford and IDAIS-Venice in this payload."
+    ]
   },
   {
     "id": "event-idais",
@@ -1068,7 +1120,7 @@ export const entities: Entity[] = [
     "entity_type": "event",
     "country": "International",
     "region": "Cross-border",
-    "summary": "Dialogue series included as a cross-border AI safety engagement channel. PR2C adds the repaired IDAIS page as a source for the recurring series, while session-specific China-side rows remain held pending exact URLs.",
+    "summary": "Recurring international AI safety dialogue series. PR2G strengthens the record with normalized SAIF/IDAIS evidence and imports Beijing/London session events where source IDs are available.",
     "focus_areas": [
       "international_dialogue",
       "dialogue_channel",
@@ -1077,19 +1129,27 @@ export const entities: Entity[] = [
     "tags": [
       "Track 2",
       "dialogue channel",
-      "IDAIS"
+      "IDAIS",
+      "Safe AI Forum flagship series"
     ],
     "source_ids": [
       "report-china-west-dialogue-2026-06-05",
-      "farai-idais-page"
+      "farai-idais-page",
+      "idais-beijing"
     ],
-    "confidence_level": "medium",
+    "confidence_level": "high",
     "sensitivity_level": "medium",
     "last_verified": "2026-06-06",
     "tier": 3,
-    "needs_primary_source": true,
+    "needs_primary_source": false,
     "open_questions": [
-      "Which session-specific IDAIS pages should anchor China-side participant claims?"
+      "Which session-specific IDAIS pages should anchor China-side participant claims?",
+      "Oxford and Venice session source rows remain held until explicit source records are available in the import payload."
+    ],
+    "evidence_note_ids": [
+      "ev-13-idais-home",
+      "ev-14-idais-beijing",
+      "ev-14-idais-home"
     ]
   },
   {
@@ -3152,6 +3212,320 @@ export const entities: Entity[] = [
     "open_questions": [
       "Which HKUST centers or labs own current public safety benchmarks and technical deliverables."
     ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "us-caisi",
+    "name_en": "Center for AI Standards and Innovation",
+    "acronym": "CAISI",
+    "entity_type": "ai_safety_institute",
+    "country": "United States",
+    "region": "North America",
+    "summary": "NIST-hosted U.S. comparator entity for AI standards, testing, collaborative research, voluntary agreements, and broad risk-evaluation work. PR2G treats CAISI as an institutional comparator and does not import operational benchmark details.",
+    "focus_areas": [
+      "frontier_ai_safety",
+      "evaluation",
+      "dangerous_capability_evaluation",
+      "model_security",
+      "biosecurity",
+      "cybersecurity",
+      "standards",
+      "testing_infrastructure"
+    ],
+    "tags": [
+      "United States",
+      "NIST-hosted",
+      "AISI comparator",
+      "PRC model evaluation",
+      "standards and metrology"
+    ],
+    "source_ids": [
+      "caisi-main",
+      "caisi-deepseek"
+    ],
+    "evidence_note_ids": [
+      "ev-01-caisi-main",
+      "ev-02-caisi-deepseek"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "tier": 1,
+    "open_questions": [
+      "Which current CAISI outputs should be modeled as research outputs without exposing operational benchmark detail."
+    ],
+    "last_verified": "2026-06-06",
+    "needs_primary_source": false
+  },
+  {
+    "id": "uk-aisi",
+    "name_en": "UK AI Security Institute",
+    "acronym": "UK AISI",
+    "entity_type": "ai_safety_institute",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "summary": "State-backed advanced-AI safety and security institute used as a Western comparator for evaluation, mitigation testing, and international coordination, with APAC pathways through Australia and India-linked coalition activity.",
+    "focus_areas": [
+      "frontier_ai_safety",
+      "evaluation",
+      "dangerous_capability_evaluation",
+      "model_security",
+      "technical_safety_research",
+      "testing_infrastructure",
+      "international_dialogue"
+    ],
+    "tags": [
+      "United Kingdom",
+      "AI Security Institute",
+      "IN-AIMES",
+      "Australia MoU",
+      "Alignment Project"
+    ],
+    "source_ids": [
+      "uk-aisi-home",
+      "uk-aus-mou",
+      "uk-alignment-project"
+    ],
+    "evidence_note_ids": [
+      "ev-04-uk-aisi-home",
+      "ev-05-uk-aus-mou",
+      "ev-07-uk-alignment-project"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "tier": 1,
+    "open_questions": [
+      "Which official source reconciles the IN-AIMES name with older International Network of AI Safety Institutes naming."
+    ],
+    "last_verified": "2026-06-06",
+    "needs_primary_source": false
+  },
+  {
+    "id": "eu-ai-office",
+    "name_en": "European AI Office",
+    "entity_type": "government",
+    "country": "European Union",
+    "region": "Europe",
+    "summary": "European Commission office implementing the AI Act, especially for general-purpose AI. It is modeled as a regulatory and evaluation comparator rather than a lab-style AISI.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "evaluation",
+      "standards",
+      "international_dialogue",
+      "ai_assurance"
+    ],
+    "tags": [
+      "European Commission",
+      "AI Act",
+      "GPAI",
+      "evaluation comparator",
+      "international governance"
+    ],
+    "source_ids": [
+      "eu-ai-office"
+    ],
+    "evidence_note_ids": [
+      "ev-08-eu-ai-office"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "tier": 2,
+    "open_questions": [
+      "How the AI Office will operationalize GPAI evaluation tools, methodologies, and benchmarks in public materials."
+    ],
+    "last_verified": "2026-06-06",
+    "needs_primary_source": true
+  },
+  {
+    "id": "oecd-ai",
+    "name_en": "OECD Artificial Intelligence Policy Observatory",
+    "acronym": "OECD.AI",
+    "entity_type": "standards_body",
+    "country": "International",
+    "region": "Cross-border",
+    "summary": "OECD-operated AI policy observatory hosting the AI Principles, AI Incidents and Hazards Monitor, Hiroshima AI Reporting Framework, and OECD-GPAI materials. It is the strongest standards/reporting comparator in PR2G.",
+    "focus_areas": [
+      "standards",
+      "evaluation",
+      "international_dialogue",
+      "capacity_building",
+      "policy_regulation",
+      "dialogue_channel"
+    ],
+    "tags": [
+      "OECD.AI",
+      "AI Principles",
+      "Hiroshima AI Reporting Framework",
+      "AI Incidents Monitor",
+      "interoperability"
+    ],
+    "source_ids": [
+      "oecd-ai-home",
+      "oecd-ai-principles",
+      "oecd-aim",
+      "oecd-haip"
+    ],
+    "evidence_note_ids": [
+      "ev-09-oecd-ai-home",
+      "ev-10-oecd-principles",
+      "ev-11-oecd-aim",
+      "ev-12-oecd-haip"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "tier": 2,
+    "open_questions": [
+      "How to connect OECD reporting mechanisms to individual APAC country profiles without implying national implementation."
+    ],
+    "last_verified": "2026-06-06",
+    "needs_primary_source": false
+  },
+  {
+    "id": "nist",
+    "name_en": "National Institute of Standards and Technology",
+    "acronym": "NIST",
+    "entity_type": "standards_body",
+    "country": "United States",
+    "region": "North America",
+    "summary": "U.S. federal standards institution imported only as CAISI’s parent/host and the AI Consortium source for broader AI metrology and standards context.",
+    "focus_areas": [
+      "standards",
+      "evaluation",
+      "testing_infrastructure",
+      "ai_assurance"
+    ],
+    "tags": [
+      "standards body",
+      "metrology",
+      "AI Consortium",
+      "CAISI parent"
+    ],
+    "source_ids": [
+      "caisi-main",
+      "nist-ai-consortium"
+    ],
+    "evidence_note_ids": [
+      "ev-01-caisi-main",
+      "ev-03-nist-ai-consortium"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "tier": 2,
+    "open_questions": [
+      "Which NIST standards outputs should be imported separately from CAISI."
+    ],
+    "last_verified": "2026-06-06",
+    "needs_primary_source": false
+  },
+  {
+    "id": "in-aimes",
+    "name_en": "International Network for Advanced AI Measurement, Evaluation and Science",
+    "acronym": "IN-AIMES",
+    "entity_type": "working_group",
+    "country": "International",
+    "region": "Cross-border",
+    "summary": "Current official UK government naming found in PR2G for an international AISI-style measurement, evaluation, and science network. Participant list is not treated as complete.",
+    "focus_areas": [
+      "evaluation",
+      "testing_infrastructure",
+      "international_dialogue",
+      "dangerous_capability_evaluation",
+      "standards"
+    ],
+    "tags": [
+      "IN-AIMES",
+      "international network",
+      "AISI network naming",
+      "measurement and evaluation"
+    ],
+    "source_ids": [
+      "uk-aus-mou"
+    ],
+    "evidence_note_ids": [
+      "ev-06-in-aimes-naming"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "tier": 2,
+    "open_questions": [
+      "A definitive official public participant roster was not located in the PR2G source set."
+    ],
+    "last_verified": "2026-06-06",
+    "needs_primary_source": true
+  },
+  {
+    "id": "aus-aisi",
+    "name_en": "Australian AI Safety Institute",
+    "acronym": "Australian AISI",
+    "entity_type": "ai_safety_institute",
+    "country": "Australia",
+    "region": "Oceania",
+    "summary": "APAC counterpart imported because the PR2G sources directly tie it to UK AISI through a formal 2026 MoU and UK Alignment Project coalition materials.",
+    "focus_areas": [
+      "frontier_ai_safety",
+      "evaluation",
+      "testing_infrastructure",
+      "international_dialogue"
+    ],
+    "tags": [
+      "Australia",
+      "APAC comparator",
+      "UK-Australia MoU",
+      "Alignment Project"
+    ],
+    "source_ids": [
+      "uk-aus-mou",
+      "uk-alignment-project"
+    ],
+    "evidence_note_ids": [
+      "ev-05-uk-aus-mou",
+      "ev-07-uk-alignment-project"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "tier": 1,
+    "open_questions": [
+      "A direct Australian official institute page would improve this profile beyond UK government sourcing."
+    ],
+    "last_verified": "2026-06-06",
+    "needs_primary_source": false
+  },
+  {
+    "id": "oxford-martin-ai-governance-initiative",
+    "name_en": "Oxford Martin AI Governance Initiative",
+    "acronym": "OxMAGI",
+    "entity_type": "research_group",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "summary": "Oxford governance initiative imported only for its directly supported IDAIS role, especially the London 2026 co-hosting claim and Beijing/series linkage.",
+    "focus_areas": [
+      "ai_governance",
+      "international_dialogue",
+      "technical_safety_research",
+      "frontier_ai_safety",
+      "dialogue_channel"
+    ],
+    "tags": [
+      "Oxford Martin",
+      "IDAIS",
+      "London 2026 co-host",
+      "dialogue channel"
+    ],
+    "source_ids": [
+      "farai-idais-page",
+      "idais-beijing"
+    ],
+    "evidence_note_ids": [
+      "ev-14-idais-home",
+      "ev-14-idais-beijing"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "tier": 2,
+    "open_questions": [
+      "A direct Oxford initiative page would strengthen institutional profile details beyond IDAIS pages."
+    ],
+    "last_verified": "2026-06-06",
     "needs_primary_source": false
   }
 ];

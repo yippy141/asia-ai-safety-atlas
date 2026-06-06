@@ -114,6 +114,14 @@ events, and `researchOutputs` rows for benchmarks, papers, datasets, tools,
 platforms, and model projects. Output-like candidates are kept out of the entity
 graph unless they are persistent platforms already useful for discovery.
 
+## PR 2G Western/APAC Comparator Backfill
+
+Western and international comparator rows now include normalized CAISI/NIST, UK
+AISI, EU AI Office, OECD/Hiroshima reporting, Safe AI Forum/IDAIS, Concordia AI,
+Oxford, and Australia records. The import keeps source-url-only and
+research-output target relationships held unless they map cleanly into the
+static schema.
+
 ## Project Rules
 
 - Every public claim should trace to a source record.

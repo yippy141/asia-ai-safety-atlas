@@ -2205,5 +2205,181 @@ export const evidenceNotes: EvidenceNote[] = [
     "page_or_section": "headline",
     "confidence_level": "high",
     "public_safe_to_show": true
+  },
+  {
+    "id": "ev-01-caisi-main",
+    "source_id": "caisi-main",
+    "claim_text": "CAISI is the current U.S. comparator label within NIST.",
+    "evidence_paraphrase": "NIST presents CAISI as the U.S. government point of contact for AI testing, collaborative research, voluntary agreements, and broad risk evaluation work.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-02-caisi-deepseek",
+    "source_id": "caisi-deepseek",
+    "claim_text": "CAISI has direct APAC relevance through a published PRC-model evaluation.",
+    "evidence_paraphrase": "NIST published a CAISI evaluation update about a PRC frontier model, supporting CAISI as a comparator for Asia-focused model-evaluation institutions without importing operational benchmark details.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-03-nist-ai-consortium",
+    "source_id": "nist-ai-consortium",
+    "claim_text": "NIST’s AI Consortium provides a metrology and standards base for the U.S. comparator.",
+    "evidence_paraphrase": "NIST describes the AI Consortium as a large multi-organization effort to develop science-based guidance, standards, metrics, and interoperable AI measurement techniques.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-04-uk-aisi-home",
+    "source_id": "uk-aisi-home",
+    "claim_text": "UK AISI is framed as a state-backed advanced-AI safety and security institute.",
+    "evidence_paraphrase": "The UK AISI homepage describes state-backed advanced-AI safety and security research, model-capability understanding, mitigation testing, and collaboration with governments.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-05-uk-aus-mou",
+    "source_id": "uk-aus-mou",
+    "claim_text": "UK AISI and the Australian AI Safety Institute have a formal APAC-relevant MoU.",
+    "evidence_paraphrase": "The UK government says the institutes signed an MoU covering information sharing on frontier AI capabilities, evaluation best practices, research findings, and staff exchanges.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-06-in-aimes-naming",
+    "source_id": "uk-aus-mou",
+    "claim_text": "IN-AIMES is the current official network name found in this run.",
+    "evidence_paraphrase": "The UK government press release names the International Network for Advanced AI Measurement, Evaluation and Science as the forum through which AISI shares best practice with AI research bodies.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-07-uk-alignment-project",
+    "source_id": "uk-alignment-project",
+    "claim_text": "The UK Alignment Project has an APAC-linked coalition pathway.",
+    "evidence_paraphrase": "A UK government release ties the Alignment Project to an international coalition including Australia’s AI Safety Institute and notes the announcement timing around the AI Impact Summit in India.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-08-eu-ai-office",
+    "source_id": "eu-ai-office",
+    "claim_text": "The European AI Office is a regulatory and evaluation comparator rather than a lab-style AISI.",
+    "evidence_paraphrase": "The European Commission describes the AI Office as supporting AI Act implementation for GPAI, developing tools, methodologies and benchmarks, and contributing to international AI governance.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-09-oecd-ai-home",
+    "source_id": "oecd-ai-home",
+    "claim_text": "OECD.AI is a cross-jurisdiction comparator for reporting and policy interoperability.",
+    "evidence_paraphrase": "OECD.AI presents the Hiroshima AI Reporting Framework, AI Incidents Monitor, AI Principles, and OECD-GPAI partnership as central observatory functions.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-10-oecd-principles",
+    "source_id": "oecd-ai-principles",
+    "claim_text": "OECD AI Principles provide an interoperability bridge into APAC.",
+    "evidence_paraphrase": "The OECD AI Principles page frames the principles as a basis for policy and interoperability and includes APAC adherents and G20 links.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-11-oecd-aim",
+    "source_id": "oecd-aim",
+    "claim_text": "OECD AIM is an incident and hazard reporting comparator with APAC country coverage.",
+    "evidence_paraphrase": "OECD describes AIM as an automated monitor of AI incidents and hazards, with filters covering multiple APAC jurisdictions.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-12-oecd-haip",
+    "source_id": "oecd-haip",
+    "claim_text": "The Hiroshima AI Process has an OECD-hosted transparency pathway.",
+    "evidence_paraphrase": "OECD says the Hiroshima AI Reporting Framework launched in February 2025, is open to organizations across the AI value chain, and publishes submitted reports on OECD.AI.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-12-mofa-hiroshima-code",
+    "source_id": "mofa-hiroshima-code",
+    "claim_text": "The Hiroshima Process Code is a voluntary advanced-AI developer governance baseline.",
+    "evidence_paraphrase": "The Japanese MOFA-hosted code calls for lifecycle risk work, red-teaming, incident reporting, security controls, and interoperable technical standards.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-13-saif",
+    "source_id": "saif",
+    "claim_text": "Safe AI Forum is a dialogue convenor with China-linked dialogue architecture.",
+    "evidence_paraphrase": "Safe AI Forum describes its mission around global coordination on extreme AI risks and identifies IDAIS as its flagship series.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-13-idais-home",
+    "source_id": "farai-idais-page",
+    "claim_text": "IDAIS is Safe AI Forum’s flagship international dialogue series.",
+    "evidence_paraphrase": "The IDAIS page describes scientist convenings focused on AI risk mitigation and lists the recurring dialogue architecture.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-14-idais-beijing",
+    "source_id": "idais-beijing",
+    "claim_text": "IDAIS-Beijing provides a Western-China/APAC dialogue channel.",
+    "evidence_paraphrase": "The Beijing dialogue page supports a China-linked dialogue event with international scientific and governance participation.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-14-idais-home",
+    "source_id": "farai-idais-page",
+    "claim_text": "IDAIS-London is documented on the IDAIS homepage as a 2026 Safe AI Forum/Oxford co-hosted event.",
+    "evidence_paraphrase": "The IDAIS homepage describes the London 2026 event as co-hosted by Safe AI Forum and the Oxford Martin AI Governance Initiative, with China/APAC-linked participants.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-15-concordia-home",
+    "source_id": "concordia-home",
+    "claim_text": "Concordia AI is structurally China-Singapore and APAC-facing.",
+    "evidence_paraphrase": "Concordia AI describes itself as a social enterprise with offices in Beijing and Singapore.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-15-concordia-china-report",
+    "source_id": "concordia-china-report",
+    "claim_text": "Concordia publishes a China-focused AI safety landscape report.",
+    "evidence_paraphrase": "Concordia’s research page lists the State of AI Safety in China report.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-15-concordia-singapore-report",
+    "source_id": "concordia-singapore-report",
+    "claim_text": "Concordia publishes a Singapore-focused AI safety landscape report.",
+    "evidence_paraphrase": "Concordia’s research page lists the State of AI Safety in Singapore report.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-15-concordia-policy",
+    "source_id": "concordia-policy",
+    "claim_text": "Concordia AI reports standards and policy engagement relevant to APAC.",
+    "evidence_paraphrase": "Concordia’s policy page describes contributions to China AI safety standards and policy groups, as well as global summit and UN-related engagement.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "ev-16-concordia-framework",
+    "source_id": "concordia-framework",
+    "claim_text": "Concordia AI and Shanghai AI Laboratory jointly released a frontier-risk framework.",
+    "evidence_paraphrase": "Concordia says it and Shanghai AI Laboratory introduced a Frontier AI Risk Management Framework for general-purpose model developers.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
   }
 ];

@@ -409,5 +409,63 @@ export const events: Event[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-06",
     "public_safe_to_show": true
+  },
+  {
+    "id": "idais-beijing-2024",
+    "name": "IDAIS-Beijing",
+    "event_type": "dialogue",
+    "date": "2024",
+    "start_date": "2024",
+    "location": "Beijing, China",
+    "city": "Beijing",
+    "country": "China",
+    "summary": "China-linked IDAIS dialogue node. Imported as a public-safe dialogue event without inferring full participant roster or institutional commitments beyond the source-backed page.",
+    "organizer_entity_ids_or_names": [
+      "org-safe-ai-forum",
+      "event-idais"
+    ],
+    "participant_entity_ids_or_names": [
+      "Oxford Martin AI Governance Initiative",
+      "Chinese and international AI safety researchers"
+    ],
+    "source_ids": [
+      "idais-beijing"
+    ],
+    "evidence_note_ids": [
+      "ev-14-idais-beijing"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "idais-london-2026",
+    "name": "IDAIS-London",
+    "event_type": "dialogue",
+    "date": "2026-04-17",
+    "start_date": "2026-04-17",
+    "end_date": "2026-04-19",
+    "location": "Royal Society, London, United Kingdom",
+    "city": "London",
+    "country": "United Kingdom",
+    "summary": "Fifth IDAIS event, recorded as co-hosted by Safe AI Forum and Oxford Martin AI Governance Initiative and APAC-linked through China-facing participant signals in the PR2G source set.",
+    "organizer_entity_ids_or_names": [
+      "org-safe-ai-forum",
+      "oxford-martin-ai-governance-initiative"
+    ],
+    "participant_entity_ids_or_names": [
+      "Tsinghua-linked and Shanghai AI Lab-linked participants referenced by the IDAIS page"
+    ],
+    "source_ids": [
+      "farai-idais-page"
+    ],
+    "evidence_note_ids": [
+      "ev-14-idais-home"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
   }
 ];

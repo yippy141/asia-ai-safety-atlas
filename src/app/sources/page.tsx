@@ -32,7 +32,8 @@ export default function SourcesPage() {
           filtered China-West dialogue and event-layer source set; PR 2D adds
           Chinese frontier-developer public-disclosure sources; PR 2E adds ASEAN
           governance implementation and Southeast Asia policy sources; PR 2F
-          adds technical safety research group and research-output sources.
+          adds technical safety research group and research-output sources; PR
+          2G adds normalized Western/APAC comparator sources.
         </p>
       </div>
 

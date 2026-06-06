@@ -689,5 +689,98 @@ export const researchOutputs: ResearchOutput[] = [
       "safety_evaluation",
       "technical_testing_infrastructure"
     ]
+  },
+  {
+    "id": "out-concordia-state-ai-safety-china-2025",
+    "title": "State of AI Safety in China (2025)",
+    "output_type": "report",
+    "author_entity_ids": [
+      "org-concordia-ai"
+    ],
+    "publication_date": "2025-07",
+    "summary": "Concordia China-focused landscape report covering governance, standards, dialogues, frontier safety research, company safety commitments, and safety disclosure practices.",
+    "focus_areas": [
+      "ai_governance",
+      "standards",
+      "technical_safety_research",
+      "international_dialogue"
+    ],
+    "tags": [
+      "China",
+      "Concordia AI",
+      "landscape report"
+    ],
+    "source_ids": [
+      "concordia-china-report"
+    ],
+    "evidence_note_ids": [
+      "ev-15-concordia-china-report"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06"
+  },
+  {
+    "id": "out-concordia-state-ai-safety-singapore",
+    "title": "State of AI Safety in Singapore",
+    "output_type": "report",
+    "author_entity_ids": [
+      "org-concordia-ai"
+    ],
+    "publication_date": "2025-07",
+    "summary": "Concordia Singapore-focused ecosystem report covering governance, testing and evaluation, standards, multilateral engagement, research institutions, and Singapore’s regional testing positioning.",
+    "focus_areas": [
+      "ai_governance",
+      "evaluation",
+      "standards",
+      "international_dialogue"
+    ],
+    "tags": [
+      "Singapore",
+      "Concordia AI",
+      "landscape report"
+    ],
+    "source_ids": [
+      "concordia-singapore-report"
+    ],
+    "evidence_note_ids": [
+      "ev-15-concordia-singapore-report"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06"
+  },
+  {
+    "id": "out-frontier-ai-risk-management-framework",
+    "title": "Frontier AI Risk Management Framework",
+    "output_type": "framework",
+    "author_entity_ids": [
+      "org-concordia-ai",
+      "cn-shlab"
+    ],
+    "publication_date": "2025-07",
+    "summary": "Concordia and Shanghai AI Laboratory framework for general-purpose AI developers. Imported at the high-level framework/author level without operational evaluation detail.",
+    "focus_areas": [
+      "frontier_ai_safety",
+      "dangerous_capability_evaluation",
+      "ai_governance",
+      "evaluation",
+      "model_security"
+    ],
+    "tags": [
+      "Concordia AI",
+      "Shanghai AI Laboratory",
+      "risk management framework",
+      "general-purpose AI developers"
+    ],
+    "source_ids": [
+      "concordia-framework"
+    ],
+    "evidence_note_ids": [
+      "ev-16-concordia-framework"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06"
   }
 ];
