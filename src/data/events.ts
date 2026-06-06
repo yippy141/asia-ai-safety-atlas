@@ -214,5 +214,118 @@ export const events: Event[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-06",
     "public_safe_to_show": true
+  },
+  {
+    "id": "event-47th-asean-summit-ai-safe-2025",
+    "name": "Adoption of ASEAN AI Safe declaration at the 47th ASEAN Summit",
+    "event_type": "summit",
+    "date": "2025-10",
+    "start_date": "2025-10",
+    "location": "Kuala Lumpur, Malaysia",
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "summary": "Malaysia’s official announcement describes ASEAN AI Safe as a regional network initiative adopted by ASEAN leaders; implementation architecture remains an evidence gap in this import.",
+    "organizer_entity_ids_or_names": [
+      "asean-secretariat"
+    ],
+    "participant_entity_ids_or_names": [
+      "ASEAN Leaders"
+    ],
+    "source_ids": [
+      "malaysia-champions-asean-ai-safe-2025"
+    ],
+    "evidence_note_ids": [
+      "e-mydigital-ai-safe-regional-network"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "event-singapore-red-teaming-challenge-2024",
+    "name": "Singapore AI Safety Red Teaming Challenge",
+    "event_type": "challenge",
+    "date": "2024-11",
+    "start_date": "2024-11",
+    "location": "Singapore and online",
+    "city": "Singapore",
+    "country": "Singapore",
+    "summary": "IMDA ran a multilingual and multicultural red-teaming challenge focused on harmful bias stereotypes across Asian contexts.",
+    "organizer_entity_ids_or_names": [
+      "imda-singapore"
+    ],
+    "participant_entity_ids_or_names": [
+      "imda-singapore",
+      "Experts from China, India, Indonesia, Japan, Malaysia, Singapore, South Korea, Thailand, and Vietnam"
+    ],
+    "source_ids": [
+      "singapore-ai-safety-red-teaming-challenge-page-2025"
+    ],
+    "evidence_note_ids": [
+      "e-red-teaming-nine-countries",
+      "e-red-teaming-1000-prompts"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "event-naio-launch-2024",
+    "name": "Launch of Malaysia National AI Office",
+    "event_type": "launch",
+    "date": "2024-12-12",
+    "start_date": "2024-12-12",
+    "location": "Malaysia",
+    "country": "Malaysia",
+    "summary": "Malaysia formally launched NAIO as a national AI coordination node.",
+    "organizer_entity_ids_or_names": [
+      "MyDIGITAL Corporation",
+      "Government of Malaysia"
+    ],
+    "participant_entity_ids_or_names": [
+      "national-ai-office-malaysia",
+      "mydigital-corporation"
+    ],
+    "source_ids": [
+      "mydigital-naio-page"
+    ],
+    "evidence_note_ids": [
+      "e-malaysia-naio-launched"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "event-naicri-launch-2026",
+    "name": "Launch of the National Artificial Intelligence Center for Research and Innovation",
+    "event_type": "launch",
+    "date": "2026-02-26",
+    "start_date": "2026-02-26",
+    "location": "Manila, Philippines",
+    "city": "Manila",
+    "country": "Philippines",
+    "summary": "DOST-ASTI launched NAICRI as a national institutional anchor for AI research, advanced computing, and innovation.",
+    "organizer_entity_ids_or_names": [
+      "dost-asti-ph"
+    ],
+    "participant_entity_ids_or_names": [
+      "dost-asti-ph",
+      "naicri-philippines"
+    ],
+    "source_ids": [
+      "philippines-naicri-launch-2026"
+    ],
+    "evidence_note_ids": [
+      "e-philippines-naicri-anchor",
+      "e-philippines-naicri-functions"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
   }
 ];

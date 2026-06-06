@@ -3,6 +3,7 @@ import { entities } from "./entities";
 import { events } from "./events";
 import { evidenceNotes } from "./evidenceNotes";
 import { glossary } from "./glossary";
+import { policies } from "./policies";
 import { relationships } from "./relationships";
 import { sources } from "./sources";
 
@@ -12,6 +13,7 @@ export {
   events,
   evidenceNotes,
   glossary,
+  policies,
   relationships,
   sources,
 };

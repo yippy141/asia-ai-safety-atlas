@@ -8,7 +8,14 @@ import {
   sensitivityLevels,
   sourceTypes,
 } from "./taxonomy.ts";
-import type { Entity, Event, EvidenceNote, Relationship, Source } from "@/types";
+import type {
+  Entity,
+  Event,
+  EvidenceNote,
+  PolicyOrStandard,
+  Relationship,
+  Source,
+} from "@/types";
 
 export const focusAreaSchema = z.enum(focusAreas);
 export const confidenceLevelSchema = z.enum(confidenceLevels);
@@ -138,8 +145,8 @@ export const policyOrStandardSchema = z.object({
   publication_date: z.string().optional(),
   effective_date: z.string().optional(),
   summary: z.string().min(1),
-  focus_areas: z.array(focusAreaSchema).default([]),
-  source_ids: z.array(z.string()).default([]),
+  focus_areas: z.array(focusAreaSchema).min(1),
+  source_ids: z.array(z.string().min(1)).min(1),
   evidence_note_ids: z.array(z.string()).optional(),
   confidence_level: confidenceLevelSchema,
   sensitivity_level: sensitivityLevelSchema,
@@ -183,6 +190,7 @@ export type AtlasData = {
   sources: Source[];
   evidenceNotes: EvidenceNote[];
   events?: Event[];
+  policies?: PolicyOrStandard[];
 };
 
 export function validateAtlasData({
@@ -191,6 +199,7 @@ export function validateAtlasData({
   sources,
   evidenceNotes,
   events = [],
+  policies = [],
 }: AtlasData) {
   const errors: string[] = [];
   collectSchemaErrors("Entity", entities, entitySchema, errors);
@@ -198,6 +207,12 @@ export function validateAtlasData({
   collectSchemaErrors("Source", sources, sourceSchema, errors);
   collectSchemaErrors("Evidence note", evidenceNotes, evidenceNoteSchema, errors);
   collectSchemaErrors("Event", events, eventSchema, errors);
+  collectSchemaErrors(
+    "Policy or standard",
+    policies,
+    policyOrStandardSchema,
+    errors
+  );
 
   const entityIds = new Set(entities.map((entity) => entity.id));
   const eventIds = new Set(events.map((event) => event.id));
@@ -216,6 +231,7 @@ export function validateAtlasData({
   collectDuplicateIds("Source", sources, errors);
   collectDuplicateIds("Evidence note", evidenceNotes, errors);
   collectDuplicateIds("Event", events, errors);
+  collectDuplicateIds("Policy or standard", policies, errors);
 
   for (const entity of entities) {
     if (entity.tier === 1) {
@@ -339,6 +355,32 @@ export function validateAtlasData({
       if (!evidenceNoteIds.has(noteId)) {
         errors.push(
           `Event ${event.id} references missing evidence note ${noteId}.`
+        );
+      }
+    }
+  }
+
+  for (const policy of policies) {
+    for (const entityId of policy.issuing_entity_ids) {
+      if (!entityIds.has(entityId)) {
+        errors.push(
+          `Policy or standard ${policy.id} references missing issuing entity ${entityId}.`
+        );
+      }
+    }
+
+    for (const sourceId of policy.source_ids) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(
+          `Policy or standard ${policy.id} references missing source ${sourceId}.`
+        );
+      }
+    }
+
+    for (const noteId of policy.evidence_note_ids ?? []) {
+      if (!evidenceNoteIds.has(noteId)) {
+        errors.push(
+          `Policy or standard ${policy.id} references missing evidence note ${noteId}.`
         );
       }
     }

@@ -2,6 +2,7 @@ import { countries } from "../src/data/countries.ts";
 import { entities } from "../src/data/entities.ts";
 import { events } from "../src/data/events.ts";
 import { evidenceNotes } from "../src/data/evidenceNotes.ts";
+import { policies } from "../src/data/policies.ts";
 import { relationships } from "../src/data/relationships.ts";
 import { sources } from "../src/data/sources.ts";
 import {
@@ -18,6 +19,7 @@ try {
     sources,
     evidenceNotes,
     events,
+    policies,
   });
 } catch (error) {
   errors.push(error instanceof Error ? error.message : String(error));
@@ -56,6 +58,7 @@ console.log(
     `${entities.length} entities`,
     `${relationships.length} relationships`,
     `${events.length} events`,
+    `${policies.length} policies`,
     `${sources.length} sources`,
     `${countries.length} country profiles`,
   ].join(" ")

@@ -51,6 +51,7 @@ analytics, or server-side ingestion.
 - `src/data/sources.ts` - seed source records
 - `src/data/relationships.ts` - public-safe relationship records
 - `src/data/evidenceNotes.ts` - evidence note records
+- `src/data/policies.ts` - policy and standard records
 - `src/data/countries.ts` - country profile records
 - `src/data/glossary.ts` - glossary entries
 
@@ -94,6 +95,15 @@ data-handling terms, API controls, repository/model-card releases, and evaluatio
 tooling. Snippet-only evidence rows are held out, and the country profile frames
 these disclosures as compliance and platform governance rather than public
 preparedness or catastrophic-risk frameworks.
+
+## PR 2E ASEAN Implementation Backfill
+
+ASEAN governance implementation and Southeast Asia records now include official
+primary-source rows for regional voluntary guidance, political declarations,
+national strategies, laws/regulations, implementation bodies, testing/assurance
+programmes, events, and policy/standard records. Search-snippet evidence and
+overclaims about binding ASEAN enforcement or operational safety-testing
+networks remain held out.
 
 ## Project Rules
 

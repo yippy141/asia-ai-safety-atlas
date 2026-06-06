@@ -297,7 +297,7 @@ export const entities: Entity[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "tier": 2,
-    "needs_primary_source": true,
+    "needs_primary_source": false,
     "open_questions": [
       "Dedicated official committee page and current leadership roster.",
       "Whether the committee has a stable standing structure separate from CAICT's report language of 筹建.",
@@ -384,7 +384,7 @@ export const entities: Entity[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "tier": 2,
-    "needs_primary_source": true,
+    "needs_primary_source": false,
     "open_questions": [
       "A directly retrievable official center-introduction page would improve mapping of CSTC's administrative status.",
       "The exact scope and permanence of the cited AI safety workgroup remain unclear from the retrieved snippet."
@@ -873,7 +873,7 @@ export const entities: Entity[] = [
     "entity_type": "evaluation_institution",
     "country": "Singapore",
     "region": "Southeast Asia",
-    "summary": "IMDA-owned Singapore assurance institution that anchors AI Verify, Moonshot, sandboxing, and tester accreditation.",
+    "summary": "Update AI Verify Foundation with current assurance stack: Project Moonshot, the Global AI Assurance Sandbox, and the AI Tester Accreditation Programme. Connect this update to existing Singapore assurance/tooling records rather than duplicating PR2B entries.",
     "focus_areas": [
       "ai_assurance",
       "evaluation",
@@ -891,7 +891,10 @@ export const entities: Entity[] = [
       "frameworks",
       "sandboxing",
       "accreditation",
-      "Project Moonshot"
+      "Project Moonshot",
+      "sandbox",
+      "benchmarking",
+      "red teaming"
     ],
     "source_ids": [
       "report-japan-korea-singapore-aisi-2026-06-05",
@@ -900,45 +903,55 @@ export const entities: Entity[] = [
       "sg-ai-verify-testing-framework-page",
       "sg-project-moonshot-page",
       "sg-global-ai-assurance-sandbox-page",
-      "sg-ai-tester-accreditation-page"
+      "sg-ai-tester-accreditation-page",
+      "ai-verify-foundation-home-2026",
+      "global-ai-assurance-sandbox-main-report-2025"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 1,
     "needs_primary_source": false,
     "name_local": "AI Verify Foundation",
     "acronym": "AIVF",
     "open_questions": [
-      "How AIVF and Singapore AISI will divide future public-facing evaluation roles."
+      "How AIVF and Singapore AISI will divide future public-facing evaluation roles.",
+      "Publicly documented governance and scope details for the AI Tester Accreditation Programme remain limited in the sources captured here."
     ]
   },
   {
     "id": "asean-working-group-ai-governance",
     "name_en": "ASEAN Working Group on AI Governance",
-    "acronym": "ASEAN AI Governance Working Group",
-    "entity_type": "policy_program",
+    "acronym": "WG-AI",
+    "entity_type": "working_group",
     "country": "Regional",
     "region": "Southeast Asia",
-    "summary": "Regional governance working group included for ASEAN generative AI governance and cross-border policy coordination tracking.",
+    "summary": "ASEAN regional working group on AI governance. The Bangkok Digital Declaration directly supports a coordination remit that includes AI policy, governance, safety, laws, regulations, and standards, but does not establish supranational regulatory authority.",
     "focus_areas": [
       "ai_governance",
       "policy_regulation",
-      "capacity_building"
+      "capacity_building",
+      "international_dialogue"
     ],
     "tags": [
       "ASEAN",
       "AI governance",
-      "capacity building"
+      "capacity building",
+      "WG-AI",
+      "regional coordination"
     ],
     "source_ids": [
-      "report-asean-genai-governance-2026-06-05"
+      "report-asean-genai-governance-2026-06-05",
+      "bangkok-digital-declaration-2025"
     ],
-    "confidence_level": "medium",
+    "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 1,
-    "needs_primary_source": true
+    "needs_primary_source": true,
+    "open_questions": [
+      "Official terms of reference and current membership for WG-AI."
+    ]
   },
   {
     "id": "org-concordia-ai",
@@ -1317,29 +1330,41 @@ export const entities: Entity[] = [
       "policy",
       "international engagement",
       "assurance ecosystem building",
-      "baseline policy"
+      "baseline policy",
+      "A.I. Verify",
+      "red teaming",
+      "sandbox",
+      "standards"
     ],
     "source_ids": [
       "sg-aisi-about-page",
-      "sg-imda-llm-starter-kit"
+      "sg-imda-llm-starter-kit",
+      "imda-ai-verify-launch-2022",
+      "sg-global-ai-assurance-sandbox-page",
+      "singapore-ai-safety-red-teaming-challenge-page-2025",
+      "singapore-global-ai-testing-standardisation-2026"
     ],
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 1,
     "name_en": "Infocomm Media Development Authority",
     "name_local": "Infocomm Media Development Authority",
     "acronym": "IMDA",
-    "summary": "Overall government agency for Singapore AISI, responsible for baseline policy and international engagement, and central to Singapore’s wider AI assurance stack.",
+    "summary": "Update IMDA with Singapore’s assurance and testing implementation roles, including A.I. Verify launch, the Global AI Assurance Sandbox with AI Verify Foundation, the Singapore AI Safety Red Teaming Challenge, and 2026 testing-standardisation activity.",
     "focus_areas": [
       "ai_governance",
       "policy_regulation",
       "ai_assurance",
-      "international_dialogue"
+      "international_dialogue",
+      "evaluation",
+      "testing_infrastructure"
     ],
     "confidence_level": "high",
     "needs_primary_source": false,
     "open_questions": [
-      "Public sources reviewed do not fully separate IMDA’s AISI role from its broader trusted-AI policy role."
+      "Public sources reviewed do not fully separate IMDA’s AISI role from its broader trusted-AI policy role.",
+      "Whether IMDA has published a final formal specification for an AI tester accreditation programme beyond current public pages.",
+      "Whether Global AI Assurance Sandbox participation criteria or reports are updated on a fixed cadence."
     ]
   },
   {
@@ -1376,8 +1401,8 @@ export const entities: Entity[] = [
     "name_local": "Project Moonshot",
     "entity_type": "evaluation_platform",
     "country": "Singapore",
-    "region": "Asia-Pacific",
-    "summary": "Officially presented as an open-source LLM evaluation toolkit connected to IMDA’s Starter Kit and AIVF.",
+    "region": "Southeast Asia",
+    "summary": "Officially presented as an open-source LLM evaluation toolkit connected to IMDA’s Starter Kit and AIVF, with benchmarking and red-teaming functions.",
     "focus_areas": [
       "evaluation",
       "testing_infrastructure",
@@ -1393,11 +1418,12 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "sg-project-moonshot-page",
-      "sg-imda-llm-starter-kit"
+      "sg-imda-llm-starter-kit",
+      "expanded-asean-guide-genai-2025"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 1,
     "needs_primary_source": false
   },
@@ -1407,28 +1433,31 @@ export const entities: Entity[] = [
     "name_local": "Global AI Assurance Sandbox",
     "entity_type": "policy_program",
     "country": "Singapore",
-    "region": "Global",
-    "summary": "Important assurance programme that should not be conflated with Singapore AISI’s core institutional structure.",
+    "region": "Asia-Pacific",
+    "summary": "Singapore-linked assurance programme for deployed or deploying GenAI applications, represented as application-level assurance and market-building infrastructure rather than foundation-model safety testing.",
     "focus_areas": [
       "ai_assurance",
       "capacity_building",
-      "evaluation"
+      "evaluation",
+      "testing_infrastructure"
     ],
     "tags": [
       "AI assurance",
       "sandbox",
       "IMDA",
       "AIVF",
-      "programme"
+      "programme",
+      "application testing"
     ],
     "source_ids": [
-      "sg-global-ai-assurance-sandbox-page"
+      "sg-global-ai-assurance-sandbox-page",
+      "global-ai-assurance-sandbox-main-report-2025"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-06",
     "tier": 1,
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "ai-tester-accreditation-programme",
@@ -1608,7 +1637,7 @@ export const entities: Entity[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "tier": 1,
-    "needs_primary_source": true,
+    "needs_primary_source": false,
     "open_questions": [
       "What official Alibaba/Qwen privacy, service-agreement, or platform-guardrail pages should be added for a fuller ba...",
       "Are there official Qwen red-teaming, dangerous-capability, or release-gating disclosures?",
@@ -2010,7 +2039,7 @@ export const entities: Entity[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "tier": 1,
-    "needs_primary_source": true,
+    "needs_primary_source": false,
     "open_questions": [
       "What is 01.AI's current official API/privacy/service-agreement stack for Yi if any public platform remains acti...",
       "Are there any official red-team or dangerous-capability evaluation disclosures for Yi?",
@@ -2106,5 +2135,456 @@ export const entities: Entity[] = [
     "last_verified": "2026-06-05",
     "tier": 1,
     "needs_primary_source": false
+  },
+  {
+    "id": "asean-secretariat",
+    "name_en": "Association of Southeast Asian Nations",
+    "acronym": "ASEAN",
+    "entity_type": "dialogue_convenor",
+    "country": "Regional",
+    "region": "Southeast Asia",
+    "summary": "Regional intergovernmental organization represented here only for source-backed ASEAN AI governance coordination: the 2024 voluntary AI governance guide, the 2025 generative-AI expansion, the Bangkok Digital Declaration, and a Malaysia official ASEAN AI Safe announcement. Held roadmap and search-snippet claims are not treated as operational evidence.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "international_dialogue",
+      "capacity_building"
+    ],
+    "tags": [
+      "ASEAN",
+      "regional voluntary guidance",
+      "political declaration",
+      "AI Safe",
+      "ADGMIN"
+    ],
+    "source_ids": [
+      "asean-guide-ai-governance-ethics-2024",
+      "expanded-asean-guide-genai-2025",
+      "bangkok-digital-declaration-2025",
+      "malaysia-champions-asean-ai-safe-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Whether ASEAN AI Safe has published terms of reference, secretariat arrangements, or a public work programme beyond summit-level announcements.",
+      "Whether the Responsible AI Roadmap has a final public PDF working text beyond the official page summary captured here."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "mydigital-corporation",
+    "name_en": "MyDIGITAL Corporation",
+    "acronym": "MyDIGITAL",
+    "entity_type": "government",
+    "country": "Malaysia",
+    "region": "Southeast Asia",
+    "summary": "Malaysian government-linked implementation and coordination node in this source pack, connected to NAIO incubation, AI action-plan procurement, and a Malaysia official announcement about ASEAN AI Safe. The public sources do not establish MyDIGITAL as an AI safety testing body.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "international_dialogue",
+      "capacity_building"
+    ],
+    "tags": [
+      "NAIO incubation",
+      "AI action plan",
+      "ASEAN AI Safe",
+      "Malaysia"
+    ],
+    "source_ids": [
+      "mydigital-naio-page",
+      "mydigital-national-ai-action-plan-rfp-2025",
+      "malaysia-champions-asean-ai-safe-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Whether NAIO’s long-term institutional home remains within MyDIGITAL or shifted after incubation."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "etda-thailand",
+    "name_en": "Electronic Transactions Development Agency",
+    "name_local": "สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์",
+    "acronym": "ETDA",
+    "entity_type": "government",
+    "country": "Thailand",
+    "region": "Southeast Asia",
+    "summary": "Thai digital-governance agency represented here through official AI governance guidance, AI Governance Center activity, ethics principles, and draft AI-law consultation sources. The imported rows do not treat the draft-law consultation as enacted law.",
+    "focus_areas": [
+      "ai_governance",
+      "ethics",
+      "policy_regulation",
+      "capacity_building"
+    ],
+    "tags": [
+      "AIGC",
+      "AI law draft",
+      "AI governance guideline",
+      "Thailand"
+    ],
+    "source_ids": [
+      "etda-aigc-page",
+      "thailand-ai-governance-guideline-executive-2023",
+      "digital-thailand-ai-ethics-guideline-2019",
+      "etda-draft-ai-law-pr-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Whether Thailand has published the full draft AI law text or only public hearing principles in an official accessible form."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "dost-asti-ph",
+    "name_en": "Advanced Science and Technology Institute",
+    "acronym": "DOST-ASTI",
+    "entity_type": "research_group",
+    "country": "Philippines",
+    "region": "Southeast Asia",
+    "summary": "Philippine government research institute represented here as a public AI R&D implementation actor, including DOST-ASTI AI programme materials, SkAI-Pinas-linked work, and the launch of NAICRI.",
+    "focus_areas": [
+      "technical_safety_research",
+      "testing_infrastructure",
+      "capacity_building",
+      "ai_governance"
+    ],
+    "tags": [
+      "NAICRI",
+      "SkAI-Pinas",
+      "AI R&D",
+      "Philippines"
+    ],
+    "source_ids": [
+      "philippines-dost-asti-ai-page",
+      "philippines-naicri-launch-2026",
+      "philippines-dost-ai-flagship-year1-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Whether DOST or DICT has separately published a final Philippines National AI Strategy Roadmap 2.0 text."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "brin-orei",
+    "name_en": "Electronics and Informatics Research Organization",
+    "name_local": "Organisasi Riset Elektronika dan Informatika",
+    "acronym": "OREI",
+    "entity_type": "research_group",
+    "country": "Indonesia",
+    "region": "Southeast Asia",
+    "summary": "BRIN research organization represented with limited public evidence that it hosts an AI and cybersecurity research center page. Details on mandate, staffing, and programme scope remain sparse in this source pack.",
+    "focus_areas": [
+      "technical_safety_research",
+      "cybersecurity"
+    ],
+    "tags": [
+      "BRIN",
+      "research center",
+      "AI and cybersecurity",
+      "Indonesia"
+    ],
+    "source_ids": [
+      "brin-ai-cybersecurity-research-center-page-2025"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "open_questions": [
+      "Formal mandate, staffing, and programme portfolio of the BRIN AI and Cybersecurity Research Center.",
+      "Whether BRIN or another Indonesian ministry hosts the authoritative public Stranas KA implementation portal."
+    ],
+    "needs_primary_source": true
+  },
+  {
+    "id": "asean-ai-safe-network",
+    "name_en": "ASEAN AI Safety Network",
+    "acronym": "ASEAN AI Safe",
+    "entity_type": "policy_program",
+    "country": "Regional",
+    "region": "Southeast Asia",
+    "summary": "Regional AI safety network initiative supported here by a Malaysia official announcement. The atlas does not treat it as an operational testing network until ASEAN publishes public implementation details.",
+    "focus_areas": [
+      "ai_governance",
+      "international_dialogue",
+      "capacity_building"
+    ],
+    "tags": [
+      "ASEAN AI Safe",
+      "regional network",
+      "political declaration"
+    ],
+    "source_ids": [
+      "malaysia-champions-asean-ai-safe-2025"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Public terms of reference, membership rules, secretariat arrangements, or work programme for ASEAN AI Safe."
+    ],
+    "needs_primary_source": true
+  },
+  {
+    "id": "singapore-ai-safety-red-teaming-challenge",
+    "name_en": "Singapore AI Safety Red Teaming Challenge",
+    "entity_type": "evaluation_platform",
+    "country": "Singapore",
+    "region": "Asia-Pacific",
+    "summary": "IMDA-organized multicultural and multilingual GenAI red-teaming challenge focused on harmful bias stereotypes across Asian contexts.",
+    "focus_areas": [
+      "red_teaming",
+      "evaluation",
+      "ai_assurance",
+      "testing_infrastructure",
+      "content_safety"
+    ],
+    "tags": [
+      "red teaming",
+      "challenge",
+      "multilingual testing",
+      "Asian contexts"
+    ],
+    "source_ids": [
+      "singapore-ai-safety-red-teaming-challenge-page-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Whether IMDA will publish repeat challenge methodology or ongoing programme governance."
+    ],
+    "needs_primary_source": true
+  },
+  {
+    "id": "national-ai-office-malaysia",
+    "name_en": "National AI Office",
+    "acronym": "NAIO",
+    "entity_type": "government",
+    "country": "Malaysia",
+    "region": "Southeast Asia",
+    "summary": "Malaysia national AI coordination node launched in December 2024. Sources describe policy and regulatory framework shaping, innovation, adoption, and talent functions, but do not establish statutory enforcement powers.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "capacity_building"
+    ],
+    "tags": [
+      "NAIO",
+      "central authority",
+      "coordination",
+      "Malaysia"
+    ],
+    "source_ids": [
+      "mydigital-naio-page",
+      "naio-home-working-groups-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Whether NAIO’s formal authority is later codified in statute, regulation, or cabinet decision."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "naio-working-groups-malaysia",
+    "name_en": "NAIO Working Groups",
+    "acronym": "NAIO WGs",
+    "entity_type": "working_group",
+    "country": "Malaysia",
+    "region": "Southeast Asia",
+    "summary": "Set of NAIO specialised working groups publicly announced to drive Malaysia’s AI agenda with technology, academic, industry, government, and civil-society participation.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "capacity_building"
+    ],
+    "tags": [
+      "working groups",
+      "multi-stakeholder",
+      "Malaysia"
+    ],
+    "source_ids": [
+      "naio-home-working-groups-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "open_questions": [
+      "Current roster and published outputs for each NAIO working group."
+    ],
+    "needs_primary_source": true
+  },
+  {
+    "id": "ai-governance-center-thailand",
+    "name_en": "AI Governance Center",
+    "name_local": "ศูนย์ธรรมาภิบาลปัญญาประดิษฐ์",
+    "acronym": "AIGC",
+    "entity_type": "government",
+    "country": "Thailand",
+    "region": "Southeast Asia",
+    "summary": "ETDA-hosted AI governance center framed as a cross-network cooperation platform for governance framework development, consultation, knowledge exchange, and networking.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "capacity_building",
+      "international_dialogue"
+    ],
+    "tags": [
+      "AIGC",
+      "ETDA",
+      "Thailand",
+      "governance center"
+    ],
+    "source_ids": [
+      "etda-aigc-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Whether AIGC has a public service catalogue or formal assessment mandate beyond governance consultation and knowledge exchange."
+    ],
+    "needs_primary_source": true
+  },
+  {
+    "id": "ai-thailand-program",
+    "name_en": "AI Thailand",
+    "entity_type": "policy_program",
+    "country": "Thailand",
+    "region": "Southeast Asia",
+    "summary": "Official national AI strategy and action-plan programme page for Thailand, including readiness work on ethics, law and regulation and a strategy line for AI sandboxes.",
+    "focus_areas": [
+      "ai_governance",
+      "policy_regulation",
+      "capacity_building",
+      "testing_infrastructure"
+    ],
+    "tags": [
+      "national strategy",
+      "sandbox",
+      "Thailand"
+    ],
+    "source_ids": [
+      "ai-thailand-national-strategy-2022-2027-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "open_questions": [
+      "Operational status and public outputs of the AI sandbox elements described in the strategy page."
+    ],
+    "needs_primary_source": true
+  },
+  {
+    "id": "brin-ai-cybersecurity-research-center",
+    "name_en": "AI and Cybersecurity Research Center",
+    "name_local": "Pusat Riset Kecerdasan Artifisial dan Keamanan Siber",
+    "entity_type": "research_group",
+    "country": "Indonesia",
+    "region": "Southeast Asia",
+    "summary": "BRIN page indicating a dedicated AI and cybersecurity research center under the Electronics and Informatics research organization. Public detail in this source pack is limited.",
+    "focus_areas": [
+      "technical_safety_research",
+      "cybersecurity"
+    ],
+    "tags": [
+      "BRIN",
+      "AI and cybersecurity",
+      "research center"
+    ],
+    "source_ids": [
+      "brin-ai-cybersecurity-research-center-page-2025"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "open_questions": [
+      "Mandate, staffing, research outputs, and service portfolio."
+    ],
+    "needs_primary_source": true
+  },
+  {
+    "id": "naicri-philippines",
+    "name_en": "National Artificial Intelligence Center for Research and Innovation",
+    "acronym": "NAICRI",
+    "entity_type": "research_group",
+    "country": "Philippines",
+    "region": "Southeast Asia",
+    "summary": "Philippine national institutional anchor for AI research, advanced computing, and innovation launched by DOST-ASTI in February 2026.",
+    "focus_areas": [
+      "technical_safety_research",
+      "testing_infrastructure",
+      "capacity_building",
+      "ai_governance"
+    ],
+    "tags": [
+      "NAICRI",
+      "advanced computing",
+      "AI research",
+      "Philippines"
+    ],
+    "source_ids": [
+      "philippines-naicri-launch-2026",
+      "philippines-dost-ai-flagship-year1-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 1,
+    "open_questions": [
+      "Public service offerings, compute-access rules, and data-governance policies."
+    ],
+    "needs_primary_source": false
+  },
+  {
+    "id": "skai-pinas",
+    "name_en": "Philippine Sky Artificial Intelligence Program",
+    "acronym": "SkAI-Pinas",
+    "entity_type": "research_group",
+    "country": "Philippines",
+    "region": "Southeast Asia",
+    "summary": "Philippine AI R&D programme represented because DOST-ASTI’s official AI page identifies ASTI-ALaM as part of the broader SkAI-Pinas umbrella.",
+    "focus_areas": [
+      "technical_safety_research",
+      "capacity_building"
+    ],
+    "tags": [
+      "SkAI-Pinas",
+      "ASTI-ALaM",
+      "research programme"
+    ],
+    "source_ids": [
+      "philippines-dost-asti-ai-page"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "tier": 2,
+    "open_questions": [
+      "Programme charter, governance, and current scope."
+    ],
+    "needs_primary_source": true
   }
 ];

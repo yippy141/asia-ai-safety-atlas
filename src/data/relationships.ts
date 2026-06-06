@@ -725,5 +725,162 @@ export const relationships: Relationship[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "public_safe_to_show": true
+  },
+  {
+    "id": "rel-aivf-maintains-project-moonshot",
+    "source_entity_id": "sg-ai-verify-foundation",
+    "target_entity_id": "project-moonshot",
+    "relationship_type": "maintains",
+    "description": "AI Verify Foundation publicly presents Project Moonshot as one of its tools.",
+    "evidence_note_ids": [
+      "e-project-moonshot-open-source-toolkit"
+    ],
+    "source_ids": [
+      "sg-project-moonshot-page",
+      "ai-verify-foundation-home-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-aivf-operates-global-sandbox",
+    "source_entity_id": "sg-ai-verify-foundation",
+    "target_entity_id": "global-ai-assurance-sandbox",
+    "relationship_type": "operates",
+    "description": "AI Verify Foundation publicly operates the Global AI Assurance Sandbox as part of its assurance offerings.",
+    "evidence_note_ids": [
+      "e-sandbox-joint-initiative"
+    ],
+    "source_ids": [
+      "sg-global-ai-assurance-sandbox-page",
+      "ai-verify-foundation-home-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-imda-organizes-red-teaming-challenge",
+    "source_entity_id": "imda-singapore",
+    "target_entity_id": "singapore-ai-safety-red-teaming-challenge",
+    "relationship_type": "organizes",
+    "description": "IMDA organised the inaugural Singapore AI Safety Red Teaming Challenge.",
+    "evidence_note_ids": [
+      "e-red-teaming-nine-countries"
+    ],
+    "source_ids": [
+      "singapore-ai-safety-red-teaming-challenge-page-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-mydigital-supports-naio",
+    "source_entity_id": "mydigital-corporation",
+    "target_entity_id": "national-ai-office-malaysia",
+    "relationship_type": "affiliated_with",
+    "description": "MyDIGITAL is represented as the incubation home and procurement/coordination platform for NAIO in the captured official materials; affiliated_with is the conservative taxonomy label used for this support claim.",
+    "evidence_note_ids": [
+      "e-malaysia-naio-launched",
+      "e-malaysia-action-plan-not-final"
+    ],
+    "source_ids": [
+      "mydigital-naio-page",
+      "mydigital-national-ai-action-plan-rfp-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-naio-establishes-working-groups",
+    "source_entity_id": "national-ai-office-malaysia",
+    "target_entity_id": "naio-working-groups-malaysia",
+    "relationship_type": "establishes",
+    "description": "NAIO announced the establishment of specialised working groups to drive Malaysia’s AI agenda.",
+    "evidence_note_ids": [
+      "e-naio-working-groups"
+    ],
+    "source_ids": [
+      "naio-home-working-groups-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-etda-operates-aigc",
+    "source_entity_id": "etda-thailand",
+    "target_entity_id": "ai-governance-center-thailand",
+    "relationship_type": "operates",
+    "description": "ETDA hosts and operates the AI Governance Center as a governance and advisory platform.",
+    "evidence_note_ids": [
+      "e-thailand-aigc-mandate"
+    ],
+    "source_ids": [
+      "etda-aigc-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-brin-orei-operates-ai-cyber-center",
+    "source_entity_id": "brin-orei",
+    "target_entity_id": "brin-ai-cybersecurity-research-center",
+    "relationship_type": "operates",
+    "description": "The BRIN OREI page structure indicates that the AI and Cybersecurity Research Center sits under OREI.",
+    "evidence_note_ids": [
+      "e-indonesia-brin-center-exists"
+    ],
+    "source_ids": [
+      "brin-ai-cybersecurity-research-center-page-2025"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-dost-asti-establishes-naicri",
+    "source_entity_id": "dost-asti-ph",
+    "target_entity_id": "naicri-philippines",
+    "relationship_type": "establishes",
+    "description": "DOST-ASTI launched NAICRI and describes it as a national institutional anchor for AI research and advanced computing.",
+    "evidence_note_ids": [
+      "e-philippines-naicri-anchor"
+    ],
+    "source_ids": [
+      "philippines-naicri-launch-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-dost-asti-affiliated-with-skai-pinas",
+    "source_entity_id": "dost-asti-ph",
+    "target_entity_id": "skai-pinas",
+    "relationship_type": "affiliated_with",
+    "description": "DOST-ASTI’s AI page describes ASTI-ALaM as the institute’s component under the broader SkAI-Pinas umbrella.",
+    "evidence_note_ids": [
+      "e-philippines-dost-asti-ai-work"
+    ],
+    "source_ids": [
+      "philippines-dost-asti-ai-page"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
   }
 ];

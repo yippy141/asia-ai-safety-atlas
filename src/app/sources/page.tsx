@@ -30,7 +30,8 @@ export default function SourcesPage() {
           include the PR 2A China standards/evaluation backfill and the PR 2B
           Japan, Korea, and Singapore AISI comparison backfill. PR 2C adds a
           filtered China-West dialogue and event-layer source set; PR 2D adds
-          Chinese frontier-developer public-disclosure sources.
+          Chinese frontier-developer public-disclosure sources; PR 2E adds ASEAN
+          governance implementation and Southeast Asia policy sources.
         </p>
       </div>
 
