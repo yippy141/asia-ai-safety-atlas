@@ -568,5 +568,475 @@ export const relationships: Relationship[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-05",
     "public_safe_to_show": true
+  },
+  {
+    "id": "tsinghua-ciss-cohosts-us-china-ai-dialogue-round-6-2024",
+    "source_entity_id": "cn-tsinghua-ciss",
+    "target_entity_id": "us-china-ai-and-international-security-dialogue-round-6-2024",
+    "relationship_type": "co_hosts",
+    "description": "Tsinghua CISS was publicly associated with the sixth U.S.-China AI and International Security Dialogue.",
+    "evidence_note_ids": [
+      "note-brookings-round6"
+    ],
+    "source_ids": [
+      "brookings-ai-glossary-2024"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "tsinghua-ciss-cohosts-china-eu-ai-dialogue-round-2-2024",
+    "source_entity_id": "cn-tsinghua-ciss",
+    "target_entity_id": "china-eu-ai-and-international-security-dialogue-round-2-2024",
+    "relationship_type": "co_hosts",
+    "description": "Tsinghua CISS publicly co-hosted round two of the China-EU AI and International Security Dialogue.",
+    "evidence_note_ids": [
+      "note-ciss-hd-round2"
+    ],
+    "source_ids": [
+      "ciss-china-eu-ai-security-dialogue-round-2-2024"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "centre-for-humanitarian-dialogue-cohosts-china-eu-ai-dialogue-round-2-2024",
+    "source_entity_id": "centre-for-humanitarian-dialogue",
+    "target_entity_id": "china-eu-ai-and-international-security-dialogue-round-2-2024",
+    "relationship_type": "co_hosts",
+    "description": "HD publicly co-hosted round two of the China-EU AI and International Security Dialogue.",
+    "evidence_note_ids": [
+      "note-ciss-hd-round2"
+    ],
+    "source_ids": [
+      "ciss-china-eu-ai-security-dialogue-round-2-2024"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "tsinghua-ciss-cohosts-china-eu-ai-dialogue-round-5-2026",
+    "source_entity_id": "cn-tsinghua-ciss",
+    "target_entity_id": "china-eu-ai-and-international-security-dialogue-round-5-2026",
+    "relationship_type": "co_hosts",
+    "description": "Tsinghua CISS publicly co-hosted round five of the China-EU AI and International Security Dialogue.",
+    "evidence_note_ids": [
+      "note-ciss-hd-round5"
+    ],
+    "source_ids": [
+      "ciss-china-eu-ai-security-dialogue-round-5-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "centre-for-humanitarian-dialogue-cohosts-china-eu-ai-dialogue-round-5-2026",
+    "source_entity_id": "centre-for-humanitarian-dialogue",
+    "target_entity_id": "china-eu-ai-and-international-security-dialogue-round-5-2026",
+    "relationship_type": "co_hosts",
+    "description": "HD publicly co-hosted round five of the China-EU AI and International Security Dialogue.",
+    "evidence_note_ids": [
+      "note-ciss-hd-round5"
+    ],
+    "source_ids": [
+      "ciss-china-eu-ai-security-dialogue-round-5-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "cnaisda-organizes-paris-side-event-2025",
+    "source_entity_id": "cn-cnaisda",
+    "target_entity_id": "cnaisda-paris-side-event-2025",
+    "relationship_type": "organizes",
+    "description": "CnAISDA appeared as the named interface for a public side event during the Paris summit period.",
+    "evidence_note_ids": [
+      "note-cnaisda-paris-side-event"
+    ],
+    "source_ids": [
+      "cnaisda-shanghai-qizhi-side-event-2025"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "zhipu-operates-bigmodel-open-platform",
+    "source_entity_id": "zhipu-ai-glm",
+    "target_entity_id": "zhipu-bigmodel-open-platform",
+    "relationship_type": "operates",
+    "description": "Zhipu AI operates the BigModel open platform used for API access and evaluation tooling.",
+    "evidence_note_ids": [
+      "zhipu-api-platform-note",
+      "zhipu-eval-definition-note"
+    ],
+    "source_ids": [
+      "zhipu-api-overview",
+      "zhipu-model-evaluation"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "baidu-operates-qianfan-platform",
+    "source_entity_id": "baidu-ernie",
+    "target_entity_id": "baidu-qianfan-platform",
+    "relationship_type": "operates",
+    "description": "Baidu exposes model and agent-development services through the Qianfan platform.",
+    "evidence_note_ids": [
+      "baidu-qianfan-platform-scope-note"
+    ],
+    "source_ids": [
+      "baidu-qianfan-overview"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "moonshot-operates-kimi-api-platform",
+    "source_entity_id": "moonshot-kimi",
+    "target_entity_id": "kimi-api-platform",
+    "relationship_type": "operates",
+    "description": "Moonshot AI operates the Kimi API open platform, which includes first-party tools and model access.",
+    "evidence_note_ids": [
+      "kimi-tooling-note",
+      "kimi-k2-model-card-note"
+    ],
+    "source_ids": [
+      "kimi-api-platform-home",
+      "kimi-k2-instruct-model-card"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-aivf-maintains-project-moonshot",
+    "source_entity_id": "sg-ai-verify-foundation",
+    "target_entity_id": "project-moonshot",
+    "relationship_type": "maintains",
+    "description": "AI Verify Foundation publicly presents Project Moonshot as one of its tools.",
+    "evidence_note_ids": [
+      "e-project-moonshot-open-source-toolkit"
+    ],
+    "source_ids": [
+      "sg-project-moonshot-page",
+      "ai-verify-foundation-home-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-aivf-operates-global-sandbox",
+    "source_entity_id": "sg-ai-verify-foundation",
+    "target_entity_id": "global-ai-assurance-sandbox",
+    "relationship_type": "operates",
+    "description": "AI Verify Foundation publicly operates the Global AI Assurance Sandbox as part of its assurance offerings.",
+    "evidence_note_ids": [
+      "e-sandbox-joint-initiative"
+    ],
+    "source_ids": [
+      "sg-global-ai-assurance-sandbox-page",
+      "ai-verify-foundation-home-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-imda-organizes-red-teaming-challenge",
+    "source_entity_id": "imda-singapore",
+    "target_entity_id": "singapore-ai-safety-red-teaming-challenge",
+    "relationship_type": "organizes",
+    "description": "IMDA organised the inaugural Singapore AI Safety Red Teaming Challenge.",
+    "evidence_note_ids": [
+      "e-red-teaming-nine-countries"
+    ],
+    "source_ids": [
+      "singapore-ai-safety-red-teaming-challenge-page-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-mydigital-supports-naio",
+    "source_entity_id": "mydigital-corporation",
+    "target_entity_id": "national-ai-office-malaysia",
+    "relationship_type": "affiliated_with",
+    "description": "MyDIGITAL is represented as the incubation home and procurement/coordination platform for NAIO in the captured official materials; affiliated_with is the conservative taxonomy label used for this support claim.",
+    "evidence_note_ids": [
+      "e-malaysia-naio-launched",
+      "e-malaysia-action-plan-not-final"
+    ],
+    "source_ids": [
+      "mydigital-naio-page",
+      "mydigital-national-ai-action-plan-rfp-2025"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-naio-establishes-working-groups",
+    "source_entity_id": "national-ai-office-malaysia",
+    "target_entity_id": "naio-working-groups-malaysia",
+    "relationship_type": "establishes",
+    "description": "NAIO announced the establishment of specialised working groups to drive Malaysia’s AI agenda.",
+    "evidence_note_ids": [
+      "e-naio-working-groups"
+    ],
+    "source_ids": [
+      "naio-home-working-groups-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-etda-operates-aigc",
+    "source_entity_id": "etda-thailand",
+    "target_entity_id": "ai-governance-center-thailand",
+    "relationship_type": "operates",
+    "description": "ETDA hosts and operates the AI Governance Center as a governance and advisory platform.",
+    "evidence_note_ids": [
+      "e-thailand-aigc-mandate"
+    ],
+    "source_ids": [
+      "etda-aigc-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-brin-orei-operates-ai-cyber-center",
+    "source_entity_id": "brin-orei",
+    "target_entity_id": "brin-ai-cybersecurity-research-center",
+    "relationship_type": "operates",
+    "description": "The BRIN OREI page structure indicates that the AI and Cybersecurity Research Center sits under OREI.",
+    "evidence_note_ids": [
+      "e-indonesia-brin-center-exists"
+    ],
+    "source_ids": [
+      "brin-ai-cybersecurity-research-center-page-2025"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-dost-asti-establishes-naicri",
+    "source_entity_id": "dost-asti-ph",
+    "target_entity_id": "naicri-philippines",
+    "relationship_type": "establishes",
+    "description": "DOST-ASTI launched NAICRI and describes it as a national institutional anchor for AI research and advanced computing.",
+    "evidence_note_ids": [
+      "e-philippines-naicri-anchor"
+    ],
+    "source_ids": [
+      "philippines-naicri-launch-2026"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-dost-asti-affiliated-with-skai-pinas",
+    "source_entity_id": "dost-asti-ph",
+    "target_entity_id": "skai-pinas",
+    "relationship_type": "affiliated_with",
+    "description": "DOST-ASTI’s AI page describes ASTI-ALaM as the institute’s component under the broader SkAI-Pinas umbrella.",
+    "evidence_note_ids": [
+      "e-philippines-dost-asti-ai-work"
+    ],
+    "source_ids": [
+      "philippines-dost-asti-ai-page"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-flagsafe-affiliated-with-pku",
+    "source_entity_id": "baai-flagsafe",
+    "target_entity_id": "pku-alignment-team",
+    "relationship_type": "affiliated_with",
+    "description": "FlagSafe’s official launch announcement explicitly names Peking University as a joint release partner.",
+    "evidence_note_ids": [
+      "ev-flagsafe-launch"
+    ],
+    "source_ids": [
+      "src-flagsafe-launch"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-nii-hosts-llmjp-safetywg",
+    "source_entity_id": "nii-llmc",
+    "target_entity_id": "llm-jp-safety-wg",
+    "relationship_type": "hosts",
+    "description": "NII’s LLMC publicly hosts and advertises the LLM-jp Safety Working Group.",
+    "evidence_note_ids": [
+      "ev-nii-llmc"
+    ],
+    "source_ids": [
+      "src-nii-llmc",
+      "src-llmjp-resources"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-hkust-group-affiliated-with-hkust",
+    "source_entity_id": "hkust-shuai-wang-group",
+    "target_entity_id": "hong-kong-university-of-science-and-technology",
+    "relationship_type": "affiliated_with",
+    "description": "Shuai Wang’s public faculty page is hosted by HKUST CSE and identifies him as HKUST faculty.",
+    "evidence_note_ids": [
+      "ev-hkust-shuaiwang"
+    ],
+    "source_ids": [
+      "src-hkust-shuaiwang"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-caisi-affiliated-with-nist",
+    "source_entity_id": "us-caisi",
+    "target_entity_id": "nist",
+    "relationship_type": "affiliated_with",
+    "description": "CAISI is presented as a NIST-hosted AI center; affiliated_with is the conservative taxonomy label for this parent/host relationship.",
+    "evidence_note_ids": [
+      "ev-01-caisi-main"
+    ],
+    "source_ids": [
+      "caisi-main"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-uk-aisi-participates-in-in-aimes",
+    "source_entity_id": "uk-aisi",
+    "target_entity_id": "in-aimes",
+    "relationship_type": "participates_in",
+    "description": "UK government materials say AISI shares best practice through IN-AIMES; full participant roster is not inferred.",
+    "evidence_note_ids": [
+      "ev-06-in-aimes-naming"
+    ],
+    "source_ids": [
+      "uk-aus-mou"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-uk-aisi-affiliated-with-aus-aisi",
+    "source_entity_id": "uk-aisi",
+    "target_entity_id": "aus-aisi",
+    "relationship_type": "affiliated_with",
+    "description": "A UK government release says UK AISI and the Australian AI Safety Institute signed an MoU on frontier AI capability information sharing, evaluation collaboration, research findings, and staff exchanges.",
+    "evidence_note_ids": [
+      "ev-05-uk-aus-mou"
+    ],
+    "source_ids": [
+      "uk-aus-mou"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-safe-ai-forum-hosts-idais-beijing",
+    "source_entity_id": "org-safe-ai-forum",
+    "target_entity_id": "idais-beijing-2024",
+    "relationship_type": "hosts",
+    "description": "Safe AI Forum identifies IDAIS as its flagship series, and IDAIS-Beijing is imported as a session event.",
+    "evidence_note_ids": [
+      "ev-13-saif",
+      "ev-14-idais-beijing"
+    ],
+    "source_ids": [
+      "saif",
+      "idais-beijing"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-safe-ai-forum-hosts-idais-london",
+    "source_entity_id": "org-safe-ai-forum",
+    "target_entity_id": "idais-london-2026",
+    "relationship_type": "hosts",
+    "description": "IDAIS describes London 2026 as co-hosted by Safe AI Forum and Oxford Martin AI Governance Initiative.",
+    "evidence_note_ids": [
+      "ev-14-idais-home"
+    ],
+    "source_ids": [
+      "farai-idais-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "rel-oxford-martin-cohosts-idais-london",
+    "source_entity_id": "oxford-martin-ai-governance-initiative",
+    "target_entity_id": "idais-london-2026",
+    "relationship_type": "co_hosts",
+    "description": "IDAIS describes London 2026 as co-hosted by Oxford Martin AI Governance Initiative and Safe AI Forum.",
+    "evidence_note_ids": [
+      "ev-14-idais-home"
+    ],
+    "source_ids": [
+      "farai-idais-page"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-06-06",
+    "public_safe_to_show": true
   }
 ];

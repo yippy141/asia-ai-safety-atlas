@@ -51,6 +51,9 @@ analytics, or server-side ingestion.
 - `src/data/sources.ts` - seed source records
 - `src/data/relationships.ts` - public-safe relationship records
 - `src/data/evidenceNotes.ts` - evidence note records
+- `src/data/policies.ts` - policy and standard records
+- `src/data/researchOutputs.ts` - benchmarks, papers, datasets, tools, and
+  other research output records
 - `src/data/countries.ts` - country profile records
 - `src/data/glossary.ts` - glossary entries
 
@@ -77,6 +80,47 @@ primary-source backfill from `tmp/pr2b_aisi_comparison_backfill.json.md`.
 Singapore assurance infrastructure such as AI Verify, Project Moonshot, the
 Global AI Assurance Sandbox, and AI TAP is modeled separately from Singapore
 AISI proper.
+
+## PR 2C China-West Dialogue Backfill
+
+The first event layer now imports the safe PR2C subset from
+`tmp/pr2c_china_west_dialogue_v2.json`, filtered through
+`tmp/pr2c_v2_factcheck.json` and `tmp/source_url_repair_map.json`. Event-target
+relationships are limited to event-oriented labels, and homepage-only source rows
+remain held unless repaired or matched to an exact existing source.
+
+## PR 2D Frontier Developer Backfill
+
+Chinese frontier-developer public disclosures now include first-party source
+records for company platform governance, content-safety controls, privacy and
+data-handling terms, API controls, repository/model-card releases, and evaluation
+tooling. Snippet-only evidence rows are held out, and the country profile frames
+these disclosures as compliance and platform governance rather than public
+preparedness or catastrophic-risk frameworks.
+
+## PR 2E ASEAN Implementation Backfill
+
+ASEAN governance implementation and Southeast Asia records now include official
+primary-source rows for regional voluntary guidance, political declarations,
+national strategies, laws/regulations, implementation bodies, testing/assurance
+programmes, events, and policy/standard records. Search-snippet evidence and
+overclaims about binding ASEAN enforcement or operational safety-testing
+networks remain held out.
+
+## PR 2F Technical Safety Research Backfill
+
+Technical AI safety research records now include source-backed research groups,
+events, and `researchOutputs` rows for benchmarks, papers, datasets, tools,
+platforms, and model projects. Output-like candidates are kept out of the entity
+graph unless they are persistent platforms already useful for discovery.
+
+## PR 2G Western/APAC Comparator Backfill
+
+Western and international comparator rows now include normalized CAISI/NIST, UK
+AISI, EU AI Office, OECD/Hiroshima reporting, Safe AI Forum/IDAIS, Concordia AI,
+Oxford, and Australia records. The import keeps source-url-only and
+research-output target relationships held unless they map cleanly into the
+static schema.
 
 ## Project Rules
 

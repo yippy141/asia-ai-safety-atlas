@@ -8,8 +8,12 @@ export default function SourcesPage() {
   const researchBriefs = sources.filter(
     (source) => source.source_type === "research_brief"
   );
+  const corroboratingSources = sources.filter(
+    (source) => source.source_type === "news"
+  );
   const primarySources = sources.filter(
-    (source) => source.source_type !== "research_brief"
+    (source) =>
+      source.source_type !== "research_brief" && source.source_type !== "news"
   );
 
   return (
@@ -24,7 +28,12 @@ export default function SourcesPage() {
         <p className="mt-4 text-base leading-7 text-stone-700">
           Research briefs remain discovery records. Official primary sources now
           include the PR 2A China standards/evaluation backfill and the PR 2B
-          Japan, Korea, and Singapore AISI comparison backfill.
+          Japan, Korea, and Singapore AISI comparison backfill. PR 2C adds a
+          filtered China-West dialogue and event-layer source set; PR 2D adds
+          Chinese frontier-developer public-disclosure sources; PR 2E adds ASEAN
+          governance implementation and Southeast Asia policy sources; PR 2F
+          adds technical safety research group and research-output sources; PR
+          2G adds normalized Western/APAC comparator sources.
         </p>
       </div>
 
@@ -32,6 +41,11 @@ export default function SourcesPage() {
         title="Official primary sources"
         description="Official regulations, standards, institutional pages, announcements, and reports used for public claims."
         sources={primarySources}
+      />
+      <SourceSection
+        title="Corroborating public sources"
+        description="Non-official public reporting used only where primary-source retrieval is incomplete and the claim remains low-risk."
+        sources={corroboratingSources}
       />
       <SourceSection
         title="Research briefs"
@@ -66,12 +80,14 @@ function SourceSection({
             <div className="flex flex-wrap gap-2">
               <Badge
                 variant={
-                  source.source_type === "research_brief" ? "warning" : "success"
+                  source.source_type === "research_brief"
+                    ? "warning"
+                    : source.source_type === "news"
+                      ? "muted"
+                      : "success"
                 }
               >
-                {source.source_type === "research_brief"
-                  ? "Research brief"
-                  : "Official primary"}
+                {getSourceBadgeLabel(source.source_type)}
               </Badge>
               <Badge variant="muted">{source.reliability_rating}</Badge>
               <Badge variant="outline">{source.language}</Badge>
@@ -117,4 +133,16 @@ function SourceSection({
       </div>
     </section>
   );
+}
+
+function getSourceBadgeLabel(sourceType: string) {
+  if (sourceType === "research_brief") {
+    return "Research brief";
+  }
+
+  if (sourceType === "news") {
+    return "Corroborating";
+  }
+
+  return "Official primary";
 }

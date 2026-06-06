@@ -8,7 +8,15 @@ import {
   sensitivityLevels,
   sourceTypes,
 } from "./taxonomy.ts";
-import type { Entity, EvidenceNote, Relationship, Source } from "@/types";
+import type {
+  Entity,
+  Event,
+  EvidenceNote,
+  PolicyOrStandard,
+  ResearchOutput,
+  Relationship,
+  Source,
+} from "@/types";
 
 export const focusAreaSchema = z.enum(focusAreas);
 export const confidenceLevelSchema = z.enum(confidenceLevels);
@@ -109,6 +117,8 @@ export const eventSchema = z.object({
   name: z.string().min(1),
   name_original: z.string().optional(),
   event_type: z.string().min(1),
+  date: z.string().optional(),
+  location: z.string().optional(),
   country: z.string().optional(),
   city: z.string().optional(),
   start_date: z.string().optional(),
@@ -116,7 +126,9 @@ export const eventSchema = z.object({
   summary: z.string().min(1),
   organizer_entity_ids: z.array(z.string()).optional(),
   participant_entity_ids: z.array(z.string()).optional(),
-  source_ids: z.array(z.string()).default([]),
+  organizer_entity_ids_or_names: z.array(z.string().min(1)).optional(),
+  participant_entity_ids_or_names: z.array(z.string().min(1)).optional(),
+  source_ids: z.array(z.string().min(1)).min(1),
   evidence_note_ids: z.array(z.string()).optional(),
   confidence_level: confidenceLevelSchema,
   sensitivity_level: sensitivityLevelSchema,
@@ -134,8 +146,8 @@ export const policyOrStandardSchema = z.object({
   publication_date: z.string().optional(),
   effective_date: z.string().optional(),
   summary: z.string().min(1),
-  focus_areas: z.array(focusAreaSchema).default([]),
-  source_ids: z.array(z.string()).default([]),
+  focus_areas: z.array(focusAreaSchema).min(1),
+  source_ids: z.array(z.string().min(1)).min(1),
   evidence_note_ids: z.array(z.string()).optional(),
   confidence_level: confidenceLevelSchema,
   sensitivity_level: sensitivityLevelSchema,
@@ -150,8 +162,9 @@ export const researchOutputSchema = z.object({
   author_entity_ids: z.array(z.string()).optional(),
   publication_date: z.string().optional(),
   summary: z.string().min(1),
-  focus_areas: z.array(focusAreaSchema).default([]),
-  source_ids: z.array(z.string()).default([]),
+  focus_areas: z.array(focusAreaSchema).min(1),
+  tags: z.array(z.string().min(1)).optional(),
+  source_ids: z.array(z.string().min(1)).min(1),
   evidence_note_ids: z.array(z.string()).optional(),
   confidence_level: confidenceLevelSchema,
   sensitivity_level: sensitivityLevelSchema,
@@ -178,6 +191,9 @@ export type AtlasData = {
   relationships: Relationship[];
   sources: Source[];
   evidenceNotes: EvidenceNote[];
+  events?: Event[];
+  policies?: PolicyOrStandard[];
+  researchOutputs?: ResearchOutput[];
 };
 
 export function validateAtlasData({
@@ -185,22 +201,48 @@ export function validateAtlasData({
   relationships,
   sources,
   evidenceNotes,
+  events = [],
+  policies = [],
+  researchOutputs = [],
 }: AtlasData) {
   const errors: string[] = [];
   collectSchemaErrors("Entity", entities, entitySchema, errors);
   collectSchemaErrors("Relationship", relationships, relationshipSchema, errors);
   collectSchemaErrors("Source", sources, sourceSchema, errors);
   collectSchemaErrors("Evidence note", evidenceNotes, evidenceNoteSchema, errors);
+  collectSchemaErrors("Event", events, eventSchema, errors);
+  collectSchemaErrors(
+    "Policy or standard",
+    policies,
+    policyOrStandardSchema,
+    errors
+  );
+  collectSchemaErrors(
+    "Research output",
+    researchOutputs,
+    researchOutputSchema,
+    errors
+  );
 
   const entityIds = new Set(entities.map((entity) => entity.id));
+  const eventIds = new Set(events.map((event) => event.id));
   const sourceIds = new Set(sources.map((source) => source.id));
   const evidenceNoteIds = new Set(evidenceNotes.map((note) => note.id));
   const sourcesById = new Map(sources.map((source) => [source.id, source]));
+  const eventRelationshipTypes = new Set([
+    "hosts",
+    "co_hosts",
+    "organizes",
+    "participates_in",
+  ]);
 
   collectDuplicateIds("Entity", entities, errors);
   collectDuplicateIds("Relationship", relationships, errors);
   collectDuplicateIds("Source", sources, errors);
   collectDuplicateIds("Evidence note", evidenceNotes, errors);
+  collectDuplicateIds("Event", events, errors);
+  collectDuplicateIds("Policy or standard", policies, errors);
+  collectDuplicateIds("Research output", researchOutputs, errors);
 
   for (const entity of entities) {
     if (entity.tier === 1) {
@@ -270,9 +312,21 @@ export function validateAtlasData({
       );
     }
 
-    if (!entityIds.has(relationship.target_entity_id)) {
+    const targetIsEntity = entityIds.has(relationship.target_entity_id);
+    const targetIsEvent = eventIds.has(relationship.target_entity_id);
+
+    if (!targetIsEntity && !targetIsEvent) {
       errors.push(
-        `Relationship ${relationship.id} references missing target entity ${relationship.target_entity_id}.`
+        `Relationship ${relationship.id} references missing target entity or event ${relationship.target_entity_id}.`
+      );
+    }
+
+    if (
+      targetIsEvent &&
+      !eventRelationshipTypes.has(relationship.relationship_type)
+    ) {
+      errors.push(
+        `Relationship ${relationship.id} targets an event but uses non-event relationship type ${relationship.relationship_type}.`
       );
     }
 
@@ -298,6 +352,74 @@ export function validateAtlasData({
       errors.push(
         `Evidence note ${note.id} references missing source ${note.source_id}.`
       );
+    }
+  }
+
+  for (const event of events) {
+    for (const sourceId of event.source_ids) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(`Event ${event.id} references missing source ${sourceId}.`);
+      }
+    }
+
+    for (const noteId of event.evidence_note_ids ?? []) {
+      if (!evidenceNoteIds.has(noteId)) {
+        errors.push(
+          `Event ${event.id} references missing evidence note ${noteId}.`
+        );
+      }
+    }
+  }
+
+  for (const policy of policies) {
+    for (const entityId of policy.issuing_entity_ids) {
+      if (!entityIds.has(entityId)) {
+        errors.push(
+          `Policy or standard ${policy.id} references missing issuing entity ${entityId}.`
+        );
+      }
+    }
+
+    for (const sourceId of policy.source_ids) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(
+          `Policy or standard ${policy.id} references missing source ${sourceId}.`
+        );
+      }
+    }
+
+    for (const noteId of policy.evidence_note_ids ?? []) {
+      if (!evidenceNoteIds.has(noteId)) {
+        errors.push(
+          `Policy or standard ${policy.id} references missing evidence note ${noteId}.`
+        );
+      }
+    }
+  }
+
+  for (const output of researchOutputs) {
+    for (const entityId of output.author_entity_ids ?? []) {
+      if (!entityIds.has(entityId)) {
+        errors.push(
+          `Research output ${output.id} references missing author entity ${entityId}.`
+        );
+      }
+    }
+
+    for (const sourceId of output.source_ids) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(
+          `Research output ${output.id} references missing source ${sourceId}.`
+        );
+      }
+    }
+
+    for (const noteId of output.evidence_note_ids ?? []) {
+      if (!evidenceNoteIds.has(noteId)) {
+        errors.push(
+          `Research output ${output.id} references missing evidence note ${noteId}.`
+        );
+      }
     }
   }
 
