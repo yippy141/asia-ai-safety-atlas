@@ -1522,5 +1522,589 @@ export const entities: Entity[] = [
     "open_questions": [
       "Exact source URLs are still needed before importing the IDAIS Oxfordshire relationship rows."
     ]
+  },
+  {
+    "id": "deepseek",
+    "name_en": "DeepSeek",
+    "name_local": "深度求索",
+    "acronym": "DeepSeek",
+    "entity_type": "company",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Chinese frontier-model developer with public disclosures centered on a transparency page plus open-weight DeepSeek-V3 repository and license documentation. This backfill does not identify a public preparedness policy, dangerous-capability evaluation framework, or external frontier-safety audit.",
+    "focus_areas": [
+      "frontier_model_developer",
+      "open_model_governance",
+      "model_security",
+      "content_safety"
+    ],
+    "tags": [
+      "disclosure:transparency_channel",
+      "disclosure:model_card",
+      "disclosure:custom_license",
+      "gap:no_public_rsp",
+      "gap:no_public_dangerous_capability_eval",
+      "gap:no_public_external_audit",
+      "frontier_model_development",
+      "open_weight_release",
+      "api_platform",
+      "source_type_mapping:repository_to_technical_report",
+      "source_type_mapping:license_to_policy_document",
+      "platform disclosure",
+      "model license",
+      "PR2D: public disclosure backfill"
+    ],
+    "source_ids": [
+      "deepseek-transparency-center",
+      "deepseek-v3-github",
+      "deepseek-v3-license"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Is there any public DeepSeek API safety or abuse-policy document beyond the transparency hub?",
+      "Are there public dangerous-capability or release-gating evaluations for frontier DeepSeek models?",
+      "Is there any public third-party red-team or external audit report?"
+    ]
+  },
+  {
+    "id": "alibaba-qwen",
+    "name_en": "Alibaba Qwen",
+    "name_local": "阿里巴巴通义千问",
+    "acronym": "Qwen",
+    "entity_type": "company",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Alibaba Qwen model-family record backed in this pass by official repository and model-card documentation. The public evidence supports open-weight/model-card disclosures, not a public dangerous-capability or release-gating framework.",
+    "focus_areas": [
+      "frontier_model_developer",
+      "open_model_governance",
+      "evaluation"
+    ],
+    "tags": [
+      "disclosure:model_card",
+      "disclosure:repository_release",
+      "disclosure:open_weight_release",
+      "gap:no_public_rsp",
+      "gap:no_public_dangerous_capability_eval",
+      "gap:platform_policy_docs_incomplete",
+      "frontier_model_development",
+      "open_weight_release",
+      "api_platform",
+      "source_type_mapping:repository_to_technical_report",
+      "source_type_mapping:model_card_to_technical_report",
+      "model card",
+      "repository release",
+      "PR2D: public disclosure backfill"
+    ],
+    "source_ids": [
+      "qwen3-github-readme",
+      "qwen3-model-card"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true,
+    "open_questions": [
+      "What official Alibaba/Qwen privacy, service-agreement, or platform-guardrail pages should be added for a fuller ba...",
+      "Are there official Qwen red-teaming, dangerous-capability, or release-gating disclosures?",
+      "Is there any explicit public advanced-AI risk statement tied to Qwen releases?"
+    ]
+  },
+  {
+    "id": "zhipu-ai-glm",
+    "name_en": "Zhipu AI",
+    "name_local": "智谱AI",
+    "acronym": "GLM",
+    "entity_type": "company",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Chinese frontier-model developer whose BigModel documentation surfaces API access, content-safety controls, model-evaluation tooling, GLM-4.5 model information, and privacy policy material. These are platform and evaluation disclosures, not a public preparedness framework.",
+    "focus_areas": [
+      "frontier_model_developer",
+      "evaluation",
+      "content_safety",
+      "model_security"
+    ],
+    "tags": [
+      "disclosure:api_controls",
+      "disclosure:content_safety",
+      "disclosure:model_evaluation",
+      "disclosure:alignment_training",
+      "disclosure:agentic_model_docs",
+      "gap:no_public_rsp",
+      "gap:no_public_dangerous_capability_eval",
+      "frontier_model_development",
+      "api_platform",
+      "model_evaluation",
+      "BigModel",
+      "platform controls",
+      "privacy",
+      "model evaluation",
+      "content safety",
+      "PR2D: public disclosure backfill"
+    ],
+    "source_ids": [
+      "zhipu-api-overview",
+      "zhipu-content-safety",
+      "zhipu-model-evaluation",
+      "zhipu-glm-4-5-overview",
+      "zhipu-privacy-policy"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Does Zhipu publish model-specific red-team results for frontier GLM releases?",
+      "Is there any public external audit or third-party safety evaluation?",
+      "Are there any public deployment thresholds or release-gating criteria beyond the general platform-evaluation tooling?"
+    ]
+  },
+  {
+    "id": "baidu-ernie",
+    "name_en": "Baidu ERNIE",
+    "name_local": "百度文心",
+    "acronym": "ERNIE",
+    "entity_type": "company",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Baidu ERNIE/Qianfan record backed by Qianfan platform, user-agreement, intervention, API, and content-marking documentation. Public disclosures are strongest on platform governance, content controls, data handling, and generated-content labeling.",
+    "focus_areas": [
+      "frontier_model_developer",
+      "evaluation",
+      "content_safety",
+      "model_security",
+      "ai_governance"
+    ],
+    "tags": [
+      "disclosure:user_data_handling",
+      "disclosure:content_safety",
+      "disclosure:api_controls",
+      "disclosure:content_provenance",
+      "disclosure:model_evaluation_platform",
+      "gap:no_public_rsp",
+      "gap:no_public_dangerous_capability_eval",
+      "frontier_model_development",
+      "api_platform",
+      "enterprise_ai_platform",
+      "Qianfan",
+      "privacy",
+      "content marking",
+      "intervention rules",
+      "API controls",
+      "PR2D: public disclosure backfill"
+    ],
+    "source_ids": [
+      "baidu-qianfan-overview",
+      "baidu-qianfan-user-agreement",
+      "baidu-qianfan-intervention-strategy",
+      "baidu-qianfan-api-general",
+      "baidu-qianfan-content-marking"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Is there a public ERNIE model card or technical report for the latest frontier closed models with safety sections?",
+      "Are any dangerous-capability evaluations or external red-team exercises publicly disclosed?",
+      "Are there model-specific release gates distinct from Qianfan platform controls?"
+    ]
+  },
+  {
+    "id": "tencent-hunyuan",
+    "name_en": "Tencent Hunyuan",
+    "name_local": "腾讯混元",
+    "acronym": "Hunyuan",
+    "entity_type": "company",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Tencent Hunyuan record backed by Tencent Cloud product, API, compatibility, moderation, and image-labeling documentation. The evidence supports platform controls and alignment-language disclosures, not a public frontier-risk governance policy.",
+    "focus_areas": [
+      "frontier_model_developer",
+      "content_safety",
+      "model_security",
+      "ai_governance"
+    ],
+    "tags": [
+      "disclosure:api_controls",
+      "disclosure:content_safety",
+      "disclosure:content_provenance",
+      "disclosure:alignment_language",
+      "disclosure:model_lineup",
+      "gap:no_public_rsp",
+      "gap:no_public_dangerous_capability_eval",
+      "frontier_model_development",
+      "api_platform",
+      "multimodal_models",
+      "Hunyuan",
+      "API controls",
+      "image moderation",
+      "content provenance",
+      "human preference alignment language",
+      "PR2D: public disclosure backfill"
+    ],
+    "source_ids": [
+      "tencent-hunyuan-product-overview",
+      "tencent-hunyuan-product-dynamics",
+      "tencent-hunyuan-api-key-management",
+      "tencent-hunyuan-openai-compat",
+      "tencent-hunyuan-image-faq"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Are there public Hunyuan model cards or technical reports for the latest closed frontier releases with safety sections?",
+      "Is any external red-teaming or third-party audit public?",
+      "Do public materials disclose release gates for advanced reasoning/agent models?"
+    ]
+  },
+  {
+    "id": "bytedance-doubao",
+    "name_en": "ByteDance Doubao",
+    "name_local": "字节跳动豆包",
+    "acronym": "Doubao",
+    "entity_type": "company",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "ByteDance/Doubao record backed by Volcengine Ark and Doubao service documentation. Public materials emphasize platform terms, API access, and model-evaluation workflow disclosures; snippet-only platform-scope claims were held out of evidence and relationships.",
+    "focus_areas": [
+      "frontier_model_developer",
+      "evaluation",
+      "model_security",
+      "ai_governance"
+    ],
+    "tags": [
+      "disclosure:platform_security",
+      "disclosure:api_controls",
+      "disclosure:model_evaluation_platform",
+      "disclosure:service_terms",
+      "gap:no_public_rsp",
+      "gap:no_public_dangerous_capability_eval",
+      "frontier_model_development",
+      "api_platform",
+      "agent_platform",
+      "Doubao",
+      "Volcengine Ark",
+      "API platform",
+      "model evaluation tooling",
+      "service terms",
+      "PR2D: public disclosure backfill"
+    ],
+    "source_ids": [
+      "volcengine-ark-overview",
+      "volcengine-ark-special-terms",
+      "volcengine-doubao-model-service-agreement",
+      "volcengine-api-key-config",
+      "volcengine-model-evaluation"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Are there public Doubao model cards or technical reports for the newest frontier closed models?",
+      "Are there public dangerous-capability or misuse evaluations beyond generic model evaluation tooling?",
+      "Is there any public external audit or red-team disclosure for Doubao/Ark?"
+    ]
+  },
+  {
+    "id": "moonshot-kimi",
+    "name_en": "Moonshot AI Kimi",
+    "name_local": "月之暗面 Kimi",
+    "acronym": "Kimi",
+    "entity_type": "company",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "Moonshot AI Kimi record backed by Kimi privacy, service-agreement, platform, and Kimi K2 model-card materials. Public evidence supports privacy, developer data-responsibility, tooling, and model-card disclosures rather than release gates or advanced-risk governance.",
+    "focus_areas": [
+      "frontier_model_developer",
+      "model_security",
+      "ai_governance"
+    ],
+    "tags": [
+      "disclosure:privacy",
+      "disclosure:developer_data_responsibility",
+      "disclosure:tooling",
+      "disclosure:model_card",
+      "gap:no_public_rsp",
+      "gap:no_public_dangerous_capability_eval",
+      "gap:no_public_external_audit",
+      "frontier_model_development",
+      "api_platform",
+      "agentic_models",
+      "Kimi",
+      "privacy",
+      "developer data responsibility",
+      "model card",
+      "tooling",
+      "PR2D: public disclosure backfill"
+    ],
+    "source_ids": [
+      "kimi-api-platform-home",
+      "kimi-privacy-policy",
+      "kimi-service-agreement",
+      "kimi-k2-instruct-model-card"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Does Moonshot publish any model-specific safety card or red-team summary for current frontier releases?",
+      "Are there public release gates or preparedness thresholds for agentic Kimi models?",
+      "Is any external audit or third-party model-safety evaluation public?"
+    ]
+  },
+  {
+    "id": "minimax",
+    "name_en": "MiniMax",
+    "name_local": "MiniMax",
+    "acronym": "MiniMax",
+    "entity_type": "company",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "MiniMax record backed by about, API, privacy, model-page, and content-labeling materials. Public disclosures are mostly API/platform, privacy, benchmark, and content-provenance oriented; snippet-only API-key and labeling evidence notes were held.",
+    "focus_areas": [
+      "frontier_model_developer",
+      "content_safety",
+      "model_security",
+      "open_model_governance",
+      "evaluation"
+    ],
+    "tags": [
+      "disclosure:api_controls",
+      "disclosure:privacy",
+      "disclosure:content_provenance",
+      "disclosure:model_benchmarks",
+      "gap:no_public_rsp",
+      "gap:no_public_dangerous_capability_eval",
+      "gap:no_public_external_audit",
+      "frontier_model_development",
+      "api_platform",
+      "multimodal_models",
+      "open_weight_release",
+      "MiniMax API",
+      "privacy",
+      "content labeling",
+      "model benchmarks",
+      "multimodal models",
+      "PR2D: public disclosure backfill"
+    ],
+    "source_ids": [
+      "minimax-about",
+      "minimax-api-prerequisites",
+      "minimax-api-key-faq",
+      "minimax-api-privacy-policy",
+      "minimax-m3-model-page",
+      "minimax-content-labeling-announcement"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Is there any public MiniMax model-card-style safety section for frontier text models?",
+      "Does MiniMax disclose red-teaming or external evaluations for advanced agentic/coding releases?",
+      "Are there public release-gating or post-deployment monitoring criteria beyond API and labeling controls?"
+    ]
+  },
+  {
+    "id": "stepfun",
+    "name_en": "StepFun",
+    "name_local": "阶跃星辰",
+    "acronym": "Step",
+    "entity_type": "company",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "StepFun record backed by privacy, user-agreement, platform, migration, and reasoning API pages. Because PR2D evidence for detailed API and agent-framework claims was snippet-only, this import keeps StepFun claims at the general platform-disclosure level.",
+    "focus_areas": [
+      "frontier_model_developer",
+      "model_security",
+      "ai_governance"
+    ],
+    "tags": [
+      "disclosure:privacy",
+      "disclosure:api_controls",
+      "disclosure:agent_framework_compatibility",
+      "disclosure:model_routing",
+      "gap:no_public_rsp",
+      "gap:no_public_dangerous_capability_eval",
+      "frontier_model_development",
+      "api_platform",
+      "agentic_models",
+      "StepFun platform",
+      "privacy",
+      "API compatibility",
+      "reasoning models",
+      "snippet-only detailed claims held",
+      "PR2D: public disclosure backfill"
+    ],
+    "source_ids": [
+      "stepfun-privacy-policy",
+      "stepfun-open-platform-home",
+      "stepfun-user-agreement",
+      "stepfun-openai-migration",
+      "step-plan-reasoning-api"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false,
+    "open_questions": [
+      "Are there public StepFun model cards or technical reports for Step 2/3.x frontier models with safety sections?",
+      "Are any external red-team or dangerous-capability evaluations public?",
+      "Is there a public release-gating or preparedness document distinct from API/platform docs?"
+    ]
+  },
+  {
+    "id": "zero-one-ai-yi",
+    "name_en": "01.AI",
+    "name_local": "零一万物",
+    "acronym": "Yi",
+    "entity_type": "company",
+    "country": "China",
+    "region": "East Asia",
+    "summary": "01.AI/Yi record backed by repository, model-card, and licensing source rows. This pass treats Yi as primarily an open-weight documentation case and does not import snippet-only claims about training details, context windows, or license language.",
+    "focus_areas": [
+      "frontier_model_developer",
+      "open_model_governance"
+    ],
+    "tags": [
+      "disclosure:model_card",
+      "disclosure:open_weight_release",
+      "disclosure:apache2_license",
+      "gap:no_public_platform_privacy_docs_found",
+      "gap:no_public_rsp",
+      "gap:no_public_dangerous_capability_eval",
+      "frontier_model_development",
+      "open_weight_release",
+      "coding_models",
+      "Yi",
+      "open-weight release",
+      "model card",
+      "license",
+      "snippet-only detail claims held",
+      "PR2D: public disclosure backfill"
+    ],
+    "source_ids": [
+      "yi-1-5-github",
+      "yi-1-5-34b-chat-model-card",
+      "yi-license"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": true,
+    "open_questions": [
+      "What is 01.AI's current official API/privacy/service-agreement stack for Yi if any public platform remains acti...",
+      "Are there any official red-team or dangerous-capability evaluation disclosures for Yi?",
+      "Is there any public advanced-AI-risk or preparedness statement from 01.AI?"
+    ]
+  },
+  {
+    "id": "zhipu-bigmodel-open-platform",
+    "name_en": "BigModel Open Platform",
+    "name_local": "大模型开放平台",
+    "acronym": "BigModel",
+    "entity_type": "policy_program",
+    "country": "China",
+    "region": "Asia-Pacific",
+    "summary": "Official Zhipu platform surface used in PR2D for source-backed API access, content-safety, and model-evaluation disclosures.",
+    "focus_areas": [
+      "evaluation",
+      "content_safety",
+      "model_security"
+    ],
+    "tags": [
+      "platform",
+      "company-operated platform",
+      "PR2D platform node"
+    ],
+    "source_ids": [
+      "zhipu-api-overview",
+      "zhipu-content-safety",
+      "zhipu-model-evaluation"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false
+  },
+  {
+    "id": "baidu-qianfan-platform",
+    "name_en": "Baidu Qianfan Platform",
+    "name_local": "百度千帆·大模型服务及Agent开发平台",
+    "acronym": "Qianfan",
+    "entity_type": "policy_program",
+    "country": "China",
+    "region": "Asia-Pacific",
+    "summary": "Official Baidu Qianfan platform surface used in PR2D for model services, intervention rules, API access, and content-marking controls.",
+    "focus_areas": [
+      "evaluation",
+      "content_safety",
+      "model_security",
+      "ai_governance"
+    ],
+    "tags": [
+      "platform",
+      "company-operated platform",
+      "PR2D platform node"
+    ],
+    "source_ids": [
+      "baidu-qianfan-overview",
+      "baidu-qianfan-intervention-strategy",
+      "baidu-qianfan-content-marking"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false
+  },
+  {
+    "id": "kimi-api-platform",
+    "name_en": "Kimi API Open Platform",
+    "name_local": "Kimi API 开放平台",
+    "acronym": "Kimi API",
+    "entity_type": "policy_program",
+    "country": "China",
+    "region": "Asia-Pacific",
+    "summary": "Official Moonshot AI Kimi API platform surface used in PR2D for source-backed tooling, privacy, service-agreement, and model-card disclosures.",
+    "focus_areas": [
+      "model_security",
+      "ai_governance"
+    ],
+    "tags": [
+      "platform",
+      "company-operated platform",
+      "PR2D platform node"
+    ],
+    "source_ids": [
+      "kimi-api-platform-home",
+      "kimi-privacy-policy",
+      "kimi-service-agreement"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "tier": 1,
+    "needs_primary_source": false
   }
 ];

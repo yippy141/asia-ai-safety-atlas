@@ -86,6 +86,15 @@ The first event layer now imports the safe PR2C subset from
 relationships are limited to event-oriented labels, and homepage-only source rows
 remain held unless repaired or matched to an exact existing source.
 
+## PR 2D Frontier Developer Backfill
+
+Chinese frontier-developer public disclosures now include first-party source
+records for company platform governance, content-safety controls, privacy and
+data-handling terms, API controls, repository/model-card releases, and evaluation
+tooling. Snippet-only evidence rows are held out, and the country profile frames
+these disclosures as compliance and platform governance rather than public
+preparedness or catastrophic-risk frameworks.
+
 ## Project Rules
 
 - Every public claim should trace to a source record.

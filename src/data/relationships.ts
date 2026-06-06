@@ -670,5 +670,60 @@ export const relationships: Relationship[] = [
     "sensitivity_level": "low",
     "last_verified": "2026-06-06",
     "public_safe_to_show": true
+  },
+  {
+    "id": "zhipu-operates-bigmodel-open-platform",
+    "source_entity_id": "zhipu-ai-glm",
+    "target_entity_id": "zhipu-bigmodel-open-platform",
+    "relationship_type": "operates",
+    "description": "Zhipu AI operates the BigModel open platform used for API access and evaluation tooling.",
+    "evidence_note_ids": [
+      "zhipu-api-platform-note",
+      "zhipu-eval-definition-note"
+    ],
+    "source_ids": [
+      "zhipu-api-overview",
+      "zhipu-model-evaluation"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "baidu-operates-qianfan-platform",
+    "source_entity_id": "baidu-ernie",
+    "target_entity_id": "baidu-qianfan-platform",
+    "relationship_type": "operates",
+    "description": "Baidu exposes model and agent-development services through the Qianfan platform.",
+    "evidence_note_ids": [
+      "baidu-qianfan-platform-scope-note"
+    ],
+    "source_ids": [
+      "baidu-qianfan-overview"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "moonshot-operates-kimi-api-platform",
+    "source_entity_id": "moonshot-kimi",
+    "target_entity_id": "kimi-api-platform",
+    "relationship_type": "operates",
+    "description": "Moonshot AI operates the Kimi API open platform, which includes first-party tools and model access.",
+    "evidence_note_ids": [
+      "kimi-tooling-note",
+      "kimi-k2-model-card-note"
+    ],
+    "source_ids": [
+      "kimi-api-platform-home",
+      "kimi-k2-instruct-model-card"
+    ],
+    "confidence_level": "high",
+    "sensitivity_level": "low",
+    "last_verified": "2026-06-05",
+    "public_safe_to_show": true
   }
 ];

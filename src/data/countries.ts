@@ -5,19 +5,22 @@ export const countries: CountryProfile[] = [
     "slug": "china",
     "country": "China",
     "region": "East Asia",
-    "summary": "China now has source-backed standards/evaluation records plus a first PR2C layer for public dialogue channels and event records. The dialogue layer is modeled as engagement pathways rather than inferred partnerships.",
-    "government_posture": "CAC and MIIT remain the core official standards/evaluation regulators in the atlas. PR2C adds public state-level summit context for Bletchley, Seoul, and Paris, but only imports a China participation relationship where the surviving public sources directly support it.",
-    "standards_evaluation": "TC260, TC28/SC42, CAICT, CESI, CSTC, MIIT/TC1, WG9, OpenCompass, FlagEval, and related benchmark or working-group nodes are represented with primary source IDs where available.",
-    "research_ecosystem": "SHLAB and BAAI are upgraded with official sources for evaluation infrastructure and safety/governance activities. Tsinghua-linked dialogue and policy nodes remain discovery-stage outside this standards/evaluation backfill.",
-    "industry_ecosystem": "AIIA is added as an industry-alliance platform because official CAICT sources link it to AI safety commitments, risk-management work, and AI safety benchmark activity.",
-    "international_engagement": "PR2C adds conservative public engagement pathways: repaired Brookings-CISS sixth U.S.-China dialogue output, repaired CISS-HD China-EU AI and International Security Dialogue rounds, summit-diplomacy event records, and the exact existing CnAISDA Paris side-event source. These are dialogue channels, not partnership claims.",
+    "summary": "China now has source-backed standards/evaluation records, a first dialogue/event layer, and PR2D public-disclosure records for major Chinese frontier-model developers. The developer layer is modeled as platform governance, compliance, content-safety, privacy, API-control, model-card, repository, and evaluation-tooling disclosure rather than preparedness-framework evidence.",
+    "government_posture": "CAC and MIIT remain the core official standards/evaluation regulators in the atlas. PR2D adds company disclosure rows that often align with Chinese compliance requirements around lawful content, platform terms, user-data handling, and generated-content labeling.",
+    "standards_evaluation": "TC260, TC28/SC42, CAICT, CESI, CSTC, MIIT/TC1, WG9, OpenCompass, FlagEval, and related benchmark or working-group nodes remain represented with primary sources. PR2D adds developer-side model-evaluation and platform-evaluation disclosures from Zhipu, Baidu Qianfan, Volcengine Ark, and other company documentation, while avoiding unsupported dangerous-capability claims.",
+    "research_ecosystem": "SHLAB and BAAI remain the strongest source-backed research/evaluation infrastructure nodes. PR2D adds open-weight and model-card documentation from company developers including DeepSeek, Qwen, Kimi, MiniMax, and 01.AI, but treats training/alignment language as technical disclosure rather than advanced-risk governance.",
+    "industry_ecosystem": "PR2D adds major Chinese frontier-developer records. Visible public disclosures are concentrated in content moderation, provenance labeling, privacy and user-data handling, API-key controls, platform security, model cards, repository releases, and evaluation tooling; public first-party evidence for catastrophic-risk governance, dangerous-capability testing, external red-teaming, or preparedness frameworks remains sparse.",
+    "international_engagement": "PR2C adds conservative public engagement pathways: repaired Brookings-CISS sixth U.S.-China dialogue output, repaired CISS-HD China-EU AI and International Security Dialogue rounds, summit-diplomacy event records, and the exact existing CnAISDA Paris side-event source. These are dialogue channels, not partnership claims. PR2D did not locate strong primary-source evidence of cross-border frontier-safety commitments from the reviewed companies.",
     "open_questions": [
       "How should CAC and the Central Cyberspace Affairs Commission Office be modeled when source text names one or the other?",
       "Which benchmark systems should become standalone profile pages as the atlas expands?",
       "Which official sources, if any, establish domestic testing or audit mandates for dialogue-network entities?",
       "Which exact source should anchor the seventh U.S.-China AI and International Security Dialogue row?",
       "Which French institution was the named counterpart in the first Beijing AISI China-France dialogue?",
-      "Which unrepaired homepage-only forum sources should be reattached before importing the broader I-AIIG and IDAIS event rows?"
+      "Which unrepaired homepage-only forum sources should be reattached before importing the broader I-AIIG and IDAIS event rows?",
+      "Which Chinese companies have unpublished but real internal frontier-safety processes not visible in public documentation?",
+      "Are any third-party red-team results or external audits available in Chinese but outside the reviewed platform docs?",
+      "Which developers will publish model-specific safety cards or preparedness policies as frontier capabilities advance?"
     ],
     "source_ids": [
       "report-china-standards-evaluation-2026-06-05",
@@ -45,9 +48,17 @@ export const countries: CountryProfile[] = [
       "ciss-china-eu-ai-security-dialogue-round-2-2024",
       "ciss-china-eu-ai-security-dialogue-round-5-2026",
       "farai-idais-page",
-      "cnaisda-shanghai-qizhi-side-event-2025"
+      "cnaisda-shanghai-qizhi-side-event-2025",
+      "zhipu-model-evaluation",
+      "baidu-qianfan-content-marking",
+      "tencent-hunyuan-image-faq",
+      "volcengine-model-evaluation",
+      "stepfun-openai-migration",
+      "kimi-k2-instruct-model-card",
+      "minimax-content-labeling-announcement",
+      "yi-license"
     ],
-    "last_verified": "2026-06-06"
+    "last_verified": "2026-06-05"
   },
   {
     "slug": "japan",
