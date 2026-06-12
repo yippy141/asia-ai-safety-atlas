@@ -2704,5 +2704,65 @@ export const sources: Source[] = [
     "source_type": "official_page",
     "reliability_rating": "B",
     "summary_note": "Normalized from PR2G source src_concordia_policy; accessed 2026-06-06."
+  },
+  {
+    "id": "miit-ai-standardization-committee-announcement-2024",
+    "title": "Announcement of the Ministry of Industry and Information Technology (No. 35 of 2024)",
+    "title_original": "中华人民共和国工业和信息化部公告（2024年第35号）",
+    "publisher": "Ministry of Industry and Information Technology",
+    "publication_date": "2024-12-13",
+    "access_date": "2026-06-12",
+    "url": "https://wap.miit.gov.cn/jgsj/kjs/jscx/bzgf/art/2024/art_8d08138c71b04e52bcc20bc252a2efbc.html",
+    "language": "Chinese",
+    "source_type": "official_announcement",
+    "reliability_rating": "A",
+    "summary_note": "Official MIIT announcement establishing MIIT/TC1 and describing its remit for AI industry standards, including evaluation testing, operations, large models, application maturity, development management, and AI risk. Official ministry notice; canonical source for MIIT/TC1 establishment and mandate."
+  },
+  {
+    "id": "shanghai-qizhi-institute-introduction-2026",
+    "title": "Introduction",
+    "title_original": "研究院简介",
+    "publisher": "Shanghai Qi Zhi Institute",
+    "access_date": "2026-06-12",
+    "url": "https://www.sqz.ac.cn/en/introduction",
+    "language": "English",
+    "source_type": "institutional_page",
+    "reliability_rating": "A",
+    "summary_note": "Official Shanghai Qi Zhi Institute introduction describing the institute, its public-institution status, and research focus areas including AI and information security. First-party institutional page; canonical source for the institute's identity and remit."
+  },
+  {
+    "id": "brin-orei-home-2026",
+    "title": "Organisasi Riset Elektronika dan Informatika",
+    "publisher": "National Research and Innovation Agency",
+    "access_date": "2026-06-12",
+    "url": "https://brin.go.id/orei/en",
+    "language": "English",
+    "source_type": "institutional_page",
+    "reliability_rating": "A",
+    "summary_note": "Official BRIN OREI page identifying the Electronics and Informatics Research Organization and its contact/organizational context. First-party BRIN institutional page; canonical source for OREI's existence and placement within BRIN."
+  },
+  {
+    "id": "eu-ai-office-establishing-decision-2024",
+    "title": "Commission Decision Establishing the European AI Office",
+    "publisher": "European Commission",
+    "publication_date": "2024-01-24",
+    "access_date": "2026-06-12",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/commission-decision-establishing-european-ai-office",
+    "language": "English",
+    "source_type": "official_report",
+    "reliability_rating": "A",
+    "summary_note": "Official European Commission library page for the decision establishing the European AI Office within the Commission. Commission-hosted legal/administrative source; canonical evidence for the office's establishment."
+  },
+  {
+    "id": "singapore-ai-safety-red-teaming-challenge-report-2025",
+    "title": "Singapore AI Safety Red Teaming Challenge Evaluation Report",
+    "publisher": "Infocomm Media Development Authority",
+    "publication_date": "2025",
+    "access_date": "2026-06-12",
+    "url": "https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/singapore-ai-safety-red-teaming-challenge-evaluation-report.pdf",
+    "language": "English",
+    "source_type": "official_report",
+    "reliability_rating": "A",
+    "summary_note": "Official IMDA evaluation report for the Singapore AI Safety Red Teaming Challenge, documenting participation, evaluation design, and challenge findings. First-party report; canonical source for the challenge methodology and outputs."
   }
 ];
