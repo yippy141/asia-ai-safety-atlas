@@ -9,3 +9,7 @@ time. This is a sandbox limitation, not a bug in this repo. Never remove,
 replace, or work around next/font or any font loading to make your local
 build pass. If the build fails only on font fetching, note it in your
 review notes and rely on the Vercel preview build as the real test.
+
+
+Because next build cannot complete in this sandbox, always run
+npx tsc --noEmit and npm run lint as the completion gate for any task.
