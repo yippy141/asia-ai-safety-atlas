@@ -115,7 +115,10 @@ for (const exportItem of exportsToWrite) {
   await writeFile(jsonPath, JSON.stringify(exportItem.rows, null, 2) + "\n");
   await writeFile(
     csvPath,
-    serializeCsv(exportItem.rows as ExportRecord[], exportItem.fields as string[])
+    serializeCsv(
+      exportItem.rows as unknown as ExportRecord[],
+      exportItem.fields as string[]
+    )
   );
 }
 
