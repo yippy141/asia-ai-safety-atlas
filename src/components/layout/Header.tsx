@@ -1,11 +1,19 @@
 import Link from "next/link";
-import { Database, GitBranch, Library, Map, ScrollText } from "lucide-react";
+import {
+  Database,
+  FileDown,
+  GitBranch,
+  Library,
+  Map,
+  ScrollText,
+} from "lucide-react";
 
 const navItems = [
   { href: "/atlas", label: "Atlas", icon: Database },
   { href: "/graph", label: "Graph", icon: GitBranch },
   { href: "/methodology", label: "Methodology", icon: ScrollText },
   { href: "/sources", label: "Sources", icon: Library },
+  { href: "/data", label: "Data", icon: FileDown },
   { href: "/glossary", label: "Glossary", icon: Map },
 ];
 

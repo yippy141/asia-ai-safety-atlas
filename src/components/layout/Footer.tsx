@@ -15,6 +15,9 @@ export function Footer() {
           <Link className="hover:text-slate-950" href="/sources">
             Source register
           </Link>
+          <Link className="hover:text-slate-950" href="/changelog">
+            Changelog
+          </Link>
         </div>
       </div>
     </footer>
