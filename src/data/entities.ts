@@ -472,13 +472,14 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "report-china-standards-evaluation-2026-06-05",
-      "shanghai-ai-safety-governance-lab-unveiling-2024"
+      "shanghai-ai-safety-governance-lab-unveiling-2024",
+      "shanghai-government-reply-ai-safety-governance-lab-2024"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "medium",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-12",
     "tier": 2,
-    "needs_primary_source": true,
+    "needs_primary_source": false,
     "open_questions": [
       "A directly retrievable first-party page from the lab itself or from Cyberspace Shanghai.",
       "Current operating team, permanent website, and concrete programs."
@@ -747,13 +748,14 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "report-china-standards-evaluation-2026-06-05",
-      "miit-tc1-homepage"
+      "miit-tc1-homepage",
+      "miit-tc1-standard-setting-guide-2025"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-12",
     "tier": 1,
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "jp-aisi",
@@ -1006,13 +1008,15 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "report-asean-genai-governance-2026-06-05",
-      "bangkok-digital-declaration-2025"
+      "bangkok-digital-declaration-2025",
+      "asean-wg-ai-governance-imda-page-2026",
+      "asean-ammsti-ai-governance-working-group-statement-2024"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 1,
-    "needs_primary_source": true,
+    "needs_primary_source": false,
     "open_questions": [
       "Official terms of reference and current membership for WG-AI."
     ]
@@ -1174,11 +1178,12 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "report-technical-research-groups-2026-06-05",
-      "report-china-west-dialogue-2026-06-05"
+      "report-china-west-dialogue-2026-06-05",
+      "tsinghua-iaiig-introduction-2024"
     ],
     "confidence_level": "low",
     "sensitivity_level": "medium",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-12",
     "tier": 2,
     "needs_primary_source": true
   },
@@ -1270,10 +1275,12 @@ export const entities: Entity[] = [
       "liaison meeting"
     ],
     "source_ids": [
-      "jpn-cabinet-office-aisi-liaison-setup"
+      "jpn-cabinet-office-aisi-liaison-setup",
+      "japan-aisi-future-activities-liaison-meeting-2024",
+      "japan-aisi-liaison-meeting-second-notice-2024"
     ],
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-12",
     "tier": 1,
     "name_en": "AISI Related Ministries and Agencies Liaison Meeting",
     "name_local": "AIセーフティ・インスティテュート関係府省庁等連絡会議",
@@ -1285,7 +1292,7 @@ export const entities: Entity[] = [
       "capacity_building"
     ],
     "confidence_level": "high",
-    "needs_primary_source": true,
+    "needs_primary_source": false,
     "open_questions": [
       "Its precise decision authority is not clear in reviewed public sources."
     ]
@@ -1503,13 +1510,14 @@ export const entities: Entity[] = [
       "framework"
     ],
     "source_ids": [
-      "sg-ai-verify-testing-framework-page"
+      "sg-ai-verify-testing-framework-page",
+      "imda-ai-verify-open-source-factsheet-2023"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-12",
     "tier": 1,
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "project-moonshot",
@@ -1609,13 +1617,14 @@ export const entities: Entity[] = [
       "programme"
     ],
     "source_ids": [
-      "sg-ai-tester-accreditation-page"
+      "sg-ai-tester-accreditation-page",
+      "ai-tap-accreditation-factsheet-2026"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-12",
     "tier": 1,
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "centre-for-humanitarian-dialogue",
@@ -2425,17 +2434,19 @@ export const entities: Entity[] = [
       "Indonesia"
     ],
     "source_ids": [
-      "brin-ai-cybersecurity-research-center-page-2025"
+      "brin-ai-cybersecurity-research-center-page-2025",
+      "brin-orei-home-2026",
+      "brin-orei-regulation-2022"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 2,
     "open_questions": [
       "Formal mandate, staffing, and programme portfolio of the BRIN AI and Cybersecurity Research Center.",
       "Whether BRIN or another Indonesian ministry hosts the authoritative public Stranas KA implementation portal."
     ],
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "asean-ai-safe-network",
@@ -2456,16 +2467,17 @@ export const entities: Entity[] = [
       "political declaration"
     ],
     "source_ids": [
-      "malaysia-champions-asean-ai-safe-2025"
+      "malaysia-champions-asean-ai-safe-2025",
+      "asean-ai-safe-declaration-2025"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 1,
     "open_questions": [
       "Public terms of reference, membership rules, secretariat arrangements, or work programme for ASEAN AI Safe."
     ],
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "singapore-ai-safety-red-teaming-challenge",
@@ -2488,16 +2500,18 @@ export const entities: Entity[] = [
       "Asian contexts"
     ],
     "source_ids": [
-      "singapore-ai-safety-red-teaming-challenge-page-2025"
+      "singapore-ai-safety-red-teaming-challenge-page-2025",
+      "singapore-ai-safety-red-teaming-report-2025",
+      "imda-ai-safety-initiatives-action-summit-2025"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 1,
     "open_questions": [
       "Whether IMDA will publish repeat challenge methodology or ongoing programme governance."
     ],
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "national-ai-office-malaysia",
@@ -2550,16 +2564,17 @@ export const entities: Entity[] = [
       "Malaysia"
     ],
     "source_ids": [
-      "naio-home-working-groups-page"
+      "naio-home-working-groups-page",
+      "naio-working-groups-stakeholder-press-release-2025"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 2,
     "open_questions": [
       "Current roster and published outputs for each NAIO working group."
     ],
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "ai-governance-center-thailand",
@@ -2583,16 +2598,17 @@ export const entities: Entity[] = [
       "governance center"
     ],
     "source_ids": [
-      "etda-aigc-page"
+      "etda-aigc-page",
+      "thailand-aigc-government-portal-2023"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 1,
     "open_questions": [
       "Whether AIGC has a public service catalogue or formal assessment mandate beyond governance consultation and knowledge exchange."
     ],
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "ai-thailand-program",
@@ -2613,16 +2629,17 @@ export const entities: Entity[] = [
       "Thailand"
     ],
     "source_ids": [
-      "ai-thailand-national-strategy-2022-2027-page"
+      "ai-thailand-national-strategy-2022-2027-page",
+      "ai-thailand-action-plan-2022"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 2,
     "open_questions": [
       "Operational status and public outputs of the AI sandbox elements described in the strategy page."
     ],
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "brin-ai-cybersecurity-research-center",
@@ -2642,16 +2659,18 @@ export const entities: Entity[] = [
       "research center"
     ],
     "source_ids": [
-      "brin-ai-cybersecurity-research-center-page-2025"
+      "brin-ai-cybersecurity-research-center-page-2025",
+      "brin-ai-cybersecurity-center-preface-2026",
+      "brin-ai-cybersecurity-center-duties-2026"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 2,
     "open_questions": [
       "Mandate, staffing, research outputs, and service portfolio."
     ],
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "naicri-philippines",
@@ -2704,16 +2723,17 @@ export const entities: Entity[] = [
       "research programme"
     ],
     "source_ids": [
-      "philippines-dost-asti-ai-page"
+      "philippines-dost-asti-ai-page",
+      "skai-pinas-alam-project-2023"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 2,
     "open_questions": [
       "Programme charter, governance, and current scope."
     ],
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "pku-alignment-team",
@@ -2841,16 +2861,17 @@ export const entities: Entity[] = [
       "technical_testing_infrastructure"
     ],
     "source_ids": [
-      "src-bigai-tongtest"
+      "src-bigai-tongtest",
+      "bigai-about-2026"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 2,
     "open_questions": [
       "How much of TongTest now directly targets foundation-model safety."
     ],
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "hkust-shuai-wang-group",
@@ -3333,7 +3354,7 @@ export const entities: Entity[] = [
     "open_questions": [
       "How the AI Office will operationalize GPAI evaluation tools, methodologies, and benchmarks in public materials."
     ],
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "needs_primary_source": true
   },
   {
@@ -3439,7 +3460,8 @@ export const entities: Entity[] = [
       "measurement and evaluation"
     ],
     "source_ids": [
-      "uk-aus-mou"
+      "uk-aus-mou",
+      "in-aimes-dsit-announcement-2025"
     ],
     "evidence_note_ids": [
       "ev-06-in-aimes-naming"
@@ -3450,8 +3472,8 @@ export const entities: Entity[] = [
     "open_questions": [
       "A definitive official public participant roster was not located in the PR2G source set."
     ],
-    "last_verified": "2026-06-06",
-    "needs_primary_source": true
+    "last_verified": "2026-06-12",
+    "needs_primary_source": false
   },
   {
     "id": "aus-aisi",

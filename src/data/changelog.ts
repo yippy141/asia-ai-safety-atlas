@@ -6,6 +6,10 @@ export interface ChangelogEntry {
 export const changelogEntries: ChangelogEntry[] = [
   {
     date: "2026-06-12",
+    summary: "Primary-source backfill: 16 entities re-grounded in official sources; 32 source records added or confirmed.",
+  },
+  {
+    date: "2026-06-12",
     summary: "Public data downloads added. Changelog started.",
   },
 ];

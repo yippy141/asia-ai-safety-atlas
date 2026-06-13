@@ -6,6 +6,11 @@ import { sources } from "../src/data/sources.ts";
 import type { Entity, Relationship, Source } from "../src/types/index.ts";
 
 type ExportRecord = Record<string, unknown>;
+type ExportItem = {
+  filename: string;
+  rows: unknown[];
+  fields: readonly string[];
+};
 
 const outputDir = path.join(process.cwd(), "public", "data");
 
@@ -74,7 +79,7 @@ const publicRelationships = relationships.filter(
 const excludedRelationshipCount =
   relationships.length - publicRelationships.length;
 
-const exportsToWrite = [
+const exportsToWrite: ExportItem[] = [
   { filename: "entities", rows: entities, fields: entityFields },
   { filename: "sources", rows: sources, fields: sourceFields },
   {
