@@ -473,7 +473,7 @@ export const entities: Entity[] = [
     "source_ids": [
       "report-china-standards-evaluation-2026-06-05",
       "shanghai-ai-safety-governance-lab-unveiling-2024",
-      "shanghai-government-reply-ai-safety-governance-lab-2024"
+      "shlab-about-us"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "medium",
@@ -749,7 +749,7 @@ export const entities: Entity[] = [
     "source_ids": [
       "report-china-standards-evaluation-2026-06-05",
       "miit-tc1-homepage",
-      "miit-tc1-standard-setting-guide-2025"
+      "miit-ai-standardization-committee-announcement-2024"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
@@ -1009,8 +1009,7 @@ export const entities: Entity[] = [
     "source_ids": [
       "report-asean-genai-governance-2026-06-05",
       "bangkok-digital-declaration-2025",
-      "asean-wg-ai-governance-imda-page-2026",
-      "asean-ammsti-ai-governance-working-group-statement-2024"
+      "expanded-asean-guide-genai-2025"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
@@ -1276,8 +1275,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "jpn-cabinet-office-aisi-liaison-setup",
-      "japan-aisi-future-activities-liaison-meeting-2024",
-      "japan-aisi-liaison-meeting-second-notice-2024"
+      "jpn-aisi-about-page"
     ],
     "sensitivity_level": "low",
     "last_verified": "2026-06-12",
@@ -1346,10 +1344,11 @@ export const entities: Entity[] = [
       "institutional home"
     ],
     "source_ids": [
-      "kor-etri-aisi-page"
+      "kor-etri-aisi-page",
+      "kor-aisi-vision-mission"
     ],
     "sensitivity_level": "low",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-12",
     "tier": 1,
     "name_en": "Electronics and Telecommunications Research Institute",
     "name_local": "한국전자통신연구원",
@@ -1361,7 +1360,7 @@ export const entities: Entity[] = [
       "testing_infrastructure"
     ],
     "confidence_level": "high",
-    "needs_primary_source": true,
+    "needs_primary_source": false,
     "open_questions": [
       "Whether Korea AISI will remain embedded in ETRI long term."
     ]
@@ -1511,7 +1510,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "sg-ai-verify-testing-framework-page",
-      "imda-ai-verify-open-source-factsheet-2023"
+      "sg-ai-verify-foundation-about"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
@@ -1618,7 +1617,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "sg-ai-tester-accreditation-page",
-      "ai-tap-accreditation-factsheet-2026"
+      "ai-verify-foundation-home-2026"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
@@ -1678,13 +1677,14 @@ export const entities: Entity[] = [
       "China-facing interface"
     ],
     "source_ids": [
-      "cnaisda-shanghai-qizhi-side-event-2025"
+      "cnaisda-shanghai-qizhi-side-event-2025",
+      "shanghai-qizhi-institute-introduction-2026"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 2,
-    "needs_primary_source": true,
+    "needs_primary_source": false,
     "open_questions": [
       "Exact source URLs are still needed before importing the IDAIS Oxfordshire relationship rows."
     ]
@@ -2435,8 +2435,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "brin-ai-cybersecurity-research-center-page-2025",
-      "brin-orei-home-2026",
-      "brin-orei-regulation-2022"
+      "brin-orei-home-2026"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
@@ -2468,7 +2467,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "malaysia-champions-asean-ai-safe-2025",
-      "asean-ai-safe-declaration-2025"
+      "expanded-asean-guide-genai-2025"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
@@ -2501,8 +2500,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "singapore-ai-safety-red-teaming-challenge-page-2025",
-      "singapore-ai-safety-red-teaming-report-2025",
-      "imda-ai-safety-initiatives-action-summit-2025"
+      "singapore-ai-safety-red-teaming-challenge-report-2025"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
@@ -2565,7 +2563,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "naio-home-working-groups-page",
-      "naio-working-groups-stakeholder-press-release-2025"
+      "mydigital-naio-page"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
@@ -2599,7 +2597,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "etda-aigc-page",
-      "thailand-aigc-government-portal-2023"
+      "thailand-ai-governance-guideline-executive-2023"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
@@ -2630,7 +2628,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "ai-thailand-national-strategy-2022-2027-page",
-      "ai-thailand-action-plan-2022"
+      "digital-thailand-ai-ethics-guideline-2019"
     ],
     "confidence_level": "high",
     "sensitivity_level": "low",
@@ -2660,8 +2658,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "brin-ai-cybersecurity-research-center-page-2025",
-      "brin-ai-cybersecurity-center-preface-2026",
-      "brin-ai-cybersecurity-center-duties-2026"
+      "brin-orei-home-2026"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
@@ -2724,7 +2721,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "philippines-dost-asti-ai-page",
-      "skai-pinas-alam-project-2023"
+      "philippines-dost-ai-flagship-year1-2026"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
@@ -3343,7 +3340,8 @@ export const entities: Entity[] = [
       "international governance"
     ],
     "source_ids": [
-      "eu-ai-office"
+      "eu-ai-office",
+      "eu-ai-office-establishing-decision-2024"
     ],
     "evidence_note_ids": [
       "ev-08-eu-ai-office"
@@ -3355,7 +3353,7 @@ export const entities: Entity[] = [
       "How the AI Office will operationalize GPAI evaluation tools, methodologies, and benchmarks in public materials."
     ],
     "last_verified": "2026-06-12",
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "oecd-ai",
@@ -3461,7 +3459,7 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "uk-aus-mou",
-      "in-aimes-dsit-announcement-2025"
+      "industry-au-seoul-declaration-2024"
     ],
     "evidence_note_ids": [
       "ev-06-in-aimes-naming"
