@@ -80,6 +80,32 @@ const exportsToWrite = [
   { filename: "relationships", rows: relationships, fields: relationshipFields },
 ];
 
+  "last_verified",
+  "public_note",
+];
+
+const publicRelationships = relationships.filter(
+  (relationship) => relationship.public_safe_to_show !== false
+);
+const excludedRelationshipCount =
+  relationships.length - publicRelationships.length;
+
+const exportsToWrite = [
+  { filename: "entities", rows: entities, fields: entityFields },
+  { filename: "sources", rows: sources, fields: sourceFields },
+  {
+    filename: "relationships",
+    rows: publicRelationships,
+    fields: relationshipFields,
+  },
+];
+
+function selectFields(rows: ExportRecord[], fields: string[]) {
+  return rows.map((row) =>
+    Object.fromEntries(fields.map((field) => [field, row[field]]))
+  );
+}
+
 function serializeCsv(rows: ExportRecord[], fields: string[]) {
   const header = fields.map(quoteCsvValue).join(",");
   const body = rows.map((row) =>
