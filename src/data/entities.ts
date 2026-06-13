@@ -1177,11 +1177,12 @@ export const entities: Entity[] = [
     ],
     "source_ids": [
       "report-technical-research-groups-2026-06-05",
-      "report-china-west-dialogue-2026-06-05"
+      "report-china-west-dialogue-2026-06-05",
+      "tsinghua-iaiig-introduction-2024"
     ],
     "confidence_level": "low",
     "sensitivity_level": "medium",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-06-12",
     "tier": 2,
     "needs_primary_source": true
   },
@@ -2857,16 +2858,17 @@ export const entities: Entity[] = [
       "technical_testing_infrastructure"
     ],
     "source_ids": [
-      "src-bigai-tongtest"
+      "src-bigai-tongtest",
+      "bigai-about-2026"
     ],
     "confidence_level": "medium",
     "sensitivity_level": "low",
-    "last_verified": "2026-06-06",
+    "last_verified": "2026-06-12",
     "tier": 2,
     "open_questions": [
       "How much of TongTest now directly targets foundation-model safety."
     ],
-    "needs_primary_source": true
+    "needs_primary_source": false
   },
   {
     "id": "hkust-shuai-wang-group",
