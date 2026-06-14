@@ -33,17 +33,17 @@ export default async function CountryPage({ params }: CountryPageProps) {
     <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <Link
         href="/"
-        className="inline-flex items-center gap-2 text-sm font-medium text-blue-800 hover:underline"
+        className="inline-flex items-center gap-2 text-sm font-medium text-oxblood hover:underline"
       >
         <ArrowLeft className="size-4" />
         Back to overview
       </Link>
       <div className="mt-6 max-w-3xl">
         <Badge variant="muted">{country.region}</Badge>
-        <h1 className="mt-3 text-3xl font-semibold text-slate-950">
+        <h1 className="mt-3 text-3xl font-semibold text-foreground">
           {country.country}
         </h1>
-        <p className="mt-4 text-base leading-7 text-stone-700">
+        <p className="mt-4 text-base leading-7 text-foreground">
           {country.summary}
         </p>
       </div>
@@ -65,7 +65,7 @@ export default async function CountryPage({ params }: CountryPageProps) {
       </section>
 
       <section className="mt-8">
-        <h2 className="text-xl font-semibold text-slate-950">
+        <h2 className="text-xl font-semibold text-foreground">
           Seed entities
         </h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -78,7 +78,7 @@ export default async function CountryPage({ params }: CountryPageProps) {
           ))}
         </div>
         {countryEntities.length === 0 ? (
-          <p className="mt-4 rounded-lg border border-dashed border-stone-300 p-4 text-sm text-stone-600">
+          <p className="mt-4 rounded-lg border border-dashed border-rule p-4 text-sm text-muted-foreground">
             No entity records are attached to this country page yet.
           </p>
         ) : null}
@@ -86,10 +86,10 @@ export default async function CountryPage({ params }: CountryPageProps) {
 
       <section className="mt-8">
         <Card className="p-5">
-          <h2 className="text-lg font-semibold text-slate-950">
+          <h2 className="text-lg font-semibold text-foreground">
             Open questions
           </h2>
-          <ul className="mt-3 space-y-2 text-sm leading-6 text-stone-700">
+          <ul className="mt-3 space-y-2 text-sm leading-6 text-foreground">
             {country.open_questions.map((question) => (
               <li key={question}>{question}</li>
             ))}
@@ -103,8 +103,8 @@ export default async function CountryPage({ params }: CountryPageProps) {
 function ProfileBlock({ title, text }: { title: string; text: string }) {
   return (
     <Card className="p-5">
-      <h2 className="text-lg font-semibold text-slate-950">{title}</h2>
-      <p className="mt-3 text-sm leading-6 text-stone-700">{text}</p>
+      <h2 className="text-lg font-semibold text-foreground">{title}</h2>
+      <p className="mt-3 text-sm leading-6 text-foreground">{text}</p>
     </Card>
   );
 }

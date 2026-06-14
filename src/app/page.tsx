@@ -32,17 +32,17 @@ export default function Home() {
 
   return (
     <main>
-      <section className="border-b border-stone-200 bg-white">
+      <section className="border-b border-rule bg-card">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-16">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
               Bootstrap shell
             </p>
-            <h1 className="mt-5 text-4xl font-semibold leading-tight text-slate-950 sm:text-5xl">
+            <h1 className="mt-5 text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
               Mapping AI safety and governance ecosystems across China and
               Asia-Pacific.
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-stone-700">
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-foreground">
               A static-first stakeholder intelligence atlas for researchers,
               bridge-building organizations, and policy teams working from
               source-backed public evidence.
@@ -73,11 +73,11 @@ export default function Home() {
             />
             <Metric label="Needs primary source" value={needsPrimarySource} />
             <Metric label="Public relationships" value={relationships.length} />
-            <p className="text-sm text-stone-600 sm:col-span-2 lg:col-span-1">
+            <p className="text-sm text-muted-foreground sm:col-span-2 lg:col-span-1">
               Last updated {latestChangelogDate}. See the{" "}
               <Link
                 href="/changelog"
-                className="font-medium text-blue-800 hover:underline"
+                className="font-medium text-oxblood hover:underline"
               >
                 changelog
               </Link>
@@ -108,18 +108,18 @@ export default function Home() {
       {latestInsight ? (
         <section className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
           <Card className="p-5">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
               Latest insight
             </p>
-            <h2 className="mt-3 text-xl font-semibold text-slate-950">
+            <h2 className="mt-3 text-xl font-semibold text-foreground">
               {latestInsight.title}
             </h2>
-            <p className="mt-3 text-sm leading-6 text-stone-700">
+            <p className="mt-3 text-sm leading-6 text-foreground">
               {latestInsight.dek}
             </p>
             <Link
               href={`/insights/${latestInsight.slug}`}
-              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-blue-800 hover:underline"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-oxblood hover:underline"
             >
               Read insight
               <ArrowRight className="size-4" />
@@ -131,16 +131,16 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
               Country slices
             </p>
-            <h2 className="mt-2 text-2xl font-semibold text-slate-950">
+            <h2 className="mt-2 text-2xl font-semibold text-foreground">
               Static country pages
             </h2>
           </div>
           <Link
             href="/sources"
-            className="inline-flex items-center gap-2 text-sm font-medium text-blue-800 hover:underline"
+            className="inline-flex items-center gap-2 text-sm font-medium text-oxblood hover:underline"
           >
             View source register
             <BookOpen className="size-4" />
@@ -151,15 +151,15 @@ export default function Home() {
             <Link
               key={country.slug}
               href={`/countries/${country.slug}`}
-              className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow-md"
+              className="rounded-lg border border-rule bg-card p-5 transition hover:border-oxblood/40 "
             >
-              <div className="text-sm font-medium text-stone-500">
+              <div className="text-sm font-medium text-muted-foreground">
                 {country.region}
               </div>
-              <h3 className="mt-2 text-lg font-semibold text-slate-950">
+              <h3 className="mt-2 text-lg font-semibold text-foreground">
                 {country.country}
               </h3>
-              <p className="mt-3 line-clamp-3 text-sm leading-6 text-stone-700">
+              <p className="mt-3 line-clamp-3 text-sm leading-6 text-foreground">
                 {country.summary}
               </p>
             </Link>
@@ -173,8 +173,8 @@ export default function Home() {
 function Metric({ label, value }: { label: string; value: number }) {
   return (
     <Card className="p-5">
-      <div className="text-3xl font-semibold text-slate-950">{value}</div>
-      <div className="mt-1 text-sm text-stone-600">{label}</div>
+      <div className="text-3xl font-semibold text-foreground">{value}</div>
+      <div className="mt-1 text-sm text-muted-foreground">{label}</div>
     </Card>
   );
 }
@@ -190,11 +190,11 @@ function Principle({
 }) {
   return (
     <Card className="p-5">
-      <div className="flex size-9 items-center justify-center rounded-md bg-teal-700 text-white [&_svg]:size-4">
+      <div className="flex size-9 items-center justify-center rounded-md bg-tide text-paper [&_svg]:size-4">
         {icon}
       </div>
-      <h2 className="mt-4 text-base font-semibold text-slate-950">{title}</h2>
-      <p className="mt-2 text-sm leading-6 text-stone-700">{text}</p>
+      <h2 className="mt-4 text-base font-semibold text-foreground">{title}</h2>
+      <p className="mt-2 text-sm leading-6 text-foreground">{text}</p>
     </Card>
   );
 }
