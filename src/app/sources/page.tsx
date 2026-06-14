@@ -19,13 +19,13 @@ export default function SourcesPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
           Sources
         </p>
-        <h1 className="mt-3 text-3xl font-semibold text-slate-950">
+        <h1 className="mt-3 text-3xl font-semibold text-foreground">
           Source register
         </h1>
-        <p className="mt-4 text-base leading-7 text-stone-700">
+        <p className="mt-4 text-base leading-7 text-foreground">
           Research briefs remain discovery records. Official primary sources now
           include the PR 2A China standards/evaluation backfill and the PR 2B
           Japan, Korea, and Singapore AISI comparison backfill. PR 2C adds a
@@ -69,8 +69,8 @@ function SourceSection({
     <section className="mt-8">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h2 className="text-xl font-semibold text-slate-950">{title}</h2>
-          <p className="mt-1 text-sm leading-6 text-stone-600">{description}</p>
+          <h2 className="text-xl font-semibold text-foreground">{title}</h2>
+          <p className="mt-1 text-sm leading-6 text-muted-foreground">{description}</p>
         </div>
         <Badge variant="muted">{sources.length} records</Badge>
       </div>
@@ -89,37 +89,39 @@ function SourceSection({
               >
                 {getSourceBadgeLabel(source.source_type)}
               </Badge>
-              <Badge variant="muted">{source.reliability_rating}</Badge>
+              <Badge variant="muted" className="font-mono">
+                {source.reliability_rating}
+              </Badge>
               <Badge variant="outline">{source.language}</Badge>
               <Badge variant="outline">{formatLabel(source.source_type)}</Badge>
             </div>
-            <h3 className="mt-3 text-lg font-semibold text-slate-950">
+            <h3 className="mt-3 text-lg font-semibold text-foreground">
               {source.title}
             </h3>
-            <dl className="mt-3 grid gap-3 text-sm text-stone-600 sm:grid-cols-3">
+            <dl className="mt-3 grid gap-3 text-sm text-muted-foreground sm:grid-cols-3">
               <div>
-                <dt className="font-medium text-stone-900">Publisher</dt>
+                <dt className="font-medium text-foreground">Publisher</dt>
                 <dd className="mt-1">{source.publisher}</dd>
               </div>
               <div>
-                <dt className="font-medium text-stone-900">Publication</dt>
+                <dt className="font-medium text-foreground">Publication</dt>
                 <dd className="mt-1">
                   {source.publication_date ?? "Not recorded"}
                 </dd>
               </div>
               <div>
-                <dt className="font-medium text-stone-900">Accessed</dt>
+                <dt className="font-medium text-foreground">Accessed</dt>
                 <dd className="mt-1">{source.access_date}</dd>
               </div>
             </dl>
             {source.summary_note ? (
-              <p className="mt-4 text-sm leading-6 text-stone-700">
+              <p className="mt-4 text-sm leading-6 text-foreground">
                 {source.summary_note}
               </p>
             ) : null}
             {source.url ? (
               <a
-                className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-blue-800 hover:underline"
+                className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-oxblood hover:underline"
                 href={source.url}
                 target="_blank"
                 rel="noreferrer"

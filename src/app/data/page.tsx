@@ -50,13 +50,13 @@ export default function DataPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
           Data
         </p>
-        <h1 className="mt-3 text-3xl font-semibold text-slate-950">
+        <h1 className="mt-3 text-3xl font-semibold text-foreground">
           Download atlas data
         </h1>
-        <p className="mt-4 text-base leading-7 text-stone-700">
+        <p className="mt-4 text-base leading-7 text-foreground">
           Researchers can download the atlas entities, sources, and public
           relationships as JSON or CSV files generated from the typed local
           data.
@@ -68,14 +68,14 @@ export default function DataPage() {
           <Card key={file.name} className="flex flex-col p-5">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <h2 className="font-mono text-base font-semibold text-slate-950">
+                <h2 className="font-mono text-base font-semibold text-foreground">
                   {file.name}
                 </h2>
-                <p className="mt-2 text-sm leading-6 text-stone-700">
+                <p className="mt-2 text-sm leading-6 text-foreground">
                   {file.description}
                 </p>
               </div>
-              <span className="rounded-md border border-stone-200 bg-stone-50 px-2.5 py-1 text-sm text-stone-700">
+              <span className="rounded-md border border-rule bg-background px-2.5 py-1 text-sm text-foreground">
                 {file.size}
               </span>
             </div>
@@ -96,16 +96,16 @@ export default function DataPage() {
 
       <section className="mt-8 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
         <Card className="p-5">
-          <h2 className="text-xl font-semibold text-slate-950">License</h2>
-          <p className="mt-3 text-sm leading-6 text-stone-700">
+          <h2 className="text-xl font-semibold text-foreground">License</h2>
+          <p className="mt-3 text-sm leading-6 text-foreground">
             Data is released under CC BY 4.0. You may reuse it with
             attribution.
           </p>
         </Card>
         <Card className="p-5">
-          <h2 className="text-xl font-semibold text-slate-950">Citation</h2>
-          <pre className="mt-3 overflow-x-auto rounded-md border border-stone-200 bg-stone-50 p-4 font-mono text-sm leading-6 text-stone-800">{citationLine}</pre>
-          <p className="mt-3 text-sm leading-6 text-stone-700">
+          <h2 className="text-xl font-semibold text-foreground">Citation</h2>
+          <pre className="mt-3 overflow-x-auto rounded-md border border-rule bg-background p-4 font-mono text-sm leading-6 text-foreground">{citationLine}</pre>
+          <p className="mt-3 text-sm leading-6 text-foreground">
             The atlas is versioned through its changelog. Cite the access date.
           </p>
         </Card>

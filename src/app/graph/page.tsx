@@ -86,23 +86,23 @@ export default function GraphPage() {
   return (
     <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-6 max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
           Graph
         </p>
-        <h1 className="mt-3 text-3xl font-semibold text-slate-950">
+        <h1 className="mt-3 text-3xl font-semibold text-foreground">
           Public-safe relationship map
         </h1>
-        <p className="mt-4 text-base leading-7 text-stone-700">
+        <p className="mt-4 text-base leading-7 text-foreground">
           This graph only renders relationship records marked safe for public
           display. Low-confidence edges are animated so they remain visibly
           provisional.
         </p>
-        <p className="mt-2 text-sm leading-6 text-stone-600">
+        <p className="mt-2 text-sm leading-6 text-muted-foreground">
           Showing {edges.length} of {publicRelationshipCount} public-safe
           relationships by default.
         </p>
       </div>
-      <section className="h-[640px] overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm">
+      <section className="h-[640px] overflow-hidden rounded-lg border border-rule bg-card">
         <ReactFlow nodes={nodes} edges={edges} fitView>
           <MiniMap pannable zoomable />
           <Controls />
