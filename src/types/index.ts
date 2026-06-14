@@ -155,6 +155,21 @@ export interface ResearchOutput {
   last_verified: string;
 }
 
+export interface Insight {
+  id: string;
+  slug: string;
+  title: string;
+  dek: string;
+  summary: string;
+  published_at: string;
+  last_verified: string;
+  confidence_level: ConfidenceLevel;
+  entity_ids: string[];
+  source_ids: string[];
+  tags: string[];
+  body: string[];
+}
+
 export interface EngagementOpportunity {
   id: string;
   title: string;
