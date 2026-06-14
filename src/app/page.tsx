@@ -10,6 +10,7 @@ import {
 import { buttonVariants } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { countries, entities, relationships, sources } from "@/data";
+import { changelogEntries } from "@/data/changelog";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
@@ -19,6 +20,10 @@ export default function Home() {
   const needsPrimarySource = entities.filter(
     (entity) => entity.needs_primary_source
   ).length;
+  const latestChangelogDate = changelogEntries.reduce(
+    (latest, entry) => (entry.date > latest ? entry.date : latest),
+    changelogEntries[0]?.date ?? ""
+  );
 
   return (
     <main>
@@ -60,6 +65,16 @@ export default function Home() {
             <Metric label="Source-backed entities" value={sourceBackedEntities} />
             <Metric label="Needs primary source" value={needsPrimarySource} />
             <Metric label="Public relationships" value={relationships.length} />
+            <p className="text-sm text-stone-600 sm:col-span-2 lg:col-span-1">
+              Last updated {latestChangelogDate}. See the{" "}
+              <Link
+                href="/changelog"
+                className="font-medium text-blue-800 hover:underline"
+              >
+                changelog
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

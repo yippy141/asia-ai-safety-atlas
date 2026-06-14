@@ -56,7 +56,10 @@ export function EntityCard({ entity, sources }: EntityCardProps) {
       <CardFooter className="mt-auto flex flex-wrap items-center justify-between gap-3">
         <div className="grid gap-1 text-xs text-stone-600">
           <span>Confidence: {formatLabel(entity.confidence_level)}</span>
-          <span>Verified: {entity.last_verified}</span>
+          <span>
+            Verified:{" "}
+            <span className="font-mono">{entity.last_verified}</span>
+          </span>
         </div>
         <div className="flex flex-wrap gap-2">
           <EntityDetailDrawer entity={entity} sources={sources} />
