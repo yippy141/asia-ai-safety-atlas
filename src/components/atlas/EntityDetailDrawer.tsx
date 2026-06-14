@@ -80,7 +80,9 @@ export function EntityDetailDrawer({
                 </div>
                 <div>
                   <dt className="font-medium text-stone-900">Last verified</dt>
-                  <dd className="mt-1 text-stone-600">{entity.last_verified}</dd>
+                  <dd className="mt-1 font-mono text-stone-600">
+                    {entity.last_verified}
+                  </dd>
                 </div>
                 <div>
                   <dt className="font-medium text-stone-900">Confidence</dt>
