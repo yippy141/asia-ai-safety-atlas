@@ -9,20 +9,25 @@ import {
 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
-import { countries, entities, relationships, sources } from "@/data";
+import { countries, entities, insights, relationships, sources } from "@/data";
 import { changelogEntries } from "@/data/changelog";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
   const sourceBackedEntities = entities.filter(
-    (entity) => entity.source_ids.length > 0
+    (entity) => entity.source_ids.length > 0,
   ).length;
   const needsPrimarySource = entities.filter(
-    (entity) => entity.needs_primary_source
+    (entity) => entity.needs_primary_source,
   ).length;
+  const latestInsight = insights.reduce(
+    (latest, insight) =>
+      !latest || insight.published_at > latest.published_at ? insight : latest,
+    insights[0],
+  );
   const latestChangelogDate = changelogEntries.reduce(
     (latest, entry) => (entry.date > latest ? entry.date : latest),
-    changelogEntries[0]?.date ?? ""
+    changelogEntries[0]?.date ?? "",
   );
 
   return (
@@ -52,7 +57,7 @@ export default function Home() {
               </Link>
               <Link
                 className={cn(
-                  buttonVariants({ variant: "outline", size: "lg" })
+                  buttonVariants({ variant: "outline", size: "lg" }),
                 )}
                 href="/methodology"
               >
@@ -62,7 +67,10 @@ export default function Home() {
           </div>
           <div className="grid content-start gap-3 sm:grid-cols-2 lg:grid-cols-1">
             <Metric label="Entities loaded" value={entities.length} />
-            <Metric label="Source-backed entities" value={sourceBackedEntities} />
+            <Metric
+              label="Source-backed entities"
+              value={sourceBackedEntities}
+            />
             <Metric label="Needs primary source" value={needsPrimarySource} />
             <Metric label="Public relationships" value={relationships.length} />
             <p className="text-sm text-stone-600 sm:col-span-2 lg:col-span-1">
@@ -96,6 +104,29 @@ export default function Home() {
           text="Only public-safe relationship edges are shown, using conservative labels from the controlled taxonomy."
         />
       </section>
+
+      {latestInsight ? (
+        <section className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
+          <Card className="p-5">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">
+              Latest insight
+            </p>
+            <h2 className="mt-3 text-xl font-semibold text-slate-950">
+              {latestInsight.title}
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-stone-700">
+              {latestInsight.dek}
+            </p>
+            <Link
+              href={`/insights/${latestInsight.slug}`}
+              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-blue-800 hover:underline"
+            >
+              Read insight
+              <ArrowRight className="size-4" />
+            </Link>
+          </Card>
+        </section>
+      ) : null}
 
       <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">

@@ -4,6 +4,7 @@ import {
   FileDown,
   GitBranch,
   Library,
+  Lightbulb,
   Map,
   ScrollText,
 } from "lucide-react";
@@ -13,6 +14,7 @@ const navItems = [
   { href: "/graph", label: "Graph", icon: GitBranch },
   { href: "/methodology", label: "Methodology", icon: ScrollText },
   { href: "/sources", label: "Sources", icon: Library },
+  { href: "/insights", label: "Insights", icon: Lightbulb },
   { href: "/data", label: "Data", icon: FileDown },
   { href: "/glossary", label: "Glossary", icon: Map },
 ];
