@@ -25,7 +25,7 @@ export function EntityCard({ entity, sources }: EntityCardProps) {
           <div className="min-w-0">
             <CardTitle>{entity.name_en}</CardTitle>
             {entity.name_local ? (
-              <p className="mt-1 text-sm leading-5 text-stone-500">
+              <p className="mt-1 text-sm leading-5 text-muted-foreground">
                 {entity.name_local}
               </p>
             ) : null}
@@ -44,7 +44,7 @@ export function EntityCard({ entity, sources }: EntityCardProps) {
             </Badge>
           ) : null}
         </div>
-        <p className="text-sm leading-6 text-stone-700">{entity.summary}</p>
+        <p className="text-sm leading-6 text-foreground">{entity.summary}</p>
         <div className="flex flex-wrap gap-2">
           {entity.focus_areas.slice(0, 4).map((area) => (
             <Badge key={area} variant="outline">
@@ -54,7 +54,7 @@ export function EntityCard({ entity, sources }: EntityCardProps) {
         </div>
       </CardContent>
       <CardFooter className="mt-auto flex flex-wrap items-center justify-between gap-3">
-        <div className="grid gap-1 text-xs text-stone-600">
+        <div className="grid gap-1 text-xs text-muted-foreground">
           <span>Confidence: {formatLabel(entity.confidence_level)}</span>
           <span>
             Verified:{" "}

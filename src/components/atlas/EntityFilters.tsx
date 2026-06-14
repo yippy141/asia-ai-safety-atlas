@@ -52,16 +52,16 @@ export function EntityFilters({ entities, sources }: EntityFiltersProps) {
 
   return (
     <section className="space-y-6">
-      <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+      <div className="rounded-lg border border-rule bg-card p-4">
         <div className="grid gap-3 lg:grid-cols-[minmax(220px,1.4fr)_repeat(4,minmax(150px,1fr))_auto]">
           <label className="relative block">
             <span className="sr-only">Search entities</span>
-            <Search className="pointer-events-none absolute left-3 top-3 size-4 text-stone-400" />
+            <Search className="pointer-events-none absolute left-3 top-3 size-4 text-muted-foreground" />
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Search names, summaries, tags"
-              className="h-10 w-full rounded-md border border-stone-300 bg-white pl-9 pr-3 text-sm outline-none transition placeholder:text-stone-400 focus:border-slate-500 focus:ring-2 focus:ring-slate-200"
+              className="h-10 w-full rounded-md border border-rule bg-card pl-9 pr-3 text-sm outline-none transition placeholder:text-muted-foreground focus:border-tide focus:ring-2 focus:ring-tide/30"
             />
           </label>
           <FilterSelect
@@ -96,14 +96,14 @@ export function EntityFilters({ entities, sources }: EntityFiltersProps) {
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm text-stone-600">
+        <p className="text-sm text-muted-foreground">
           Showing{" "}
-          <span className="font-semibold text-slate-950">
+          <span className="font-semibold text-foreground">
             {visibleEntities.length}
           </span>{" "}
           of {entities.length} entities
         </p>
-        <p className="text-sm text-stone-500">
+        <p className="text-sm text-muted-foreground">
           {sources.length} source records loaded locally
         </p>
       </div>
@@ -138,7 +138,7 @@ function FilterSelect({
       <select
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="h-10 w-full rounded-md border border-stone-300 bg-white px-3 text-sm text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200"
+        className="h-10 w-full rounded-md border border-rule bg-card px-3 text-sm text-ink outline-none transition focus:border-tide focus:ring-2 focus:ring-tide/30"
       >
         <option value={ALL}>{label}</option>
         {options.map((option) => (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Background,
   Controls,
@@ -14,7 +14,25 @@ import { formatLabel } from "@/lib/taxonomy";
 
 const defaultGraphEdgeLimit = 24;
 
+function usePrefersReducedMotion() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches);
+
+    updatePreference();
+    mediaQuery.addEventListener("change", updatePreference);
+
+    return () => mediaQuery.removeEventListener("change", updatePreference);
+  }, []);
+
+  return prefersReducedMotion;
+}
+
 export default function GraphPage() {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   const { nodes, edges, publicRelationshipCount } = useMemo(() => {
     const publicRelationships = relationships.filter(
       (relationship) => relationship.public_safe_to_show
@@ -41,9 +59,11 @@ export default function GraphPage() {
             label: `${entity.acronym ?? entity.name_en}\n${entity.country}`,
           },
           style: {
-            border: "1px solid #d6d3d1",
-            borderRadius: 8,
-            color: "#0f172a",
+            background: "var(--paper-2)",
+            border: "1px solid var(--rule)",
+            borderRadius: 4,
+            color: "var(--ink)",
+            fontFamily: "var(--font-mono)",
             fontSize: 12,
             padding: 10,
             width: 190,
@@ -62,9 +82,11 @@ export default function GraphPage() {
               label: `${event.name}\n${event.event_type}`,
             },
             style: {
-              border: "1px dashed #0f766e",
-              borderRadius: 8,
-              color: "#0f172a",
+              background: "var(--paper-2)",
+              border: "1px dashed var(--tide)",
+              borderRadius: 4,
+              color: "var(--ink)",
+              fontFamily: "var(--font-mono)",
               fontSize: 12,
               padding: 10,
               width: 210,
@@ -77,32 +99,36 @@ export default function GraphPage() {
         source: relationship.source_entity_id,
         target: relationship.target_entity_id,
         label: formatLabel(relationship.relationship_type),
-        animated: relationship.confidence_level === "low",
+        animated:
+          !prefersReducedMotion && relationship.confidence_level === "low",
+        style:
+          relationship.confidence_level === "low"
+            ? { stroke: "var(--confidence-low)", strokeDasharray: "4 4" }
+            : { stroke: "var(--ink-2)" },
       })),
       publicRelationshipCount: publicRelationships.length,
     };
-  }, []);
+  }, [prefersReducedMotion]);
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-6 max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
           Graph
         </p>
-        <h1 className="mt-3 text-3xl font-semibold text-slate-950">
+        <h1 className="mt-3 text-3xl font-semibold text-foreground">
           Public-safe relationship map
         </h1>
-        <p className="mt-4 text-base leading-7 text-stone-700">
+        <p className="mt-4 text-base leading-7 text-foreground">
           This graph only renders relationship records marked safe for public
-          display. Low-confidence edges are animated so they remain visibly
-          provisional.
+          display. Low-confidence edges remain visibly provisional.
         </p>
-        <p className="mt-2 text-sm leading-6 text-stone-600">
+        <p className="mt-2 text-sm leading-6 text-muted-foreground">
           Showing {edges.length} of {publicRelationshipCount} public-safe
           relationships by default.
         </p>
       </div>
-      <section className="h-[640px] overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm">
+      <section className="h-[640px] overflow-hidden rounded-lg border border-rule bg-card">
         <ReactFlow nodes={nodes} edges={edges} fitView>
           <MiniMap pannable zoomable />
           <Controls />
