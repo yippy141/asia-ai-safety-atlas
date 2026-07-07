@@ -1,6 +1,8 @@
 import type { Source } from "@/types";
+import { peSources } from "./peSources.ts";
 
 export const sources: Source[] = [
+  ...peSources,
   {
     "id": "report-market-sweep-2026-06-05",
     "title": "Asia AI Safety Atlas Market Sweep",

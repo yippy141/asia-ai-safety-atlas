@@ -18,7 +18,7 @@ import type {
   Source,
 } from "@/types";
 import type { PersonProfile } from "@/types/interlocutors";
-import type { MapPosition, OrgDossier } from "@/types/dossiers";
+import type { MapPosition, OrgDossier, PEClaim } from "@/types/dossiers";
 
 export const focusAreaSchema = z.enum(focusAreas);
 export const confidenceLevelSchema = z.enum(confidenceLevels);
@@ -285,6 +285,33 @@ export const orgDossierSchema = z.object({
   public_safe_to_show: z.boolean(),
 });
 
+export const peClaimSchema = z.object({
+  id: z.string().min(1),
+  jurisdiction: z.string().min(1),
+  actor_class: z.enum([
+    "central_ministry",
+    "provincial_government",
+    "municipal_government",
+    "central_soe",
+    "local_soe",
+    "private_national",
+    "private_local",
+    "military_affiliated",
+    "foreign_firm",
+    "financial_state",
+  ]),
+  actor_entity_id: z.string().min(1).optional(),
+  instrument: z.string().min(1),
+  claim: z.string().min(1),
+  so_what: z.string().min(1),
+  safety_salience: z.string().optional(),
+  evidence_basis: evidenceBasisSchema,
+  confidence_level: confidenceLevelSchema,
+  source_ids: z.array(z.string().min(1)).min(1),
+  last_verified: z.string().min(1),
+  public_safe_to_show: z.boolean(),
+});
+
 export const mapPositionSchema = z.object({
   entity_id: z.string().min(1),
   authority_level: z.union([
@@ -325,6 +352,7 @@ export type AtlasData = {
   people?: PersonProfile[];
   orgDossiers?: OrgDossier[];
   mapPositions?: MapPosition[];
+  peClaims?: PEClaim[];
 };
 
 export function validateAtlasData({
@@ -338,6 +366,7 @@ export function validateAtlasData({
   people = [],
   orgDossiers = [],
   mapPositions = [],
+  peClaims = [],
 }: AtlasData) {
   const errors: string[] = [];
   collectSchemaErrors("Entity", entities, entitySchema, errors);
@@ -360,6 +389,7 @@ export function validateAtlasData({
   collectSchemaErrors("Person", people, personProfileSchema, errors);
   collectSchemaErrors("Org dossier", orgDossiers, orgDossierSchema, errors);
   collectSchemaErrors("Map position", mapPositions, mapPositionSchema, errors);
+  collectSchemaErrors("PE claim", peClaims, peClaimSchema, errors);
 
   const entityIds = new Set(entities.map((entity) => entity.id));
   const eventIds = new Set(events.map((event) => event.id));
@@ -506,6 +536,24 @@ export function validateAtlasData({
       errors.push(
         `Map position ${position.entity_id} references a missing entity.`
       );
+    }
+  }
+
+  collectDuplicateIds("PE claim", peClaims, errors);
+
+  for (const claim of peClaims) {
+    if (claim.actor_entity_id && !entityIds.has(claim.actor_entity_id)) {
+      errors.push(
+        `PE claim ${claim.id} references missing actor entity ${claim.actor_entity_id}.`
+      );
+    }
+
+    for (const sourceId of claim.source_ids) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(
+          `PE claim ${claim.id} references missing source ${sourceId}.`
+        );
+      }
     }
   }
 

@@ -4,6 +4,7 @@ import { entities } from "../src/data/entities.ts";
 import { events } from "../src/data/events.ts";
 import { evidenceNotes } from "../src/data/evidenceNotes.ts";
 import { mapPositions } from "../src/data/mapPositions.ts";
+import { peClaims } from "../src/data/peClaims.ts";
 import { people } from "../src/data/people.ts";
 import { policies } from "../src/data/policies.ts";
 import { researchOutputs } from "../src/data/researchOutputs.ts";
@@ -28,6 +29,7 @@ try {
     people,
     orgDossiers,
     mapPositions,
+    peClaims,
   });
 } catch (error) {
   errors.push(error instanceof Error ? error.message : String(error));
@@ -73,5 +75,6 @@ console.log(
     `${people.length} people`,
     `${orgDossiers.length} org dossiers`,
     `${mapPositions.length} map positions`,
+    `${peClaims.length} PE claims`,
   ].join(" ")
 );

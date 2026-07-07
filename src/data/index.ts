@@ -6,6 +6,7 @@ import { evidenceNotes } from "./evidenceNotes";
 import { glossary } from "./glossary";
 import { insights } from "./insights";
 import { mapPositions } from "./mapPositions";
+import { peClaims, peJurisdictionNotes, peOpenQuestions } from "./peClaims";
 import { people } from "./people";
 import { policies } from "./policies";
 import { researchOutputs } from "./researchOutputs";
@@ -21,6 +22,9 @@ export {
   glossary,
   insights,
   mapPositions,
+  peClaims,
+  peJurisdictionNotes,
+  peOpenQuestions,
   people,
   policies,
   researchOutputs,
