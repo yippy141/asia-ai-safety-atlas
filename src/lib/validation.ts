@@ -17,6 +17,7 @@ import type {
   Relationship,
   Source,
 } from "@/types";
+import type { PersonProfile } from "@/types/interlocutors";
 
 export const focusAreaSchema = z.enum(focusAreas);
 export const confidenceLevelSchema = z.enum(confidenceLevels);
@@ -171,6 +172,48 @@ export const researchOutputSchema = z.object({
   last_verified: z.string().min(1),
 });
 
+export const evidenceBasisSchema = z.enum([
+  "official",
+  "first_party",
+  "credible_reporting",
+  "anonymous_reporting",
+  "analyst_inference",
+]);
+
+export const personProfileSchema = z.object({
+  id: z.string().min(1),
+  name_en: z.string().min(1),
+  name_local: z.string().optional(),
+  current_public_roles: z
+    .array(
+      z.object({
+        role: z.string().min(1),
+        entity_id: z.string().min(1).optional(),
+        source_ids: z.array(z.string().min(1)).min(1),
+      })
+    )
+    .min(1),
+  governance_frame: z
+    .object({
+      text: z.string().min(1),
+      evidence_basis: evidenceBasisSchema,
+      source_ids: z.array(z.string().min(1)).min(1),
+    })
+    .optional(),
+  selected_public_items: z
+    .array(
+      z.object({
+        title: z.string().min(1),
+        source_id: z.string().min(1),
+      })
+    )
+    .optional(),
+  confidence_level: confidenceLevelSchema,
+  last_verified: z.string().min(1),
+  open_questions: z.array(z.string().min(1)).optional(),
+  public_safe_to_show: z.boolean(),
+});
+
 export const countryProfileSchema = z.object({
   slug: z.string().min(1),
   country: z.string().min(1),
@@ -194,6 +237,7 @@ export type AtlasData = {
   events?: Event[];
   policies?: PolicyOrStandard[];
   researchOutputs?: ResearchOutput[];
+  people?: PersonProfile[];
 };
 
 export function validateAtlasData({
@@ -204,6 +248,7 @@ export function validateAtlasData({
   events = [],
   policies = [],
   researchOutputs = [],
+  people = [],
 }: AtlasData) {
   const errors: string[] = [];
   collectSchemaErrors("Entity", entities, entitySchema, errors);
@@ -223,6 +268,7 @@ export function validateAtlasData({
     researchOutputSchema,
     errors
   );
+  collectSchemaErrors("Person", people, personProfileSchema, errors);
 
   const entityIds = new Set(entities.map((entity) => entity.id));
   const eventIds = new Set(events.map((event) => event.id));
@@ -352,6 +398,42 @@ export function validateAtlasData({
       errors.push(
         `Evidence note ${note.id} references missing source ${note.source_id}.`
       );
+    }
+  }
+
+  collectDuplicateIds("Person", people, errors);
+
+  for (const person of people) {
+    for (const role of person.current_public_roles) {
+      if (role.entity_id && !entityIds.has(role.entity_id)) {
+        errors.push(
+          `Person ${person.id} role references missing entity ${role.entity_id}.`
+        );
+      }
+
+      for (const sourceId of role.source_ids) {
+        if (!sourceIds.has(sourceId)) {
+          errors.push(
+            `Person ${person.id} role references missing source ${sourceId}.`
+          );
+        }
+      }
+    }
+
+    for (const sourceId of person.governance_frame?.source_ids ?? []) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(
+          `Person ${person.id} governance frame references missing source ${sourceId}.`
+        );
+      }
+    }
+
+    for (const item of person.selected_public_items ?? []) {
+      if (!sourceIds.has(item.source_id)) {
+        errors.push(
+          `Person ${person.id} public item references missing source ${item.source_id}.`
+        );
+      }
     }
   }
 

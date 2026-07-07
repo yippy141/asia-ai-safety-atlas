@@ -35,11 +35,15 @@ export const entities: Entity[] = [
       "cac-generative-ai-measures-2023",
       "cac-deep-synthesis-provisions-2022",
       "cac-ai-content-labeling-measures-2025",
-      "cac-national-ai-standardization-guide-2024"
+      "cac-national-ai-standardization-guide-2024",
+      "cac-algorithm-recommendation-provisions-2022"
+    ],
+    "evidence_note_ids": [
+      "en-cac-algorithm-recommendation-provisions"
     ],
     "confidence_level": "high",
     "sensitivity_level": "medium",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-07-07",
     "tier": 1,
     "needs_primary_source": false,
     "open_questions": [
@@ -91,6 +95,43 @@ export const entities: Entity[] = [
     ]
   },
   {
+    "id": "cn-most",
+    "name_en": "Ministry of Science and Technology",
+    "name_local": "科学技术部",
+    "acronym": "MOST",
+    "entity_type": "government",
+    "country": "China",
+    "city": "Beijing",
+    "region": "East Asia",
+    "summary": "National science and technology ministry. Its clearest sourced AI-governance output in the atlas is the 2019 New Generation AI Governance Principles, an eight-principle responsible-AI framework that includes safe and controllable (安全可控) and agile governance (敏捷治理).",
+    "focus_areas": [
+      "ai_governance",
+      "ethics",
+      "policy_regulation"
+    ],
+    "tags": [
+      "ministry",
+      "AI governance principles",
+      "responsible AI",
+      "China"
+    ],
+    "source_ids": [
+      "most-new-generation-ai-governance-principles-2019"
+    ],
+    "evidence_note_ids": [
+      "en-most-2019-governance-principles"
+    ],
+    "confidence_level": "medium",
+    "sensitivity_level": "medium",
+    "last_verified": "2026-07-07",
+    "tier": 2,
+    "needs_primary_source": true,
+    "open_questions": [
+      "Which MOST units currently hold AI governance responsibilities after the science and technology institutional restructuring.",
+      "Whether MOST's 2021 AI ethics norms and the science and technology ethics review measures should be added once primary source pages are verified."
+    ]
+  },
+  {
     "id": "cn-tc260",
     "name_en": "National Cybersecurity Standardization Technical Committee",
     "name_local": "全国网络安全标准化技术委员会",
@@ -129,11 +170,15 @@ export const entities: Entity[] = [
       "tc260-genai-service-security-requirements-2024",
       "tc260-content-labeling-practice-guide-2023",
       "tc260-ai-safety-governance-framework-2024",
-      "shlab-wg9-formation-2026"
+      "shlab-wg9-formation-2026",
+      "gb-45438-2025-aigc-labeling-standard"
+    ],
+    "evidence_note_ids": [
+      "en-gb-45438-labeling-standard"
     ],
     "confidence_level": "high",
     "sensitivity_level": "medium",
-    "last_verified": "2026-06-05",
+    "last_verified": "2026-07-07",
     "tier": 1,
     "needs_primary_source": false,
     "open_questions": [

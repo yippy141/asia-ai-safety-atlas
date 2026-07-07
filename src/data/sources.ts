@@ -2764,5 +2764,44 @@ export const sources: Source[] = [
     "source_type": "official_report",
     "reliability_rating": "A",
     "summary_note": "Official IMDA evaluation report for the Singapore AI Safety Red Teaming Challenge, documenting participation, evaluation design, and challenge findings. First-party report; canonical source for the challenge methodology and outputs."
+  },
+  {
+    "id": "cac-algorithm-recommendation-provisions-2022",
+    "title": "Provisions on the Administration of Algorithmic Recommendation in Internet Information Services",
+    "title_original": "互联网信息服务算法推荐管理规定",
+    "publisher": "Cyberspace Administration of China",
+    "publication_date": "2021-12-31",
+    "access_date": "2026-07-07",
+    "url": "https://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm",
+    "language": "Chinese",
+    "source_type": "regulation",
+    "reliability_rating": "A",
+    "summary_note": "Official CAC posting of order No. 9, issued jointly with the Ministry of Industry and Information Technology, the Ministry of Public Security, and the State Administration for Market Regulation. Published 2021-12-31, posted 2022-01-04, effective 2022-03-01. The binding rule for recommendation algorithms in internet information services."
+  },
+  {
+    "id": "most-new-generation-ai-governance-principles-2019",
+    "title": "Developing Responsible AI: Release of the New Generation AI Governance Principles",
+    "title_original": "发展负责任的人工智能：新一代人工智能治理原则发布",
+    "publisher": "Ministry of Science and Technology",
+    "publication_date": "2019-06-17",
+    "access_date": "2026-07-07",
+    "url": "https://www.most.gov.cn/kjbgz/201906/t20190617_147107.html",
+    "language": "Chinese",
+    "source_type": "official_announcement",
+    "reliability_rating": "A",
+    "summary_note": "MOST announcement of the 2019 New Generation AI Governance Principles, an eight-principle responsible-AI framework whose named principles include safe and controllable (安全可控) and agile governance (敏捷治理). Page confirmed live through search records rather than a direct fetch; a direct verification pass is still wanted."
+  },
+  {
+    "id": "gb-45438-2025-aigc-labeling-standard",
+    "title": "GB 45438-2025 Cybersecurity Technology: Labeling Method for AI-Generated and Synthetic Content",
+    "title_original": "GB 45438-2025 网络安全技术 人工智能生成合成内容标识方法",
+    "publisher": "State Administration for Market Regulation / Standardization Administration of China",
+    "publication_date": "2025-02-28",
+    "access_date": "2026-07-07",
+    "url": "https://std.samr.gov.cn/gb/search/gbDetailed?id=301E0388CB75788DE06397BE0A0AE1B4",
+    "language": "Chinese",
+    "source_type": "standard",
+    "reliability_rating": "A",
+    "summary_note": "Official national-standard catalog record for the mandatory labeling-method standard paired with the 2025 AI-generated content labeling measures. Issued 2025-02-28, effective 2025-09-01. The catalog record lists CAC as the administering authority with TC260 as the executing technical committee."
   }
 ];
