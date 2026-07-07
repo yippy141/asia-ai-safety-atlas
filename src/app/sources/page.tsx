@@ -26,14 +26,13 @@ export default function SourcesPage() {
           Source register
         </h1>
         <p className="mt-4 text-base leading-7 text-foreground">
-          Research briefs remain discovery records. Official primary sources now
-          include the PR 2A China standards/evaluation backfill and the PR 2B
-          Japan, Korea, and Singapore AISI comparison backfill. PR 2C adds a
-          filtered China-West dialogue and event-layer source set; PR 2D adds
-          Chinese frontier-developer public-disclosure sources; PR 2E adds ASEAN
-          governance implementation and Southeast Asia policy sources; PR 2F
-          adds technical safety research group and research-output sources; PR
-          2G adds normalized Western/APAC comparator sources.
+          Research briefs remain discovery records. Official primary sources
+          cover China standards and evaluation bodies; the Japan, Korea, and
+          Singapore AI safety institutes; China-West dialogue and event
+          records; Chinese frontier-developer public disclosures; ASEAN
+          governance implementation; technical safety research groups;
+          Western and Asia-Pacific comparators; and the instruments behind
+          the China AI+ briefing.
         </p>
       </div>
 

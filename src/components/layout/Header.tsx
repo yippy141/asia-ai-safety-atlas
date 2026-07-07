@@ -1,26 +1,12 @@
 import Link from "next/link";
-import {
-  BookOpen,
-  Building2,
-  Database,
-  FileDown,
-  GitBranch,
-  Library,
-  Lightbulb,
-  Map,
-  ScrollText,
-} from "lucide-react";
+import { Building2, Globe, Library, Map, Newspaper } from "lucide-react";
 
 const navItems = [
   { href: "/map", label: "Map", icon: Map },
-  { href: "/atlas", label: "Atlas", icon: Database },
+  { href: "/briefings", label: "Briefings", icon: Newspaper },
+  { href: "/countries", label: "Countries", icon: Globe },
   { href: "/orgs", label: "Organizations", icon: Building2 },
-  { href: "/graph", label: "Graph", icon: GitBranch },
-  { href: "/methodology", label: "Methodology", icon: ScrollText },
   { href: "/sources", label: "Sources", icon: Library },
-  { href: "/insights", label: "Insights", icon: Lightbulb },
-  { href: "/data", label: "Data", icon: FileDown },
-  { href: "/glossary", label: "Glossary", icon: BookOpen },
 ];
 
 export function Header() {

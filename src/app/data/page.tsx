@@ -58,8 +58,8 @@ export default function DataPage() {
         </h1>
         <p className="mt-4 text-base leading-7 text-foreground">
           Researchers can download the atlas entities, sources, and public
-          relationships as JSON or CSV files generated from the typed local
-          data.
+          relationships as JSON or CSV files generated from the atlas
+          records.
         </p>
       </div>
 
