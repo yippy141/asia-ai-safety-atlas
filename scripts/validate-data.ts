@@ -1,4 +1,5 @@
 import { countries } from "../src/data/countries.ts";
+import { orgDossiers } from "../src/data/dossiers.ts";
 import { entities } from "../src/data/entities.ts";
 import { events } from "../src/data/events.ts";
 import { evidenceNotes } from "../src/data/evidenceNotes.ts";
@@ -24,6 +25,7 @@ try {
     policies,
     researchOutputs,
     people,
+    orgDossiers,
   });
 } catch (error) {
   errors.push(error instanceof Error ? error.message : String(error));
@@ -67,5 +69,6 @@ console.log(
     `${sources.length} sources`,
     `${countries.length} country profiles`,
     `${people.length} people`,
+    `${orgDossiers.length} org dossiers`,
   ].join(" ")
 );

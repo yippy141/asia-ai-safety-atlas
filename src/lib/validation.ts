@@ -18,6 +18,7 @@ import type {
   Source,
 } from "@/types";
 import type { PersonProfile } from "@/types/interlocutors";
+import type { OrgDossier } from "@/types/dossiers";
 
 export const focusAreaSchema = z.enum(focusAreas);
 export const confidenceLevelSchema = z.enum(confidenceLevels);
@@ -214,6 +215,76 @@ export const personProfileSchema = z.object({
   public_safe_to_show: z.boolean(),
 });
 
+const importanceBandSchema = z.union([
+  z.literal(0),
+  z.literal(1),
+  z.literal(2),
+  z.literal(3),
+]);
+
+export const orgDossierSchema = z.object({
+  entity_id: z.string().min(1),
+  why_it_matters: z.string().min(1),
+  history: z.array(
+    z.object({
+      date: z.string().min(1),
+      event: z.string().min(1),
+      source_ids: z.array(z.string().min(1)).min(1),
+    })
+  ),
+  leadership: z.array(
+    z.object({
+      person_id: z.string().min(1),
+      person_display: z.string().min(1),
+      role: z.string().min(1),
+      source_ids: z.array(z.string().min(1)).min(1),
+    })
+  ),
+  importance: z.array(
+    z.object({
+      aspect: z.enum([
+        "regulatory_authority",
+        "standards_influence",
+        "technical_capacity",
+        "convening_power",
+        "international_interface",
+      ]),
+      band: importanceBandSchema,
+      reasoning: z.string().min(1),
+      evidence_basis: evidenceBasisSchema,
+      source_ids: z.array(z.string().min(1)).min(1),
+    })
+  ),
+  safety_conception: z.object({
+    text: z.string().min(1),
+    evidence_basis: evidenceBasisSchema,
+    source_ids: z.array(z.string().min(1)).min(1),
+  }),
+  connections_note: z
+    .object({
+      text: z.string().min(1),
+      evidence_basis: evidenceBasisSchema,
+    })
+    .optional(),
+  selected_outputs: z.array(
+    z.object({
+      title: z.string().min(1),
+      year: z.string().optional(),
+      source_id: z.string().min(1),
+    })
+  ),
+  engagement_fit: z
+    .object({
+      plausible_for: z.string().min(1),
+      constrained_by: z.string().min(1),
+      evidence_basis: evidenceBasisSchema,
+    })
+    .optional(),
+  open_questions: z.array(z.string().min(1)),
+  last_verified: z.string().min(1),
+  public_safe_to_show: z.boolean(),
+});
+
 export const countryProfileSchema = z.object({
   slug: z.string().min(1),
   country: z.string().min(1),
@@ -238,6 +309,7 @@ export type AtlasData = {
   policies?: PolicyOrStandard[];
   researchOutputs?: ResearchOutput[];
   people?: PersonProfile[];
+  orgDossiers?: OrgDossier[];
 };
 
 export function validateAtlasData({
@@ -249,6 +321,7 @@ export function validateAtlasData({
   policies = [],
   researchOutputs = [],
   people = [],
+  orgDossiers = [],
 }: AtlasData) {
   const errors: string[] = [];
   collectSchemaErrors("Entity", entities, entitySchema, errors);
@@ -269,6 +342,7 @@ export function validateAtlasData({
     errors
   );
   collectSchemaErrors("Person", people, personProfileSchema, errors);
+  collectSchemaErrors("Org dossier", orgDossiers, orgDossierSchema, errors);
 
   const entityIds = new Set(entities.map((entity) => entity.id));
   const eventIds = new Set(events.map((event) => event.id));
@@ -398,6 +472,46 @@ export function validateAtlasData({
       errors.push(
         `Evidence note ${note.id} references missing source ${note.source_id}.`
       );
+    }
+  }
+
+  const personIds = new Set(people.map((person) => person.id));
+  const dossierEntityIds = new Set<string>();
+
+  for (const dossier of orgDossiers) {
+    if (dossierEntityIds.has(dossier.entity_id)) {
+      errors.push(`Org dossier ${dossier.entity_id} uses a duplicate entity_id.`);
+    }
+    dossierEntityIds.add(dossier.entity_id);
+
+    if (!entityIds.has(dossier.entity_id)) {
+      errors.push(
+        `Org dossier ${dossier.entity_id} references a missing entity.`
+      );
+    }
+
+    const citedSourceIds = [
+      ...dossier.importance.flatMap((assessment) => assessment.source_ids),
+      ...dossier.safety_conception.source_ids,
+      ...dossier.history.flatMap((item) => item.source_ids),
+      ...dossier.leadership.flatMap((role) => role.source_ids),
+      ...dossier.selected_outputs.map((output) => output.source_id),
+    ];
+
+    for (const sourceId of citedSourceIds) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(
+          `Org dossier ${dossier.entity_id} references missing source ${sourceId}.`
+        );
+      }
+    }
+
+    for (const role of dossier.leadership) {
+      if (!personIds.has(role.person_id)) {
+        errors.push(
+          `Org dossier ${dossier.entity_id} leadership references missing person ${role.person_id}.`
+        );
+      }
     }
   }
 

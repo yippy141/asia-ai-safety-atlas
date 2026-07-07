@@ -1,4 +1,5 @@
 import { countries } from "./countries";
+import { orgDossiers } from "./dossiers";
 import { entities } from "./entities";
 import { events } from "./events";
 import { evidenceNotes } from "./evidenceNotes";
@@ -13,6 +14,7 @@ import { sources } from "./sources";
 export {
   countries,
   entities,
+  orgDossiers,
   events,
   evidenceNotes,
   glossary,

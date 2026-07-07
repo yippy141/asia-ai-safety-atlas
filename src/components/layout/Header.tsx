@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  Building2,
   Database,
   FileDown,
   GitBranch,
@@ -11,6 +12,7 @@ import {
 
 const navItems = [
   { href: "/atlas", label: "Atlas", icon: Database },
+  { href: "/orgs", label: "Organizations", icon: Building2 },
   { href: "/graph", label: "Graph", icon: GitBranch },
   { href: "/methodology", label: "Methodology", icon: ScrollText },
   { href: "/sources", label: "Sources", icon: Library },
