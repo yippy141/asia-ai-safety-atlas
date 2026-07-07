@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  BookOpen,
   Building2,
   Database,
   FileDown,
@@ -11,6 +12,7 @@ import {
 } from "lucide-react";
 
 const navItems = [
+  { href: "/map", label: "Map", icon: Map },
   { href: "/atlas", label: "Atlas", icon: Database },
   { href: "/orgs", label: "Organizations", icon: Building2 },
   { href: "/graph", label: "Graph", icon: GitBranch },
@@ -18,7 +20,7 @@ const navItems = [
   { href: "/sources", label: "Sources", icon: Library },
   { href: "/insights", label: "Insights", icon: Lightbulb },
   { href: "/data", label: "Data", icon: FileDown },
-  { href: "/glossary", label: "Glossary", icon: Map },
+  { href: "/glossary", label: "Glossary", icon: BookOpen },
 ];
 
 export function Header() {

@@ -7,6 +7,7 @@ import {
   GitBranch,
   ShieldCheck,
 } from "lucide-react";
+import { MapPreview } from "@/components/map/MapPreview";
 import { buttonVariants } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { countries, entities, insights, relationships, sources } from "@/data";
@@ -84,6 +85,38 @@ export default function Home() {
               .
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
+              The Map
+            </p>
+            <h2 className="mt-3 text-2xl font-semibold text-foreground">
+              Who holds authority, and what kind of safety they do
+            </h2>
+            <p className="mt-4 text-base leading-7 text-foreground">
+              One fixed grid: the authority stack from party center down to
+              labs and firms, against the safety spectrum from content control
+              to frontier alignment. Every placement carries its reasoning.
+            </p>
+            <Link
+              href="/map"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-oxblood hover:underline"
+            >
+              Open the Map
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
+          <Link
+            href="/map"
+            aria-label="Open the Map"
+            className="block border border-rule bg-paper p-3 transition hover:border-oxblood/40"
+          >
+            <MapPreview />
+          </Link>
         </div>
       </section>
 

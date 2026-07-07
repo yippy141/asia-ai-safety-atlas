@@ -18,7 +18,7 @@ import type {
   Source,
 } from "@/types";
 import type { PersonProfile } from "@/types/interlocutors";
-import type { OrgDossier } from "@/types/dossiers";
+import type { MapPosition, OrgDossier } from "@/types/dossiers";
 
 export const focusAreaSchema = z.enum(focusAreas);
 export const confidenceLevelSchema = z.enum(confidenceLevels);
@@ -285,6 +285,20 @@ export const orgDossierSchema = z.object({
   public_safe_to_show: z.boolean(),
 });
 
+export const mapPositionSchema = z.object({
+  entity_id: z.string().min(1),
+  authority_level: z.union([
+    z.literal(0),
+    z.literal(1),
+    z.literal(2),
+    z.literal(3),
+    z.literal(4),
+  ]),
+  spectrum_x: z.number().min(0).max(1),
+  placement_reasoning: z.string().min(1),
+  evidence_basis: evidenceBasisSchema,
+});
+
 export const countryProfileSchema = z.object({
   slug: z.string().min(1),
   country: z.string().min(1),
@@ -310,6 +324,7 @@ export type AtlasData = {
   researchOutputs?: ResearchOutput[];
   people?: PersonProfile[];
   orgDossiers?: OrgDossier[];
+  mapPositions?: MapPosition[];
 };
 
 export function validateAtlasData({
@@ -322,6 +337,7 @@ export function validateAtlasData({
   researchOutputs = [],
   people = [],
   orgDossiers = [],
+  mapPositions = [],
 }: AtlasData) {
   const errors: string[] = [];
   collectSchemaErrors("Entity", entities, entitySchema, errors);
@@ -343,6 +359,7 @@ export function validateAtlasData({
   );
   collectSchemaErrors("Person", people, personProfileSchema, errors);
   collectSchemaErrors("Org dossier", orgDossiers, orgDossierSchema, errors);
+  collectSchemaErrors("Map position", mapPositions, mapPositionSchema, errors);
 
   const entityIds = new Set(entities.map((entity) => entity.id));
   const eventIds = new Set(events.map((event) => event.id));
@@ -471,6 +488,23 @@ export function validateAtlasData({
     if (!sourceIds.has(note.source_id)) {
       errors.push(
         `Evidence note ${note.id} references missing source ${note.source_id}.`
+      );
+    }
+  }
+
+  const mapPositionEntityIds = new Set<string>();
+
+  for (const position of mapPositions) {
+    if (mapPositionEntityIds.has(position.entity_id)) {
+      errors.push(
+        `Map position ${position.entity_id} uses a duplicate entity_id.`
+      );
+    }
+    mapPositionEntityIds.add(position.entity_id);
+
+    if (!entityIds.has(position.entity_id)) {
+      errors.push(
+        `Map position ${position.entity_id} references a missing entity.`
       );
     }
   }

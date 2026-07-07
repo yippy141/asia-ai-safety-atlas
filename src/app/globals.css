@@ -20,6 +20,9 @@
   --color-confidence-high: var(--confidence-high);
   --color-confidence-medium: var(--confidence-medium);
   --color-confidence-low: var(--confidence-low);
+  --color-governance: var(--governance);
+  --color-frontier: var(--frontier);
+  --color-risk: var(--risk);
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
@@ -75,6 +78,10 @@
   --confidence-high: #2f5d4a;
   --confidence-medium: #9a6b27;
   --confidence-low: #6b6258;
+  /* Map accents fixed by AGENTS.md rule 7 */
+  --governance: #2b4c6f;
+  --frontier: #b07d2b;
+  --risk: #9b3a2e;
   --background: var(--paper);
   --foreground: var(--ink);
   --card: var(--paper-2);
@@ -122,6 +129,9 @@
   --confidence-high: #6fb39a;
   --confidence-medium: #c79a4e;
   --confidence-low: #9a9186;
+  --governance: #2b4c6f;
+  --frontier: #b07d2b;
+  --risk: #9b3a2e;
   --background: var(--paper);
   --foreground: var(--ink);
   --card: var(--paper-2);

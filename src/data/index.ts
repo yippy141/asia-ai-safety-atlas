@@ -5,6 +5,7 @@ import { events } from "./events";
 import { evidenceNotes } from "./evidenceNotes";
 import { glossary } from "./glossary";
 import { insights } from "./insights";
+import { mapPositions } from "./mapPositions";
 import { people } from "./people";
 import { policies } from "./policies";
 import { researchOutputs } from "./researchOutputs";
@@ -19,6 +20,7 @@ export {
   evidenceNotes,
   glossary,
   insights,
+  mapPositions,
   people,
   policies,
   researchOutputs,
