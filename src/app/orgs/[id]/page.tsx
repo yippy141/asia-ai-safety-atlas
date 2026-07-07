@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
-import { entities, events, orgDossiers, relationships, sources } from "@/data";
+import { entities, events, orgDossiers, people, relationships, sources } from "@/data";
+import { renderablePeople } from "@/lib/people";
 import {
   dossierSourceIds,
   evidenceBasisLabels,
@@ -43,6 +44,9 @@ export default async function OrgDossierPage({ params }: OrgPageProps) {
   const eventById = new Map(events.map((event) => [event.id, event]));
   const dossierEntityIds = new Set(
     renderableDossiers(orgDossiers).map((record) => record.entity_id)
+  );
+  const personPageIds = new Set(
+    renderablePeople(people).map((person) => person.id)
   );
 
   const appendixIds = Array.from(
@@ -192,9 +196,18 @@ export default async function OrgDossierPage({ params }: OrgPageProps) {
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {dossier.leadership.map((role) => (
               <Card key={role.person_id} className="p-5">
-                <p className="text-base font-semibold text-foreground">
-                  {role.person_display}
-                </p>
+                {personPageIds.has(role.person_id) ? (
+                  <Link
+                    href={`/people/${role.person_id}`}
+                    className="text-base font-semibold text-oxblood hover:underline"
+                  >
+                    {role.person_display}
+                  </Link>
+                ) : (
+                  <p className="text-base font-semibold text-foreground">
+                    {role.person_display}
+                  </p>
+                )}
                 <p className="mt-1 text-sm leading-6 text-foreground">
                   {role.role}
                 </p>
