@@ -2381,5 +2381,31 @@ export const evidenceNotes: EvidenceNote[] = [
     "evidence_paraphrase": "Concordia says it and Shanghai AI Laboratory introduced a Frontier AI Risk Management Framework for general-purpose model developers.",
     "confidence_level": "high",
     "public_safe_to_show": true
+  },
+  {
+    "id": "en-cac-algorithm-recommendation-provisions",
+    "source_id": "cac-algorithm-recommendation-provisions-2022",
+    "claim_text": "CAC and three co-issuing authorities adopted binding provisions on algorithmic recommendation in internet information services, effective March 1, 2022.",
+    "evidence_paraphrase": "The official CAC posting records the provisions as order No. 9, jointly issued with MIIT, the Ministry of Public Security, and SAMR, published 2021-12-31 and effective 2022-03-01.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "en-most-2019-governance-principles",
+    "source_id": "most-new-generation-ai-governance-principles-2019",
+    "claim_text": "MOST announced the New Generation AI Governance Principles in June 2019, an eight-principle responsible-AI framework.",
+    "original_language_quote": "安全可控、共担责任、开放协作、敏捷治理",
+    "translation_note": "Four of the named principles: safe and controllable, shared responsibility, open collaboration, agile governance.",
+    "evidence_paraphrase": "The MOST page announces the release of the governance principles under the heading of developing responsible AI (发展负责任的人工智能).",
+    "confidence_level": "high",
+    "public_safe_to_show": true
+  },
+  {
+    "id": "en-gb-45438-labeling-standard",
+    "source_id": "gb-45438-2025-aigc-labeling-standard",
+    "claim_text": "GB 45438-2025 is the mandatory national standard specifying labeling methods for AI-generated and synthetic content, issued 2025-02-28 and effective 2025-09-01.",
+    "evidence_paraphrase": "The national-standard catalog record identifies the standard as mandatory, lists CAC as the administering authority and TC260 as the executing technical committee, and pairs its effective date with the 2025 labeling measures.",
+    "confidence_level": "high",
+    "public_safe_to_show": true
   }
 ];

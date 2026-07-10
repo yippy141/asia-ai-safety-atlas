@@ -17,6 +17,8 @@ import type {
   Relationship,
   Source,
 } from "@/types";
+import type { PersonProfile } from "@/types/interlocutors";
+import type { MapPosition, OrgDossier, PEClaim } from "@/types/dossiers";
 
 export const focusAreaSchema = z.enum(focusAreas);
 export const confidenceLevelSchema = z.enum(confidenceLevels);
@@ -171,6 +173,159 @@ export const researchOutputSchema = z.object({
   last_verified: z.string().min(1),
 });
 
+export const evidenceBasisSchema = z.enum([
+  "official",
+  "first_party",
+  "credible_reporting",
+  "anonymous_reporting",
+  "analyst_inference",
+]);
+
+export const personProfileSchema = z.object({
+  id: z.string().min(1),
+  name_en: z.string().min(1),
+  name_local: z.string().optional(),
+  current_public_roles: z
+    .array(
+      z.object({
+        role: z.string().min(1),
+        entity_id: z.string().min(1).optional(),
+        source_ids: z.array(z.string().min(1)).min(1),
+      })
+    )
+    .min(1),
+  governance_frame: z
+    .object({
+      text: z.string().min(1),
+      evidence_basis: evidenceBasisSchema,
+      source_ids: z.array(z.string().min(1)).min(1),
+    })
+    .optional(),
+  selected_public_items: z
+    .array(
+      z.object({
+        title: z.string().min(1),
+        source_id: z.string().min(1),
+      })
+    )
+    .optional(),
+  confidence_level: confidenceLevelSchema,
+  last_verified: z.string().min(1),
+  open_questions: z.array(z.string().min(1)).optional(),
+  public_safe_to_show: z.boolean(),
+});
+
+const importanceBandSchema = z.union([
+  z.literal(0),
+  z.literal(1),
+  z.literal(2),
+  z.literal(3),
+]);
+
+export const orgDossierSchema = z.object({
+  entity_id: z.string().min(1),
+  why_it_matters: z.string().min(1),
+  history: z.array(
+    z.object({
+      date: z.string().min(1),
+      event: z.string().min(1),
+      source_ids: z.array(z.string().min(1)).min(1),
+    })
+  ),
+  leadership: z.array(
+    z.object({
+      person_id: z.string().min(1),
+      person_display: z.string().min(1),
+      role: z.string().min(1),
+      source_ids: z.array(z.string().min(1)).min(1),
+    })
+  ),
+  importance: z.array(
+    z.object({
+      aspect: z.enum([
+        "regulatory_authority",
+        "standards_influence",
+        "technical_capacity",
+        "convening_power",
+        "international_interface",
+      ]),
+      band: importanceBandSchema,
+      reasoning: z.string().min(1),
+      evidence_basis: evidenceBasisSchema,
+      source_ids: z.array(z.string().min(1)).min(1),
+    })
+  ),
+  safety_conception: z.object({
+    text: z.string().min(1),
+    evidence_basis: evidenceBasisSchema,
+    source_ids: z.array(z.string().min(1)).min(1),
+  }),
+  connections_note: z
+    .object({
+      text: z.string().min(1),
+      evidence_basis: evidenceBasisSchema,
+    })
+    .optional(),
+  selected_outputs: z.array(
+    z.object({
+      title: z.string().min(1),
+      year: z.string().optional(),
+      source_id: z.string().min(1),
+    })
+  ),
+  engagement_fit: z
+    .object({
+      plausible_for: z.string().min(1),
+      constrained_by: z.string().min(1),
+      evidence_basis: evidenceBasisSchema,
+    })
+    .optional(),
+  open_questions: z.array(z.string().min(1)),
+  last_verified: z.string().min(1),
+  public_safe_to_show: z.boolean(),
+});
+
+export const peClaimSchema = z.object({
+  id: z.string().min(1),
+  jurisdiction: z.string().min(1),
+  actor_class: z.enum([
+    "central_ministry",
+    "provincial_government",
+    "municipal_government",
+    "central_soe",
+    "local_soe",
+    "private_national",
+    "private_local",
+    "military_affiliated",
+    "foreign_firm",
+    "financial_state",
+  ]),
+  actor_entity_id: z.string().min(1).optional(),
+  instrument: z.string().min(1),
+  claim: z.string().min(1),
+  so_what: z.string().min(1),
+  safety_salience: z.string().optional(),
+  evidence_basis: evidenceBasisSchema,
+  confidence_level: confidenceLevelSchema,
+  source_ids: z.array(z.string().min(1)).min(1),
+  last_verified: z.string().min(1),
+  public_safe_to_show: z.boolean(),
+});
+
+export const mapPositionSchema = z.object({
+  entity_id: z.string().min(1),
+  authority_level: z.union([
+    z.literal(0),
+    z.literal(1),
+    z.literal(2),
+    z.literal(3),
+    z.literal(4),
+  ]),
+  spectrum_x: z.number().min(0).max(1),
+  placement_reasoning: z.string().min(1),
+  evidence_basis: evidenceBasisSchema,
+});
+
 export const countryProfileSchema = z.object({
   slug: z.string().min(1),
   country: z.string().min(1),
@@ -194,6 +349,10 @@ export type AtlasData = {
   events?: Event[];
   policies?: PolicyOrStandard[];
   researchOutputs?: ResearchOutput[];
+  people?: PersonProfile[];
+  orgDossiers?: OrgDossier[];
+  mapPositions?: MapPosition[];
+  peClaims?: PEClaim[];
 };
 
 export function validateAtlasData({
@@ -204,6 +363,10 @@ export function validateAtlasData({
   events = [],
   policies = [],
   researchOutputs = [],
+  people = [],
+  orgDossiers = [],
+  mapPositions = [],
+  peClaims = [],
 }: AtlasData) {
   const errors: string[] = [];
   collectSchemaErrors("Entity", entities, entitySchema, errors);
@@ -223,6 +386,10 @@ export function validateAtlasData({
     researchOutputSchema,
     errors
   );
+  collectSchemaErrors("Person", people, personProfileSchema, errors);
+  collectSchemaErrors("Org dossier", orgDossiers, orgDossierSchema, errors);
+  collectSchemaErrors("Map position", mapPositions, mapPositionSchema, errors);
+  collectSchemaErrors("PE claim", peClaims, peClaimSchema, errors);
 
   const entityIds = new Set(entities.map((entity) => entity.id));
   const eventIds = new Set(events.map((event) => event.id));
@@ -352,6 +519,117 @@ export function validateAtlasData({
       errors.push(
         `Evidence note ${note.id} references missing source ${note.source_id}.`
       );
+    }
+  }
+
+  const mapPositionEntityIds = new Set<string>();
+
+  for (const position of mapPositions) {
+    if (mapPositionEntityIds.has(position.entity_id)) {
+      errors.push(
+        `Map position ${position.entity_id} uses a duplicate entity_id.`
+      );
+    }
+    mapPositionEntityIds.add(position.entity_id);
+
+    if (!entityIds.has(position.entity_id)) {
+      errors.push(
+        `Map position ${position.entity_id} references a missing entity.`
+      );
+    }
+  }
+
+  collectDuplicateIds("PE claim", peClaims, errors);
+
+  for (const claim of peClaims) {
+    if (claim.actor_entity_id && !entityIds.has(claim.actor_entity_id)) {
+      errors.push(
+        `PE claim ${claim.id} references missing actor entity ${claim.actor_entity_id}.`
+      );
+    }
+
+    for (const sourceId of claim.source_ids) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(
+          `PE claim ${claim.id} references missing source ${sourceId}.`
+        );
+      }
+    }
+  }
+
+  const personIds = new Set(people.map((person) => person.id));
+  const dossierEntityIds = new Set<string>();
+
+  for (const dossier of orgDossiers) {
+    if (dossierEntityIds.has(dossier.entity_id)) {
+      errors.push(`Org dossier ${dossier.entity_id} uses a duplicate entity_id.`);
+    }
+    dossierEntityIds.add(dossier.entity_id);
+
+    if (!entityIds.has(dossier.entity_id)) {
+      errors.push(
+        `Org dossier ${dossier.entity_id} references a missing entity.`
+      );
+    }
+
+    const citedSourceIds = [
+      ...dossier.importance.flatMap((assessment) => assessment.source_ids),
+      ...dossier.safety_conception.source_ids,
+      ...dossier.history.flatMap((item) => item.source_ids),
+      ...dossier.leadership.flatMap((role) => role.source_ids),
+      ...dossier.selected_outputs.map((output) => output.source_id),
+    ];
+
+    for (const sourceId of citedSourceIds) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(
+          `Org dossier ${dossier.entity_id} references missing source ${sourceId}.`
+        );
+      }
+    }
+
+    for (const role of dossier.leadership) {
+      if (!personIds.has(role.person_id)) {
+        errors.push(
+          `Org dossier ${dossier.entity_id} leadership references missing person ${role.person_id}.`
+        );
+      }
+    }
+  }
+
+  collectDuplicateIds("Person", people, errors);
+
+  for (const person of people) {
+    for (const role of person.current_public_roles) {
+      if (role.entity_id && !entityIds.has(role.entity_id)) {
+        errors.push(
+          `Person ${person.id} role references missing entity ${role.entity_id}.`
+        );
+      }
+
+      for (const sourceId of role.source_ids) {
+        if (!sourceIds.has(sourceId)) {
+          errors.push(
+            `Person ${person.id} role references missing source ${sourceId}.`
+          );
+        }
+      }
+    }
+
+    for (const sourceId of person.governance_frame?.source_ids ?? []) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(
+          `Person ${person.id} governance frame references missing source ${sourceId}.`
+        );
+      }
+    }
+
+    for (const item of person.selected_public_items ?? []) {
+      if (!sourceIds.has(item.source_id)) {
+        errors.push(
+          `Person ${person.id} public item references missing source ${item.source_id}.`
+        );
+      }
     }
   }
 

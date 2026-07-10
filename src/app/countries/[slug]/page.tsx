@@ -55,7 +55,7 @@ export default async function CountryPage({ params }: CountryPageProps) {
           text={country.standards_evaluation}
         />
         <ProfileBlock
-          title="Research ecosystem"
+          title="Technical research"
           text={country.research_ecosystem}
         />
         <ProfileBlock

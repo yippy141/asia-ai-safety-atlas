@@ -7,6 +7,7 @@ import {
   GitBranch,
   ShieldCheck,
 } from "lucide-react";
+import { MapPreview } from "@/components/map/MapPreview";
 import { buttonVariants } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { countries, entities, insights, relationships, sources } from "@/data";
@@ -33,65 +34,75 @@ export default function Home() {
   return (
     <main>
       <section className="border-b border-rule bg-card">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-16">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:px-8 lg:py-16">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
-              Bootstrap shell
-            </p>
-            <h1 className="mt-5 text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
-              Mapping AI safety and governance ecosystems across China and
-              Asia-Pacific.
+            <h1 className="text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
+              Who holds authority over AI safety in China and Asia-Pacific,
+              and what they do with it.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-foreground">
-              A static-first stakeholder intelligence atlas for researchers,
+              A stakeholder intelligence atlas for researchers,
               bridge-building organizations, and policy teams working from
-              source-backed public evidence.
+              source-backed public evidence. Claims first, sources attached.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                className={cn(buttonVariants({ size: "lg" }))}
-                href="/atlas"
-              >
-                Open atlas
+              <Link className={cn(buttonVariants({ size: "lg" }))} href="/map">
+                Open the Map
                 <ArrowRight />
               </Link>
               <Link
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
                 )}
-                href="/methodology"
+                href="/briefings/china-ai-plus"
               >
-                Review methodology
+                Read the China AI+ briefing
               </Link>
             </div>
           </div>
-          <div className="grid content-start gap-3 sm:grid-cols-2 lg:grid-cols-1">
-            <Metric label="Entities loaded" value={entities.length} />
-            <Metric
-              label="Source-backed entities"
-              value={sourceBackedEntities}
-            />
-            <Metric label="Needs primary source" value={needsPrimarySource} />
-            <Metric label="Public relationships" value={relationships.length} />
-            <p className="text-sm text-muted-foreground sm:col-span-2 lg:col-span-1">
-              Last updated {latestChangelogDate}. See the{" "}
-              <Link
-                href="/changelog"
-                className="font-medium text-oxblood hover:underline"
-              >
-                changelog
-              </Link>
-              .
+          <Link
+            href="/map"
+            aria-label="Open the Map"
+            className="block border border-rule bg-paper p-3 transition hover:border-oxblood/40"
+          >
+            <MapPreview />
+            <p className="px-2 pb-1 pt-2 text-sm text-muted-foreground">
+              The authority stack against the safety spectrum, one node per
+              organization. Every placement carries its reasoning.
             </p>
-          </div>
+          </Link>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
+            Briefings
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold text-foreground">
+            The AI+ campaign: who pushes, who pays, where 安全 fits
+          </h2>
+          <p className="mt-4 text-base leading-7 text-foreground">
+            The August 2025 State Council opinion made AI adoption a national
+            mandate. The briefing traces the instrument chain from the central
+            plan through ministries, SOEs, and state finance to the provincial
+            race it set off, separating sourced facts from marked judgments.
+          </p>
+          <Link
+            href="/briefings/china-ai-plus"
+            className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-oxblood hover:underline"
+          >
+            Read the briefing
+            <ArrowRight className="size-4" />
+          </Link>
         </div>
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-4 px-4 py-10 sm:px-6 md:grid-cols-3 lg:px-8">
         <Principle
           icon={<Database />}
-          title="Typed local data"
-          text={`${sources.length} research-brief source records seed the shell while primary-source backfill begins.`}
+          title="Source-audited records"
+          text={`${sources.length} source records back the entities, relationships, and claims. Gaps are listed, not filled.`}
         />
         <Principle
           icon={<ShieldCheck />}
@@ -103,6 +114,45 @@ export default function Home() {
           title="Relationship graph"
           text="Only public-safe relationship edges are shown, using conservative labels from the controlled taxonomy."
         />
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
+              What&apos;s inside
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold text-foreground">
+              The atlas in numbers
+            </h2>
+          </div>
+          <Link
+            href="/atlas"
+            className="inline-flex items-center gap-2 text-sm font-medium text-oxblood hover:underline"
+          >
+            Browse the atlas
+            <ArrowRight className="size-4" />
+          </Link>
+        </div>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <Metric label="Entities loaded" value={entities.length} />
+          <Metric
+            label="Source-backed entities"
+            value={sourceBackedEntities}
+          />
+          <Metric label="Needs primary source" value={needsPrimarySource} />
+          <Metric label="Public relationships" value={relationships.length} />
+        </div>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Last updated {latestChangelogDate}. See the{" "}
+          <Link
+            href="/changelog"
+            className="font-medium text-oxblood hover:underline"
+          >
+            changelog
+          </Link>
+          .
+        </p>
       </section>
 
       {latestInsight ? (

@@ -1,7 +1,11 @@
 import { countries } from "../src/data/countries.ts";
+import { orgDossiers } from "../src/data/dossiers.ts";
 import { entities } from "../src/data/entities.ts";
 import { events } from "../src/data/events.ts";
 import { evidenceNotes } from "../src/data/evidenceNotes.ts";
+import { mapPositions } from "../src/data/mapPositions.ts";
+import { peClaims } from "../src/data/peClaims.ts";
+import { people } from "../src/data/people.ts";
 import { policies } from "../src/data/policies.ts";
 import { researchOutputs } from "../src/data/researchOutputs.ts";
 import { relationships } from "../src/data/relationships.ts";
@@ -22,6 +26,10 @@ try {
     events,
     policies,
     researchOutputs,
+    people,
+    orgDossiers,
+    mapPositions,
+    peClaims,
   });
 } catch (error) {
   errors.push(error instanceof Error ? error.message : String(error));
@@ -64,5 +72,9 @@ console.log(
     `${researchOutputs.length} research outputs`,
     `${sources.length} sources`,
     `${countries.length} country profiles`,
+    `${people.length} people`,
+    `${orgDossiers.length} org dossiers`,
+    `${mapPositions.length} map positions`,
+    `${peClaims.length} PE claims`,
   ].join(" ")
 );
